@@ -1,0 +1,1 @@
+# metody_badania_w_finansach
