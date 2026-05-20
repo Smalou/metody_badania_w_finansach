@@ -1,8 +1,8 @@
 """Zadanie 3: A/B testing na probach zaleznych - 21 spolek AI (infra + platforms)
 wokol zdarzenia rozpoczecia boomu generatywnej AI (2022-11-30, premiera ChatGPT).
 
-Wariant A: srednia dzienna abnormal return w oknie PRZED zdarzeniem.
-Wariant B: srednia dzienna abnormal return w oknie PO zdarzeniu.
+Wariant A: sredni dzienny spread vs SPY w oknie PRZED zdarzeniem.
+Wariant B: sredni dzienny spread vs SPY w oknie PO zdarzeniu.
 Jednostka pary: ta sama spolka.
 
 Test glowny: paired t-test (jezeli roznice normalne).
@@ -10,6 +10,8 @@ Test odpornosci: Wilcoxon signed-rank.
 Wielkosc efektu: Cohen's dz.
 Analiza wrazliwosci: okna 30, 60, 120, 250 sesji.
 Placebo: ta sama procedura dla daty 2021-11-30 (przed boomem AI).
+Kontrola odpornosci: beta-adjusted excess return under CAPM assumption,
+bez estymowanego interceptu alpha.
 """
 
 from pathlib import Path
@@ -21,7 +23,7 @@ import scipy.stats as st
 
 from common import (
     CACHE, BENCHMARK, EVENT_DATE, PLACEBO_DATE,
-    load_prices, load_metadata, log_returns, group_tickers, abnormal_returns,
+    load_prices, load_metadata, log_returns, daily_rf, group_tickers, abnormal_returns,
 )
 from plot_utils import setup_style, savefig
 
@@ -94,26 +96,79 @@ def run_sensitivity(ar_df, event, windows, label):
     return pd.DataFrame(rows), pairs_by_window
 
 
+def beta_pre_event(asset_ret: pd.Series, bench_excess: pd.Series, rf: pd.Series,
+                   event: pd.Timestamp) -> float:
+    """Beta estymowana tylko na danych sprzed analizowanej daty."""
+    aligned = pd.concat([asset_ret - rf, bench_excess], axis=1, join="inner").dropna()
+    pre = aligned[aligned.index < event]
+    return float(np.cov(pre.iloc[:, 0], pre.iloc[:, 1], ddof=1)[0, 1] / np.var(pre.iloc[:, 1], ddof=1))
+
+
+def capm_adjusted_returns(rets: pd.DataFrame, rf: pd.Series, bench_excess: pd.Series,
+                          tickers: list[str], event: pd.Timestamp) -> tuple[pd.DataFrame, dict[str, float]]:
+    """Beta-adjusted excess returns: (r_i-r_f) - beta_pre*(r_SPY-r_f).
+
+    To nie jest pelny market model z estymowanym interceptem alpha.
+    """
+    cols = {}
+    betas = {}
+    for t in tickers:
+        beta = beta_pre_event(rets[t], bench_excess, rf, event)
+        betas[t] = beta
+        aligned = pd.concat([rets[t] - rf, bench_excess], axis=1, join="inner").dropna()
+        cols[t] = aligned.iloc[:, 0] - beta * aligned.iloc[:, 1]
+    return pd.DataFrame(cols).dropna(how="all"), betas
+
+
+def capm_primary_summary(rets: pd.DataFrame, rf: pd.Series, bench_excess: pd.Series,
+                         tickers: list[str], event: pd.Timestamp, label: str):
+    capm_df, betas = capm_adjusted_returns(rets, rf, bench_excess, tickers, event)
+    pair = per_stock_paired(capm_df, event, PRIMARY_WINDOW)
+    summary = paired_summary(pair["diff_B_minus_A"].dropna().values)
+    summary["analysis"] = label
+    summary["event_date"] = event.date()
+    summary["window_sessions"] = PRIMARY_WINDOW
+    summary["beta_mean_pre"] = float(np.mean(list(betas.values())))
+    summary["beta_min_pre"] = float(np.min(list(betas.values())))
+    summary["beta_max_pre"] = float(np.max(list(betas.values())))
+    return summary, pair
+
+
 def main():
     prices = load_prices()
     meta = load_metadata()
     rets = log_returns(prices)
+    rf = daily_rf(prices).reindex(rets.index).ffill()
     bench = rets[BENCHMARK]
+    bench_excess = bench - rf
     ai_tickers = group_tickers(meta, "AI_infra") + group_tickers(meta, "AI_platforms")
     print(f"Liczba spolek w grupie AI (infra + platforms): {len(ai_tickers)}")
 
-    ar = pd.DataFrame({t: abnormal_returns(rets[t], bench) for t in ai_tickers}).dropna(how="all")
-    print(f"Zakres dat AR: {ar.index.min().date()} -> {ar.index.max().date()}, n={len(ar)} sesji")
+    spread = pd.DataFrame({t: abnormal_returns(rets[t], bench) for t in ai_tickers}).dropna(how="all")
+    print(f"Zakres dat spreadow vs SPY: {spread.index.min().date()} -> {spread.index.max().date()}, n={len(spread)} sesji")
 
     print(f"\n========== EVENT: rozpoczecie boomu AI ({EVENT_DATE.date()}) ==========")
-    event_summary, event_pairs = run_sensitivity(ar, EVENT_DATE, WINDOWS, label="event")
+    event_summary, event_pairs = run_sensitivity(spread, EVENT_DATE, WINDOWS, label="event_spread")
 
     print(f"\n========== PLACEBO: data o rok wczesniej ({PLACEBO_DATE.date()}) ==========")
-    placebo_summary, placebo_pairs = run_sensitivity(ar, PLACEBO_DATE, WINDOWS, label="placebo")
+    placebo_summary, placebo_pairs = run_sensitivity(spread, PLACEBO_DATE, WINDOWS, label="placebo_spread")
+
+    print(f"\n========== CAPM-ADJUSTED CHECK (okno {PRIMARY_WINDOW}) ==========")
+    capm_event, capm_event_pair = capm_primary_summary(
+        rets, rf, bench_excess, ai_tickers, EVENT_DATE, "event_capm")
+    capm_placebo, capm_placebo_pair = capm_primary_summary(
+        rets, rf, bench_excess, ai_tickers, PLACEBO_DATE, "placebo_capm")
+    for s in (capm_event, capm_placebo):
+        print(f"  [{s['analysis']}] beta_pre_mean={s['beta_mean_pre']:.3f}  "
+              f"mean_d={s['mean_diff']:+.5f}  95% CI=[{s['ci_low']:+.5f}; {s['ci_high']:+.5f}]  "
+              f"d_z={s['cohen_dz']:+.3f}  p={s['main_p_value']:.4f} ({s['main_test']})")
 
     full = pd.concat([event_summary, placebo_summary], ignore_index=True)
     full.to_csv(CACHE / "task3_sensitivity.csv", index=False)
+    pd.DataFrame([capm_event, capm_placebo]).to_csv(CACHE / "task3_capm_robustness.csv", index=False)
     event_pairs[PRIMARY_WINDOW].to_csv(CACHE / f"task3_pairs_w{PRIMARY_WINDOW}.csv", index=False)
+    capm_event_pair.to_csv(CACHE / f"task3_capm_event_pairs_w{PRIMARY_WINDOW}.csv", index=False)
+    capm_placebo_pair.to_csv(CACHE / f"task3_capm_placebo_pairs_w{PRIMARY_WINDOW}.csv", index=False)
 
     primary = event_summary[event_summary["window_sessions"] == PRIMARY_WINDOW].iloc[0]
     print(f"\n[GLOWNY WYNIK - okno {PRIMARY_WINDOW} sesji wokol 2022-11-30]")
@@ -121,7 +176,7 @@ def main():
               "shapiro_p", "t_p_value", "wilcoxon_p_value", "main_test", "main_p_value"):
         print(f"  {k}: {primary[k]}")
     decyzja = "ODRZUCONA" if primary['main_p_value'] < ALPHA else "NIE odrzucona"
-    print(f"  H0 (brak roznicy AR przed/po) {decyzja} przy alfa={ALPHA}")
+    print(f"  H0 (brak roznicy spreadow vs SPY przed/po) {decyzja} przy alfa={ALPHA}")
 
     setup_style()
     fig, axes = plt.subplots(1, 2, figsize=(13, 4.6))
@@ -132,7 +187,7 @@ def main():
     axes[0].axvline(0, color="black", linestyle="--", linewidth=1.0)
     axes[0].axvline(diffs.mean(), color="navy", linewidth=1.4,
                     label=f"srednia = {diffs.mean():+.4f}")
-    axes[0].set_xlabel("Roznica srednich AR (B - A)")
+    axes[0].set_xlabel("Roznica srednich spreadow vs SPY (B - A)")
     axes[0].set_ylabel("Liczba spolek")
     axes[0].set_title(f"Histogram roznic - okno {PRIMARY_WINDOW} sesji")
     axes[0].legend()
@@ -155,7 +210,7 @@ def main():
     axes[1].axhline(0, color="black", linestyle="--", linewidth=0.8)
     axes[1].set_xticks(x); axes[1].set_xticklabels([f"{k}" for k in WINDOWS])
     axes[1].set_xlabel("Dlugosc okna (sesje)")
-    axes[1].set_ylabel("Srednia roznica AR (B - A)")
+    axes[1].set_ylabel("Srednia roznica spreadow vs SPY (B - A)")
     axes[1].set_title("Analiza wrazliwosci + placebo")
     axes[1].legend()
     savefig(fig, "task3_sensitivity_placebo.pdf")

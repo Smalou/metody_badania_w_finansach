@@ -712,8 +712,9 @@ specyfikacja nie pozwala przypisać go jednoznacznie premierze ChatGPT ani
 
 Jako minimalną kontrolę problemu $\beta \neq 1$ przeliczono kluczowe wyniki po
 korekcie CAPM. Dla portfeli i spółek estymowano betę na danych \emph{przed}
-30.11.2022, aby ograniczyć look-ahead bias w samej korekcie. Dzienny komponent
-skorygowany liczono jako:
+analizowaną datą: dla eventu przed 30.11.2022, a dla placebo przed 30.11.2021,
+aby ograniczyć look-ahead bias w samej korekcie. Dzienny komponent skorygowany
+liczono jako:
 \[
   AR^{CAPM}_{t}
   =
@@ -721,20 +722,28 @@ skorygowany liczono jako:
   -
   \hat{\beta}_{pre}\,(r^{SPY}_t - r_{f,t}).
 \]
-Nie jest to pełne event study z oknem estymacyjnym i modelem wieloczynnikowym,
-ale pozwala sprawdzić, czy podstawowe wnioski przetrwają najprostszą korektę
-o ryzyko systematyczne.
+Korekta CAPM zakłada zerową alfę w modelu CAPM; nie jest to pełny market model
+z estymowanym interceptem. Nie jest to także event study z modelem
+wieloczynnikowym, ale pozwala sprawdzić, czy podstawowe wnioski przetrwają
+najprostszą korektę o ryzyko systematyczne.
 
 \begin{center}\small
-\begin{tabular}{lrr}
+\begin{tabular}{llrr}
 \toprule
-Wynik & Spread vs SPY & CAPM-adjusted \\
+Analiza & Metryka & Spread vs SPY & CAPM-adjusted \\
 \midrule
-Zad. 1: różnica średnich & $+3{,}73$ p.p./mies. & $+2{,}23$ p.p./mies. \\
-Zad. 1: $p$-value & $0{,}0079$ & $0{,}0685$ \\
+Zad. 1 & różnica średnich & $+3{,}73$ p.p./mies. & $+2{,}23$ p.p./mies. \\
+Zad. 1 & $p$-value & $0{,}0079$ & $0{,}0685$ \\
 \midrule
-Zad. 3: $\bar d$ ($K=120$) & $+0{,}243$ p.p./dzień & $+0{,}225$ p.p./dzień \\
-Zad. 3: $p$-value & $8{,}4 \cdot 10^{-5}$ & $1{,}6 \cdot 10^{-4}$ \\
+Zad. 3 event $K=120$ & mean$_d$ & $+0{,}243$ p.p./dzień & $+0{,}225$ p.p./dzień \\
+Zad. 3 event $K=120$ & 95\% CI & $[+0{,}123;\ +0{,}363]$ & $[+0{,}107;\ +0{,}342]$ \\
+Zad. 3 event $K=120$ & $d_z$ & $+0{,}921$ & $+0{,}871$ \\
+Zad. 3 event $K=120$ & $p$-value / test & $8{,}4 \cdot 10^{-5}$ / Wilcoxon & $1{,}6 \cdot 10^{-4}$ / Wilcoxon \\
+\midrule
+Zad. 3 placebo $K=120$ & mean$_d$ & $-0{,}260$ p.p./dzień & $-0{,}162$ p.p./dzień \\
+Zad. 3 placebo $K=120$ & 95\% CI & $[-0{,}412;\ -0{,}108]$ & $[-0{,}309;\ -0{,}015]$ \\
+Zad. 3 placebo $K=120$ & $d_z$ & $-0{,}777$ & $-0{,}501$ \\
+Zad. 3 placebo $K=120$ & $p$-value / test & $0{,}0020$ / paired $t$ & $0{,}0327$ / paired $t$ \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -743,8 +752,13 @@ W Zadaniu 1 korekta CAPM istotnie osłabia wynik: różnica pozostaje dodatnia,
 ale przy $\alpha=0{,}05$ nie jest już statystycznie istotna. To potwierdza, że
 część prostego spreadu względem SPY była związana z wysoką betą portfela
 AI infrastructure. W Zadaniu 3 wynik pozostaje dodatni i istotny także po
-korekcie CAPM, ale nadal obowiązują wcześniejsze zastrzeżenia: istotne placebo,
-look-ahead bias w doborze spółek oraz brak modelu wieloczynnikowego.
+korekcie CAPM. Jednocześnie CAPM-adjusted placebo nadal jest istotne
+statystycznie ($p=0{,}0327$), choć słabsze niż placebo na prostym spreadzie.
+Oznacza to, że korekta CAPM nie wystarcza do usunięcia problemu placebo:
+metoda nadal wychwytuje reżimy rynkowe/trendy, więc nie pozwala na mocne
+wnioskowanie przyczynowe. Nadal obowiązują wcześniejsze zastrzeżenia:
+look-ahead bias w doborze spółek, model jednoczynnikowy oraz brak pełnego
+modelu Fama-French / market model z interceptem.
 
 \clearpage
 % =====================================================================
@@ -772,8 +786,10 @@ look-ahead bias w doborze spółek oraz brak modelu wieloczynnikowego.
         w przeciwnym kierunku, co jest sygnałem błędnej specyfikacji, a nie
         argumentem wzmacniającym przyczynowość. CAPM-adjusted robustness
         pozostaje dodatni i istotny ($\bar d \approx +0{,}225$ p.p./dzień,
-        $p \approx 1{,}6 \cdot 10^{-4}$), ale nie usuwa problemu placebo ani
-        doboru próby ex post.
+        $p \approx 1{,}6 \cdot 10^{-4}$), ale CAPM-adjusted placebo również
+        pozostaje istotne ($\bar d \approx -0{,}162$ p.p./dzień,
+        $p \approx 0{,}0327$). Wynik jest spójny z hipotezą, ale jego
+        interpretacja zależy od kontroli placebo i specyfikacji modelu.
 \end{itemize}
 
 \paragraph{Werdykt metodologiczny.}
@@ -789,7 +805,9 @@ look-ahead bias w doborze spółek oraz brak modelu wieloczynnikowego.
         SPY. Ich wyniki są informacyjne, ale metodologicznie słabsze przez
         ukryte założenie $\beta=1$, istotne placebo oraz look-ahead bias.
         Mini-kontrola CAPM pokazuje, że Zad. 1 jest wrażliwe na korektę bety,
-        natomiast Zad. 3 zachowuje dodatni efekt mimo tej korekty.
+        natomiast Zad. 3 zachowuje dodatni efekt mimo tej korekty. Ponieważ
+        CAPM-adjusted placebo także jest istotne, nie traktujemy wyniku jako
+        dowodu przyczynowego wpływu premiery ChatGPT.
   \item Praktyczny take-away dla inwestora jest ostrożny: segment AI
         infrastructure był historycznie bardzo silny, ale przewaga była związana
         z wysoką zmiennością, wysoką betą i dużymi obsunięciami. Sama wielkość
