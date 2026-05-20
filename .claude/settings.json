@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3:*)",
+      "Bash(python3 -m pip install:*)",
+      "Bash(python3 -m venv:*)",
+      "Bash(pip install:*)",
+      "Bash(pdflatex:*)",
+      "Bash(latexmk:*)",
+      "Bash(ls:*)",
+      "Bash(wc:*)",
+      "Bash(mkdir:*)",
+      "WebFetch(domain:query1.finance.yahoo.com)",
+      "WebFetch(domain:query2.finance.yahoo.com)",
+      "WebFetch(domain:fc.yahoo.com)",
+      "Read(./materialy/**)",
+      "Read(./src/**)",
+      "Read(./report/**)",
+      "Read(./figures/**)",
+      "Read(./data_cache/**)",
+      "Write(./src/**)",
+      "Write(./report/**)",
+      "Write(./figures/**)",
+      "Write(./data_cache/**)",
+      "Edit(./src/**)",
+      "Edit(./report/**)"
+    ],
+    "deny": [
+      "Bash(rm -rf:*)",
+      "Bash(git push:*)"
+    ]
+  }
+}

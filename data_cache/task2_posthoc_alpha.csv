@@ -1,0 +1,7 @@
+group1,group2,meandiff,p-adj,lower,upper,reject
+AI_infra,AI_platforms,-0.2261,0.0004,-0.3632,-0.089,True
+AI_infra,Broad_tech,-0.1834,0.0049,-0.3204,-0.0463,True
+AI_infra,Defensive,-0.1079,0.1665,-0.245,0.0292,False
+AI_platforms,Broad_tech,0.0427,0.845,-0.0976,0.183,False
+AI_platforms,Defensive,0.1182,0.1247,-0.0221,0.2585,False
+Broad_tech,Defensive,0.0755,0.4791,-0.0648,0.2158,False

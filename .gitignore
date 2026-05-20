@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+data_cache/*.parquet
+report/*.aux
+report/*.log
+report/*.out
+report/*.toc
+report/*.fls
+report/*.fdb_latexmk
+report/*.synctex.gz
+report/_minted-*/
+.DS_Store

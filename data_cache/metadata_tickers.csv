@@ -1,0 +1,42 @@
+ticker,company_name,group,rationale
+NVDA,NVIDIA Corp.,AI_infra,Lider GPU dla treningu i inferencji LLM; dominujacy beneficjent boomu AI
+AMD,Advanced Micro Devices,AI_infra,Akceleratory MI300/MI325 i CPU EPYC do data center AI
+AVGO,Broadcom Inc.,AI_infra,Custom AI ASIC dla hyperscalerow + sieciowka 800G dla klastrow AI
+TSM,Taiwan Semi (ADR),AI_infra,Foundry produkujace wiekszosc czipow AI swiata
+ASML,ASML Holding (ADR),AI_infra,Monopolista litografii EUV niezbednej dla nodow <=5nm
+AMAT,Applied Materials,AI_infra,Aparatura produkcji polprzewodnikow (deposition/etch)
+LRCX,Lam Research,AI_infra,Etch i deposition; krytyczne narzedzia HBM i logic
+KLAC,KLA Corp.,AI_infra,Metrologia i inspekcja waflow; uniwersalna ekspozycja na AI capex
+MU,Micron Technology,AI_infra,HBM i DDR5 dla akceleratorow GPU/AI
+MRVL,Marvell Technology,AI_infra,Custom AI silicon i DPU/optical interconnect
+SMCI,Super Micro Computer,AI_infra,Serwery AI; bezposrednia korelacja z popytem na GPU
+MSFT,Microsoft Corp.,AI_platforms,Azure OpenAI; Copilot; partner OpenAI
+GOOGL,Alphabet Class A,AI_platforms,Gemini; Google Cloud TPU; AI Mode w Search
+AMZN,Amazon.com,AI_platforms,AWS Bedrock; Trainium/Inferentia; Anthropic partnership
+META,Meta Platforms,AI_platforms,Llama LLM; ogromne inwestycje w klastry H100/H200
+ORCL,Oracle Corp.,AI_platforms,OCI dla treningu AI; partnership z OpenAI (Stargate)
+CRM,Salesforce,AI_platforms,Einstein/Agentforce; AI w CRM enterprise
+NOW,ServiceNow,AI_platforms,AI agents dla enterprise workflow
+ADBE,Adobe Inc.,AI_platforms,Firefly generative AI w Creative Cloud
+IBM,IBM Corp.,AI_platforms,watsonx; hybrid cloud + AI
+SNOW,Snowflake,AI_platforms,Cortex AI/ML na Data Cloud
+AAPL,Apple Inc.,Broad_tech,Apple Intelligence (on-device) ale glownie konsumencki
+CSCO,Cisco Systems,Broad_tech,Networking; ekspozycja na AI capex posrednia
+INTC,Intel Corp.,Broad_tech,Gaudi 3 i foundry; AI ekspozycja trudna i ograniczona
+TXN,Texas Instruments,Broad_tech,Analog/embedded; brak bezposredniej ekspozycji AI
+QCOM,Qualcomm,Broad_tech,Snapdragon + AI on-device (mobile)
+INTU,Intuit,Broad_tech,Finansowy SaaS; AI w produktach (TurboTax)
+ACN,Accenture plc,Broad_tech,IT consulting; beneficjent wdrozen AI w enterprise
+PANW,Palo Alto Networks,Broad_tech,Cybersecurity; AI w detekcji zagrozen
+CDNS,Cadence Design Systems,Broad_tech,EDA tools dla projektowania czipow AI (posrednio)
+ADSK,Autodesk,Broad_tech,CAD/AEC; AI w product design (umiarkowanie)
+KO,The Coca-Cola Company,Defensive,Klasyczna spolka defensywna FMCG; brak ekspozycji AI
+PEP,PepsiCo,Defensive,FMCG; brak ekspozycji AI
+PG,Procter & Gamble,Defensive,FMCG; brak ekspozycji AI
+WMT,Walmart Inc.,Defensive,Retail defensywny; AI w logistyce ale nie material
+JNJ,Johnson & Johnson,Defensive,Healthcare defensywne; brak material AI
+MRK,Merck & Co.,Defensive,Big Pharma; brak material AI
+MCD,McDonald's Corp.,Defensive,Restauracje defensywne; brak ekspozycji AI
+COST,Costco Wholesale,Defensive,Retail; defensywny low-cost
+CL,Colgate-Palmolive,Defensive,FMCG; brak ekspozycji AI
+GIS,General Mills,Defensive,FMCG; brak ekspozycji AI
