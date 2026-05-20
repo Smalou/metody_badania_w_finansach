@@ -1,9 +1,10 @@
-"""Zadanie 1: porownanie srednich miesiecznych abnormal returns dwoch portfeli EW
+"""Zadanie 1: porownanie srednich miesiecznych spreadow vs SPY dwoch portfeli EW
 po rozpoczeciu boomu AI (2022-11-30): AI infrastructure vs Defensive control.
 
 Test glowny: Welch t-test (rownosc srednich, wariancje niekoniecznie rowne).
 Analiza odpornosci: bootstrap 95% CI dla roznicy srednich.
-Test pomocniczy: Mann-Whitney U (roznica w polozeniu rozkladow, NIE w srednich).
+Test pomocniczy: Mann-Whitney U (roznica rang / dominacja stochastyczna,
+NIE test srednich; przy nierownych wariancjach nie interpretowac jako test median).
 Wielkosc efektu: Hedges' g (poprawiona Cohen's d dla malych prob).
 """
 
@@ -104,7 +105,7 @@ def main():
     welch = welch_with_ci(ar_ai_post, ar_def_post)
     for k, v in welch.items():
         print(f"  {k}: {v}")
-    print(f"  H0 (rownosc srednich AR) {'ODRZUCONA' if welch['p_value']<ALPHA else 'NIE odrzucona'}")
+    print(f"  H0 (rownosc srednich spreadow vs SPY) {'ODRZUCONA' if welch['p_value']<ALPHA else 'NIE odrzucona'}")
 
     g = hedges_g(ar_ai_post, ar_def_post)
     print(f"  Hedges g = {g:.4f}")
@@ -114,7 +115,7 @@ def main():
     for k, v in boot.items():
         print(f"  {k}: {v}")
 
-    print("\n--- Test pomocniczy: Mann-Whitney U (roznica w polozeniu, NIE w srednich) ---")
+    print("\n--- Test pomocniczy: Mann-Whitney U (roznica rang / dominacja stochastyczna, NIE w srednich) ---")
     mw_stat, mw_p = st.mannwhitneyu(ar_ai_post, ar_def_post, alternative="two-sided")
     print(f"  U={mw_stat:.2f}, p={mw_p:.4f}")
 
@@ -134,22 +135,22 @@ def main():
     sns.kdeplot(ar_ai_post,  ax=ax1, label="AI infrastructure", color="#1f77b4", fill=True, alpha=0.35)
     sns.kdeplot(ar_def_post, ax=ax1, label="Defensive control", color="#d62728", fill=True, alpha=0.35)
     ax1.axvline(0, color="gray", linewidth=0.6, linestyle="--")
-    ax1.set_xlabel("Miesieczny abnormal return (vs SPY)")
+    ax1.set_xlabel("Miesieczny spread vs SPY")
     ax1.set_ylabel("Gestosc")
-    ax1.set_title("Zad 1 - rozklad miesiecznych AR (po 2022-11-30)")
+    ax1.set_title("Zad 1 - rozklad miesiecznych spreadow vs SPY")
     ax1.legend()
 
     melt = pd.DataFrame({
         "AI infrastructure": ar_ai_post.values,
         "Defensive control": ar_def_post.values,
-    }).melt(var_name="grupa", value_name="AR")
-    sns.boxplot(data=melt, x="grupa", y="AR", hue="grupa",
+    }).melt(var_name="grupa", value_name="spread")
+    sns.boxplot(data=melt, x="grupa", y="spread", hue="grupa",
                 palette={"AI infrastructure": "#1f77b4", "Defensive control": "#d62728"},
                 ax=ax2, legend=False, width=0.5)
-    sns.stripplot(data=melt, x="grupa", y="AR", color="black", size=3.5, alpha=0.5, ax=ax2)
+    sns.stripplot(data=melt, x="grupa", y="spread", color="black", size=3.5, alpha=0.5, ax=ax2)
     ax2.axhline(0, color="gray", linewidth=0.6, linestyle="--")
     ax2.set_xlabel("")
-    ax2.set_ylabel("Miesieczny abnormal return")
+    ax2.set_ylabel("Miesieczny spread vs SPY")
     ax2.set_title("Zad 1 - boxplot porownawczy")
     savefig(fig, "task1_distributions.pdf")
 

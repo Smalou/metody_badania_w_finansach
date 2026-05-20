@@ -1,5 +1,5 @@
-"""Wykresy zaawansowane: cumulative AR per grupa, forest plot, heatmapa korelacji,
-event window CAR wokol 2022-11-30, rolling vol per grupa."""
+"""Wykresy zaawansowane: cumulative spread vs SPY per grupa, forest plot,
+heatmapa korelacji, event window spread wokol 2022-11-30, rolling vol per grupa."""
 
 from pathlib import Path
 import numpy as np
@@ -39,8 +39,8 @@ def plot_cumulative_AR(prices, meta):
                label=f"event {EVENT_DATE.date()}")
     ax.axhline(0, color="gray", linewidth=0.5)
     ax.set_xlabel("Data")
-    ax.set_ylabel("Skumulowany abnormal return (log) vs SPY")
-    ax.set_title("Cumulative Abnormal Returns per grupa (portfel EW, vs SPY)")
+    ax.set_ylabel("Skumulowany spread log-zwrotow vs SPY")
+    ax.set_title("Cumulative spread vs SPY per grupa (portfel EW)")
     ax.legend(loc="upper left", framealpha=0.95)
     ax.xaxis.set_major_locator(mdates.YearLocator())
     ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y"))
@@ -104,7 +104,7 @@ def plot_forest(prices, meta):
 
 
 def plot_event_window_CAR(prices, meta, days_around=120):
-    """Skumulowany abnormal return od T-days do T+days dla portfeli per grupa."""
+    """Skumulowany spread vs SPY od T-days do T+days dla portfeli per grupa."""
     rets = log_returns(prices)
     bench = rets[BENCHMARK]
     setup_style()
@@ -124,8 +124,8 @@ def plot_event_window_CAR(prices, meta, days_around=120):
     ax.axvline(0, color="black", linestyle="--", linewidth=1.0, label=f"event {EVENT_DATE.date()}")
     ax.axhline(0, color="gray", linewidth=0.5)
     ax.set_xlabel("Dni sesyjne wzgledem zdarzenia (T-0 = 2022-11-30)")
-    ax.set_ylabel("CAR per grupa (re-bazowane na T-0)")
-    ax.set_title(f"Event-window CAR (+/- {days_around} sesji wokol premiery ChatGPT)")
+    ax.set_ylabel("Skumulowany spread vs SPY (re-bazowany na T-0)")
+    ax.set_title(f"Event-window spread vs SPY (+/- {days_around} sesji)")
     ax.legend(loc="upper left", framealpha=0.95)
     savefig(fig, "extra_event_window_CAR.pdf")
 

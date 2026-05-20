@@ -23,7 +23,7 @@
   colorlinks=true,
   linkcolor=blue!60!black,
   urlcolor=blue!60!black,
-  pdftitle={AI Boom Premium},
+  pdftitle={AI Boom Premium? Test empiryczny i ograniczenia metodologiczne},
   pdfauthor={Roksana Kulawiec, Sylwia Malinowska, Mateusz Konopka, Antoni Grabowski}
 }
 
@@ -81,10 +81,10 @@
   showstringspaces=false,
 }
 
-\title{\textbf{AI Boom Premium} \\[2pt]
+\title{\textbf{AI Boom Premium?} \\[2pt]
        \large Czy spółki silnie powiązane z infrastrukturą AI osiągnęły wyższe
-       średnie zwroty i lepszy profil ryzyko--zwrot po rozpoczęciu boomu
-       generatywnej AI? \\[6pt]
+       zwroty po rozpoczęciu boomu generatywnej AI --- i ile z tego może
+       wynikać z ryzyka rynkowego? \\[6pt]
        \normalsize \emph{Projekt zaliczeniowy IAD --- Metody Badań w Finansach,
        ćwiczenia 3}}
 \author{%
@@ -106,10 +106,13 @@ w powyższym repozytorium.}
 
 \infobox{Streszczenie dla czytelnika}{
 Raport sprawdza, czy po premierze ChatGPT spółki infrastruktury AI osiągały
-wyższe zwroty ponad benchmark SPY i lepszy profil ryzyko--zwrot niż grupy
-kontrolne. Wszystkie trzy zadania wskazują na przewagę segmentu
-\textbf{AI infrastructure}, ale wyniki są historyczne, ex post i nie stanowią
-prognozy przyszłych stóp zwrotu.}
+wyższe zwroty niż grupy kontrolne. Wyniki wskazują silną przewagę segmentu
+\textbf{AI infrastructure} w analizowanym okresie, jednak pogłębiona diagnostyka
+metodologiczna pokazuje, że proste spready względem SPY nie kontrolują różnic
+w becie, test placebo w Zadaniu 3 ujawnia misspecification, a dobór spółek ma
+charakter ex post. Najmocniejszym elementem raportu pozostaje porównanie metryk
+ryzyko--zwrot i CAPM alpha w Zadaniu 2; Zadania 1 i 3 traktujemy jako opisowe,
+a nie przyczynowe.}
 
 \tableofcontents
 \clearpage
@@ -126,22 +129,32 @@ różnice w średnich zwrotach oraz profilu ryzyko--zwrot między spółkami o r
 stopniu ekspozycji na sztuczną inteligencję. Analiza ma charakter statystyczny
 i porównawczy; nie jest dowodem przyczynowym w ścisłym sensie ekonometrycznym.
 
-\paragraph{Główna teza.} \emph{Spółki silnie powiązane z infrastrukturą AI
-(producenci półprzewodników i sprzętu) osiągnęły po 30.11.2022 istotnie wyższe
-średnie zwroty względem benchmarku rynkowego (SPY) oraz lepszy profil
-ryzyko--zwrot niż grupy kontrolne (Defensive, Broad Tech, AI Platforms).}
+\paragraph{Hipoteza badawcza.} \emph{Spółki silnie powiązane z infrastrukturą AI
+(producenci półprzewodników i sprzętu) osiągnęły po 30.11.2022 wyższe średnie
+zwroty i/lub lepszy profil ryzyko--zwrot niż grupy kontrolne (Defensive, Broad
+Tech, AI Platforms).} Hipotezę tę traktujemy jako przedmiot testu, a nie tezę
+do udowodnienia.
+
+\cautionbox{Najważniejsze ograniczenie metodologiczne dotyczy definicji spreadów
+w Zadaniach 1 i 3. Użyty spread względem SPY zakłada implicite $\beta = 1$.
+Tymczasem estymowane bety dziennych portfeli EW są bardzo różne: po evencie
+AI infrastructure ma $\beta \approx 1{,}98$, a Defensive tylko
+$\beta \approx 0{,}24$. Oznacza to, że część przewagi AI infrastructure może
+być premią za wysokie ryzyko systematyczne, a nie czystą premią związaną z AI.}
 
 \paragraph{Trzy zadania spójne tematycznie.}
 \begin{itemize}
-  \item \textbf{Zadanie 1} --- porównanie średnich miesięcznych \emph{abnormal
-        returns} (AR względem SPY) portfela AI infrastructure i portfela
-        Defensive control \emph{po} rozpoczęciu boomu (próby niezależne).
+  \item \textbf{Zadanie 1} --- porównanie średnich miesięcznych zwrotów
+        względem SPY portfela AI infrastructure i portfela Defensive control
+        \emph{po} rozpoczęciu boomu (próby niezależne). To test opisowy,
+        nie pełne CAPM event study.
   \item \textbf{Zadanie 2} --- porównanie średnich metryk efektywności
         ryzyko--zwrot (\emph{Sharpe Ratio} jako zmienna główna, \emph{CAPM alpha}
         jako uzupełnienie) między czterema grupami spółek.
   \item \textbf{Zadanie 3} --- A/B testing na próbach zależnych: średnie dzienne
-        AR tej samej spółki w oknie przed (wariant A) i po (wariant B) 30.11.2022,
-        z analizą wrażliwości na długość okna i \emph{placebo test}.
+        zwroty względem SPY tej samej spółki w oknie przed (wariant A) i po
+        (wariant B) 30.11.2022, z analizą wrażliwości i testem placebo. Wynik
+        placebo traktujemy jako ostrzeżenie o misspecification.
 \end{itemize}
 
 \paragraph{Dane.} Źródło: Yahoo Finance przez bibliotekę \texttt{yfinance}.
@@ -163,10 +176,10 @@ Okres: 04.01.2021--14.05.2026 (1347 dni sesyjnych). Ceny skorygowane
         CL, GIS.
 \end{itemize}
 
-\paragraph{Kontekst graficzny --- skumulowane abnormal returns per grupa.}
-Poniższy wykres przedstawia skumulowany dzienny abnormal return portfela
-równoważonego (EW) każdej grupy względem SPY. Pionowa linia oznacza moment
-zdarzenia 30.11.2022.
+\paragraph{Kontekst graficzny --- skumulowane zwroty względem SPY per grupa.}
+Poniższy wykres przedstawia skumulowany dzienny spread portfela równoważonego
+(EW) każdej grupy względem SPY. Pionowa linia oznacza moment zdarzenia
+30.11.2022.
 
 \begin{center}
 \includegraphics[width=\textwidth]{../figures/extra_cumulative_AR.pdf}
@@ -174,16 +187,17 @@ zdarzenia 30.11.2022.
 
 Widoczne jest wyraźne rozejście trajektorii AI infrastructure od pozostałych grup
 po listopadzie 2022. Wykres pełni jednak wyłącznie funkcję diagnostyczną i
-opisową; formalne wnioski oparto na testach statystycznych, wielkościach efektu
-i analizach odporności przedstawionych w trzech zadaniach poniżej.
+opisową. Nie rozstrzyga, czy przewaga wynika z ekspozycji na AI, z wysokiej
+bety względem rynku, czy z innych czynników wspólnych dla spółek technologicznych.
 
-\cautionbox{Wykres skumulowanych AR pomaga zrozumieć kontekst, ale nie zastępuje
-testów statystycznych. Formalne decyzje w raporcie opierają się na testach,
-przedziałach ufności i wielkościach efektu.}
+\cautionbox{Wykres skumulowanych spreadów względem SPY pomaga zrozumieć kontekst, ale nie zastępuje
+testów statystycznych. Dodatkowo jest liczony względem SPY bez korekty o
+indywidualną betę, dlatego nie powinien być czytany jako pełny abnormal return
+w sensie CAPM.}
 
 \clearpage
 % =====================================================================
-\section{Zadanie 1 --- AI infrastructure vs Defensive: miesięczne abnormal returns}
+\section{Zadanie 1 --- AI infrastructure vs Defensive: miesięczne zwroty względem SPY}
 
 \subsection{Opis zmiennych}
 Dla każdej grupy zbudowano portfel równoważony (EW). Dzienna stopa zwrotu
@@ -195,25 +209,42 @@ gdzie $r_{i,t}$ to dzienna log-stopa zwrotu spółki $i$. Następnie:
 \begin{itemize}
   \item agregacja miesięczna: $r^{\text{port}}_m = \sum_{t \in m} r^{\text{port}}_t$
         (suma log-zwrotów, ekwiwalentnie miesięczny log-zwrot);
-  \item \emph{abnormal return}: $AR^{\text{port}}_m = r^{\text{port}}_m - r^{\text{SPY}}_m$;
+  \item spread względem SPY:
+        $S^{\text{port}}_m = r^{\text{port}}_m - r^{\text{SPY}}_m$.
+        W kodzie część zmiennych i plików ma historyczną nazwę z wcześniejszej
+        wersji projektu, ale w interpretacji finansowej traktujemy tę zmienną
+        jako \emph{spread vs SPY}, nie jako pełny abnormal return z modelu CAPM;
   \item filtracja czasowa: tylko obserwacje \emph{po} 30.11.2022.
 \end{itemize}
 
 Porównywane zmienne (próby niezależne, $n_1 = n_2 = 42$ miesiące):
 \begin{itemize}
-  \item $X$: miesięczne AR portfela \textbf{AI infrastructure} (11 spółek),
-  \item $Y$: miesięczne AR portfela \textbf{Defensive control} (10 spółek).
+  \item $X$: miesięczny spread vs SPY portfela \textbf{AI infrastructure}
+        (11 spółek),
+  \item $Y$: miesięczny spread vs SPY portfela \textbf{Defensive control}
+        (10 spółek).
 \end{itemize}
 Ostatni miesiąc w próbie (maj 2026) jest miesiącem częściowym ze względu na datę
 pobrania danych. W głównym wyniku zachowano go dla zgodności z cache danych;
 w praktycznej analizie inwestycyjnej warto dodatkowo sprawdzić wariant z jego
 wykluczeniem.
 
+\paragraph{Ograniczenie specyfikacji.}
+Definicja $S^{\text{port}}_m = r^{\text{port}}_m - r^{\text{SPY}}_m$ jest
+prosta i czytelna, ale narzuca ukryte założenie $\beta = 1$ względem rynku.
+To założenie jest mało realistyczne dla porównywanych portfeli: dzienna beta
+EW portfela AI infrastructure po 30.11.2022 wynosi ok. $1{,}98$, a portfela
+Defensive ok. $0{,}24$. W silnej hossie technologicznej wysoka beta może
+mechanicznie generować przewagę nad SPY. Wynik Zadania 1 należy więc traktować
+jako test różnicy prostych zwrotów względem benchmarku, a nie jako dowód
+czystej alfy AI.
+
 \subsection{Hipotezy badawcze}
 \begin{itemize}
-  \item $H_0$: średnie miesięczne AR obu portfeli są równe,
-        $\mu_{AR,\text{AI}} = \mu_{AR,\text{Def}}$.
-  \item $H_1$: średnie różnią się, $\mu_{AR,\text{AI}} \neq \mu_{AR,\text{Def}}$.
+  \item $H_0$: średnie miesięczne spready vs SPY obu portfeli są równe,
+        $\mu_{\text{spread},\text{AI}} = \mu_{\text{spread},\text{Def}}$.
+  \item $H_1$: średnie różnią się,
+        $\mu_{\text{spread},\text{AI}} \neq \mu_{\text{spread},\text{Def}}$.
 \end{itemize}
 
 \subsection{Procedura statystyczna}
@@ -226,8 +257,9 @@ wykluczeniem.
         95\% przedziału ufności różnicy średnich.
   \item Wielkość efektu: \emph{Hedges' g} (poprawiona Cohen's $d$ dla małych
         prób).
-  \item \textbf{Test pomocniczy}: Mann-Whitney U --- różnica w położeniu rozkładów
-        (\emph{nie} test średnich, dla kompletności).
+  \item \textbf{Test pomocniczy}: Mann-Whitney U. Przy nierównych wariancjach
+        nie interpretujemy go jako czystego testu median; traktujemy go jako
+        test różnic w rangach / stochastycznej dominacji.
 \end{enumerate}
 
 \subsection{Kod źródłowy (fragment)}
@@ -238,7 +270,7 @@ wykluczeniem.
 \begin{center}\small
 \begin{tabular}{lrrr}
 \toprule
-Portfel & $n$ & średnia $AR_m$ & odch. std. \\
+Portfel & $n$ & średni spread vs SPY & odch. std. \\
 \midrule
 AI infrastructure & 42 & $\phantom{-}0{,}02638$ & $0{,}07774$ \\
 Defensive control & 42 & $-0{,}01089$ & $0{,}04133$ \\
@@ -271,15 +303,15 @@ Hedges' $g$ & $+0{,}593$ & umiarkowany efekt \\
 \midrule
 95\% CI bootstrap (B~=~10\,000) & $[+0{,}01199;\ +0{,}06365]$ & spójne z Welch \\
 \midrule
-Mann-Whitney $U$ (\emph{pomocniczy}) & $1122{,}0$ & różnica w położeniu rozkładów \\
+Mann-Whitney $U$ (\emph{pomocniczy}) & $1122{,}0$ & różnica rang / dominacja stochastyczna \\
 $p$-value (M-W) & $0{,}0321$ & spójne z $H_1$ \\
 \bottomrule
 \end{tabular}
 \end{center}
 
 \resultbox{Portfel AI infrastructure miał średnio o $+3{,}73$ p.p. miesięcznie
-wyższy abnormal return niż portfel Defensive, a 95\% przedziały ufności nie
-obejmują zera.}
+wyższy zwrot względem SPY niż portfel Defensive, a 95\% przedziały ufności nie
+obejmują zera. Nie jest to jednak wynik skorygowany o różnice w becie.}
 
 \paragraph{Wykres rozkładów.}
 \begin{center}
@@ -288,25 +320,27 @@ obejmują zera.}
 
 \subsection{Interpretacja}
 \begin{itemize}
-  \item \textbf{Zmienna}: miesięczny abnormal return portfela EW vs SPY,
+  \item \textbf{Zmienna}: miesięczny zwrot portfela EW względem SPY,
         $n = 42$ miesięcy (12.2022--05.2026).
   \item \textbf{Test zastosowany}: Welch t-test (główny) + bootstrap (odporność)
-        + Mann-Whitney U (pomocniczy).
+        + Mann-Whitney U (pomocniczy; przy nierównych wariancjach nie jako
+        prosty test median).
   \item \textbf{Wynik}: $p = 0{,}0079$; $\bar X - \bar Y = +3{,}73$ p.p.
         miesięcznie; 95\% CI Welch $[+1{,}01;\ +6{,}44]$ p.p.; Hedges' $g = 0{,}59$.
         Bootstrap CI praktycznie pokrywa się z Welch.
   \item \textbf{Decyzja statystyczna}: odrzucamy $H_0$ przy $\alpha = 0{,}05$.
   \item \textbf{Interpretacja ekonomiczna}: w okresie 42 miesięcy po premierze
         ChatGPT portfel AI infrastructure dostarczył średnio ok. 3{,}7 p.p.
-        \emph{na miesiąc} wyższego abnormal returnu względem SPY niż portfel
-        defensywny. Wynik jest spójny z hipotezą \emph{AI Boom Premium},
-        choć wyższa zmienność portfela AI ($\sigma = 7{,}8\%$) wskazuje, że
-        premia ta wiąże się z istotnie większym ryzykiem (do oceny w Zadaniu 2).
+        \emph{na miesiąc} wyższego zwrotu względem SPY niż portfel defensywny.
+        Wynik jest spójny z obserwacją silnej przewagi segmentu infrastruktury
+        AI, ale nie pozwala samodzielnie oddzielić efektu AI od premii za
+        wysoką betę i wyższe ryzyko systematyczne.
 \end{itemize}
 
-\cautionbox{Wynik z Zadania 1 pokazuje istotną różnicę średnich AR, ale portfel
-AI infrastructure miał też wyraźnie wyższą zmienność. Dlatego sama premia zwrotu
-nie wystarcza do decyzji inwestycyjnej bez oceny ryzyka.}
+\cautionbox{Wynik z Zadania 1 pokazuje istotną różnicę średnich spreadów względem
+SPY, ale nie kontroluje ryzyka systematycznego. Dlatego wniosek powinien brzmieć:
+,,AI infrastructure pobiło SPY i Defensive w prostym porównaniu'', a nie:
+,,AI infrastructure wygenerowało czystą alfę związaną wyłącznie z AI''.}
 
 \clearpage
 % =====================================================================
@@ -332,17 +366,22 @@ kontroli ryzyka systematycznego'' i najbliższego pojęciu \emph{AI Premium}.
 
 \paragraph{Statystyki opisowe (średnie metryk per grupa).}
 \begin{center}\small
-\begin{tabular}{lrrrrrr}
+\begin{tabular}{lrrrrrrr}
 \toprule
-Grupa & Ann.~ret & Ann.~vol & Sharpe & Sortino & Max DD & alpha \\
+Grupa & Ann.~ret & Ann.~vol & Sharpe & Sortino & Max DD & beta & alpha \\
 \midrule
-AI infrastructure & $0{,}362$ & $0{,}501$ & $\mathbf{0{,}674}$ & $0{,}684$ & $-0{,}584$ & $\mathbf{+0{,}119}$ \\
-AI platforms      & $0{,}072$ & $0{,}374$ & $0{,}154$ & $0{,}159$ & $-0{,}567$ & $-0{,}107$ \\
-Broad tech        & $0{,}111$ & $0{,}349$ & $0{,}228$ & $0{,}228$ & $-0{,}452$ & $-0{,}064$ \\
-Defensive         & $0{,}082$ & $0{,}192$ & $0{,}250$ & $0{,}244$ & $-0{,}297$ & $+0{,}011$ \\
+AI infrastructure & $0{,}362$ & $0{,}501$ & $\mathbf{0{,}674}$ & $0{,}684$ & $-0{,}584$ & $1{,}854$ & $\mathbf{+0{,}119}$ \\
+AI platforms      & $0{,}072$ & $0{,}374$ & $0{,}154$ & $0{,}159$ & $-0{,}567$ & $1{,}296$ & $-0{,}107$ \\
+Broad tech        & $0{,}111$ & $0{,}349$ & $0{,}228$ & $0{,}228$ & $-0{,}452$ & $1{,}262$ & $-0{,}064$ \\
+Defensive         & $0{,}082$ & $0{,}192$ & $0{,}250$ & $0{,}244$ & $-0{,}297$ & $0{,}336$ & $+0{,}011$ \\
 \bottomrule
 \end{tabular}
 \end{center}
+
+Tabela pokazuje jednocześnie, dlaczego interpretacja Zadania 1 wymaga ostrożności:
+AI infrastructure ma znacznie wyższą średnią betę niż grupa Defensive, więc
+część przewagi w prostym spreadzie względem SPY jest naturalną konsekwencją
+wyższej ekspozycji na rynek.
 
 \subsection{Hipotezy badawcze}
 \begin{itemize}
@@ -364,7 +403,14 @@ Defensive         & $0{,}082$ & $0{,}192$ & $0{,}250$ & $0{,}244$ & $-0{,}297$ &
                 (Bonferroni).
         \end{itemize}
   \item Wielkość efektu: $\eta^2$ i $\omega^2$ (mniej obciążone dla małych prób).
+  \item Ze względu na małe liczebności grup ($n=10$--$11$) raportujemy także
+        kontrolę odporności: Kruskal-Wallis + Dunn (Bonferroni).
 \end{enumerate}
+
+\cautionbox{Przy $n \approx 10$ test Shapiro-Wilka ma niską moc. Brak odrzucenia
+normalności nie jest silnym dowodem normalności rozkładów metryk finansowych.
+Dlatego wyniki ANOVA traktujemy jako główne zgodnie z drzewem decyzyjnym, ale
+weryfikujemy je nieparametrycznie.}
 
 \subsection{Kod źródłowy (fragment)}
 \lstinputlisting[style=py, firstline=23, lastline=86]{../src_ascii/task2_four_groups.py}
@@ -379,7 +425,8 @@ Levene: $\text{stat} = 1{,}25;\ p = 0{,}299$ --- wariancje jednorodne. Decyzja:
 \paragraph{ANOVA jednoczynnikowa.}
 $F(3,\ 37) = 4{,}956;\quad p = 0{,}00543;\quad \eta^2 = 0{,}287;\ \omega^2 = 0{,}225$.
 Odrzucamy $H_0$. Wartość $\omega^2 \approx 0{,}22$ wskazuje na duży efekt
-(konwencja Cohena: $\omega^2 \geq 0{,}14$ duży).
+(próg $0{,}14$ pochodzi z konwencji Cohena dla $\eta^2$; $\omega^2$ traktujemy
+tu jako mniej obciążony estymator tej samej populacyjnej wielkości efektu).
 
 \paragraph{Tukey HSD (FWER $= 0{,}05$).} Różnica oznacza średnią grupy 1 minus średnią grupy 2.
 \begin{center}\small
@@ -447,13 +494,43 @@ premia AI nie jest równomiernie rozłożona między wszystkie spółki technolo
 \includegraphics[width=0.85\textwidth]{../figures/extra_forest_diff.pdf}
 \end{center}
 
+\subsection{Kontrola odporności --- Kruskal-Wallis + Dunn}
+
+Ze względu na małe próby w grupach ($n=10$--$11$) dodatkowo sprawdzono
+nieparametryczny odpowiednik analizy wariancji. Wyniki są spójne z ANOVA:
+
+\begin{center}\small
+\begin{tabular}{lrrl}
+\toprule
+Zmienna & Kruskal $H$ & $p$-value & Wniosek \\
+\midrule
+Sharpe Ratio & $12{,}880$ & $0{,}0049$ & różnice między grupami istotne \\
+CAPM alpha   & $13{,}971$ & $0{,}0029$ & różnice między grupami istotne \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Test Dunna z korektą Bonferroniego lokalizuje różnice podobnie jak Tukey:
+dla Sharpe istotne są pary AI infrastructure vs AI platforms ($p=0{,}0104$),
+AI infrastructure vs Broad tech ($p=0{,}0317$) oraz AI infrastructure vs
+Defensive ($p=0{,}0424$). Dla CAPM alpha istotne są AI infrastructure vs
+AI platforms ($p=0{,}0036$) oraz AI infrastructure vs Broad tech ($p=0{,}0202$),
+natomiast różnica AI infrastructure vs Defensive pozostaje nieistotna
+($p=0{,}3445$).
+
+\resultbox{Nieparametryczna kontrola odporności potwierdza główną strukturę
+wniosków z ANOVA. Zadanie 2 jest więc silniejsze metodologicznie niż Zadania
+1 i 3, ponieważ łączy ocenę relacji zysku do zmienności przez Sharpe Ratio
+z kontrolą ryzyka systematycznego przez CAPM alpha.}
+
 \subsection{Interpretacja}
 \begin{itemize}
   \item \textbf{Zmienna}: Sharpe Ratio (główna) oraz CAPM alpha (uzupełniająca)
         liczone per spółka na dziennych log-zwrotach 2021--2026; $n = 41$
         spółek w 4 grupach.
   \item \textbf{Test zastosowany}: ANOVA + Tukey HSD (oba przypadki: założenia
-        spełnione).
+        spełnione według testów formalnych) oraz kontrola nieparametryczna
+        Kruskal-Wallis + Dunn.
   \item \textbf{Wynik (Sharpe)}: $F(3,37) = 4{,}96;\ p = 0{,}005;\ \omega^2 = 0{,}23$.
         Tukey lokalizuje różnice: AI infrastructure ma istotnie wyższy średni
         Sharpe Ratio niż każda z pozostałych grup; pozostałe trzy grupy nie
@@ -491,20 +568,28 @@ Zdarzenie: \textbf{publiczna premiera ChatGPT, 30.11.2022} --- przyjęta jako da
 rozpoczęcia masowej fazy boomu generatywnej AI. Próba: 21 spółek z połączonej
 grupy ,,AI'' = AI infrastructure $\cup$ AI platforms (11 + 10 = 21 spółek).
 
-Dla każdej spółki $i$ liczymy dwie wartości:
+Dla każdej spółki $i$ liczymy dwie wartości prostego zwrotu względem SPY:
 \begin{itemize}
-  \item \textbf{Wariant A}: $\bar{AR}_i^{(A)}$ --- średni dzienny abnormal return
-        (vs SPY) w oknie $K$ sesji \emph{przed} 30.11.2022,
-  \item \textbf{Wariant B}: $\bar{AR}_i^{(B)}$ --- średni dzienny abnormal return
+  \item \textbf{Wariant A}: $\bar S_i^{(A)}$ --- średni dzienny spread względem
+        SPY w oknie $K$ sesji \emph{przed} 30.11.2022,
+  \item \textbf{Wariant B}: $\bar S_i^{(B)}$ --- średni dzienny spread względem SPY
         w oknie $K$ sesji \emph{po} 30.11.2022.
 \end{itemize}
 Jednostką pary jest \emph{ta sama spółka}. Próby są więc zależne (paired).
-Statystyka testowa: $d_i = \bar{AR}_i^{(B)} - \bar{AR}_i^{(A)}$.
+Statystyka testowa: $d_i = \bar S_i^{(B)} - \bar S_i^{(A)}$.
+
+\paragraph{Ograniczenie doboru próby.}
+Grupa zdarzeniowa została zdefiniowana z perspektywy projektu przygotowanego
+po boomie AI. Oznacza to ryzyko \emph{look-ahead bias}: w zestawie znajdują się
+spółki rozpoznane już ex post jako beneficjenci trendu AI (np. infrastruktura
+GPU i serwerów). Test przed--po dla tak dobranej grupy może zawyżać efekt
+zdarzenia, bo analizuje częściowo historycznych zwycięzców, a nie portfel
+skonstruowany wyłącznie na podstawie informacji dostępnych 30.11.2022.
 
 \subsection{Hipotezy badawcze}
 \begin{itemize}
-  \item $H_0$: $\mu_d = 0$ --- średnia różnica AR między wariantem B i A wynosi
-        zero.
+  \item $H_0$: $\mu_d = 0$ --- średnia różnica spreadów względem SPY między
+        wariantem B i A wynosi zero.
   \item $H_1$: $\mu_d \neq 0$.
 \end{itemize}
 
@@ -519,9 +604,10 @@ Statystyka testowa: $d_i = \bar{AR}_i^{(B)} - \bar{AR}_i^{(A)}$.
   \item \textbf{Analiza wrażliwości} na długość okna: $K \in \{30, 60, 120, 250\}$
         sesji. Okno bazowe: $K = 120$ (~6 miesięcy ekspozycji \emph{ex post}).
   \item \textbf{Placebo test}: cała procedura powtórzona dla daty 30.11.2021
-        (rok przed boomem AI). Jeżeli wynik dla eventu nie pojawia się
-        ,,przypadkowo'', placebo nie powinien dawać analogicznie istotnego
-        efektu \emph{w tym samym kierunku}.
+        (rok przed boomem AI). W dobrze wyspecyfikowanym modelu placebo powinno
+        być nieistotne. Istotny wynik placebo interpretujemy jako ostrzeżenie,
+        że prosty spread względem SPY nie usuwa trendów i różnic w ryzyku
+        systematycznym.
 \end{enumerate}
 
 \subsection{Kod źródłowy (fragment)}
@@ -544,9 +630,9 @@ jako wspierający.
 \]
 Oba testy zgodnie odrzucają $H_0$.
 
-\resultbox{W oknie bazowym 120 sesji średnia różnica po--przed jest dodatnia
-i istotna statystycznie. Efekt pojawia się mocno dopiero w dłuższych oknach,
-co jest spójne z narastającą wyceną tematu AI po premierze ChatGPT.}
+\resultbox{W oknie bazowym 120 sesji różnica po--przed jest dodatnia i istotna,
+ale istotny test placebo oznacza, że model referencyjny jest zbyt prosty.
+Wynik Zadania 3 jest sygnałem opisowym, nie mocnym dowodem event-study.}
 
 \paragraph{Pełna analiza wrażliwości + placebo.}
 \begin{center}\small
@@ -574,87 +660,140 @@ placebo & 250 & $-0{,}00156$ & $[-0{,}00248;\ -0{,}00064]$ & $-0{,}77$ & $0{,}00
 \includegraphics[width=\textwidth]{../figures/task3_sensitivity_placebo.pdf}
 \end{center}
 
-\paragraph{Event-window CAR --- portfele EW per grupa wokół 30.11.2022.}
+\paragraph{Event-window spread vs SPY --- portfele EW per grupa wokół 30.11.2022.}
 \begin{center}
 \includegraphics[width=\textwidth]{../figures/extra_event_window_CAR.pdf}
 \end{center}
 
 \subsection{Interpretacja}
 \begin{itemize}
-  \item \textbf{Zmienna}: $d_i = \bar{AR}_i^{(B)} - \bar{AR}_i^{(A)}$ dla
-        $n = 21$ spółek z grupy AI; $\bar{AR}$ to średni dzienny abnormal return
-        (vs SPY) w oknie $K$ sesji.
+  \item \textbf{Zmienna}: $d_i = \bar S_i^{(B)} - \bar S_i^{(A)}$ dla
+        $n = 21$ spółek z grupy AI; $\bar S$ to średni dzienny spread względem
+        SPY w oknie $K$ sesji.
   \item \textbf{Test zastosowany}: Wilcoxon signed-rank (główny, bo Shapiro
         odrzucił normalność dla okna 120) + paired $t$-test (wspierający).
   \item \textbf{Wynik (okno bazowe $K = 120$)}: $\bar d = +0{,}243$ p.p.
         \emph{dziennie}; 95\% CI $[+0{,}123;\ +0{,}363]$ p.p.; $d_z = +0{,}92$
         (duży efekt); Wilcoxon $p = 8{,}4 \cdot 10^{-5}$.
   \item \textbf{Decyzja statystyczna}: odrzucamy $H_0$ z wysokim marginesem dla
-        okien 120 i 250 sesji. Dla okna 60 efekt graniczny ($p = 0{,}076$),
-        dla okna 30 nieistotny. Jest to spójne z interpretacją, że rynek nie
-        wycenił całej premii AI natychmiast, lecz w kolejnych miesiącach po
-        zdarzeniu.
+        okien 120 i 250 sesji. Brak istotności dla okna 30 sesji i istotność
+        dla dłuższych okien sugerują, że dodatni efekt w danych rozwijał się
+        stopniowo, ale przy obecnej specyfikacji nie można rozstrzygnąć, czy
+        wynikał z samego zdarzenia, zmiany reżimu rynkowego, czy innych czynników
+        technologicznych.
   \item \textbf{Placebo}: dla 30.11.2021 efekt jest \emph{ujemny i istotny}
-        we wszystkich oknach. Kierunek przeciwny do eventu rzeczywistego
-        wzmacnia interpretację czasowego związku z 30.11.2022 i ogranicza
-        ryzyko, że dodatni wynik jest prostym artefaktem wybranej metody
-        przed--po. Nie jest to jednak samodzielny dowód przyczynowości.
+        we wszystkich oknach. Nie wzmacnia to interpretacji przyczynowej.
+        Przeciwnie: falsyfikuje prostą specyfikację spreadów względem SPY i pokazuje,
+        że metoda przed--po wychwytuje także silne trendy rynkowe, np. spadki
+        technologii w okresie 2021/2022.
   \item \textbf{Interpretacja ekonomiczna}: po publicznej premierze ChatGPT
         spółki z grupy AI generowały średnio o ok. 0{,}24 p.p. \emph{dziennie}
-        wyższy abnormal return niż w analogicznym oknie przed premierą. Prosta
+        wyższy spread względem SPY niż w analogicznym oknie przed premierą. Prosta
         annualizacja tej średniej ($0{,}243\% \times 252$) daje ok. 61 p.p.
-        rocznie, dlatego wynik należy traktować jako bardzo duży efekt
-        historyczny, a nie jako prognozę przyszłych stóp zwrotu. Dla okna
-        120 sesji liniowa kumulacja odpowiada ok. 29 p.p. przewagi abnormal
-        returnu.
+        rocznie. Ponieważ operujemy na log-zwrotach, taka liniowa agregacja jest
+        matematycznie spójna jako przybliżenie addytywne. Nie należy jej jednak
+        czytać jako prognozy ani jako oczekiwanej rocznej stopy zwrotu; to
+        historyczny, lokalny efekt w bardzo specyficznym oknie.
 \end{itemize}
 
 \paragraph{Ograniczenia.}
 Analiza ma charakter \emph{uproszczonego testu A/B przed--po}: nie modeluje
-oczekiwanego abnormal returnu względem modelu czynnikowego (Fama-French
-3/5 czynników); raportujemy AR jedynie względem SPY. Wybór grupy zdarzeniowej
-(infra + platforms) jest definicyjny --- nie jest to próba losowa.
+oczekiwanego abnormal returnu względem CAPM ani modelu czynnikowego
+(Fama-French 3/5 czynników); raportujemy jedynie spready względem SPY. Istotny wynik
+placebo oraz dobór grupy zdarzeniowej ex post istotnie ograniczają siłę
+wnioskowania.
 
-\cautionbox{Test A/B przed--po jest czytelny i intuicyjny, ale nie kontroluje
-pełnego zestawu czynników rynkowych. Wynik należy traktować jako mocny sygnał
-historyczny, a nie jako dowód przyczynowości ani prognozę przyszłych zwrotów.}
+\cautionbox{Po uwzględnieniu testu placebo wniosek z Zadania 3 musi być
+sceptyczny: dodatni efekt po 30.11.2022 istnieje w danych, ale prosta
+specyfikacja nie pozwala przypisać go jednoznacznie premierze ChatGPT ani
+,,czystej'' premii AI.}
+
+\subsection{Dodatkowa kontrola odporności --- CAPM-adjusted returns}
+
+Jako minimalną kontrolę problemu $\beta \neq 1$ przeliczono kluczowe wyniki po
+korekcie CAPM. Dla portfeli i spółek estymowano betę na danych \emph{przed}
+30.11.2022, aby ograniczyć look-ahead bias w samej korekcie. Dzienny komponent
+skorygowany liczono jako:
+\[
+  AR^{CAPM}_{t}
+  =
+  (r_t - r_{f,t})
+  -
+  \hat{\beta}_{pre}\,(r^{SPY}_t - r_{f,t}).
+\]
+Nie jest to pełne event study z oknem estymacyjnym i modelem wieloczynnikowym,
+ale pozwala sprawdzić, czy podstawowe wnioski przetrwają najprostszą korektę
+o ryzyko systematyczne.
+
+\begin{center}\small
+\begin{tabular}{lrr}
+\toprule
+Wynik & Spread vs SPY & CAPM-adjusted \\
+\midrule
+Zad. 1: różnica średnich & $+3{,}73$ p.p./mies. & $+2{,}23$ p.p./mies. \\
+Zad. 1: $p$-value & $0{,}0079$ & $0{,}0685$ \\
+\midrule
+Zad. 3: $\bar d$ ($K=120$) & $+0{,}243$ p.p./dzień & $+0{,}225$ p.p./dzień \\
+Zad. 3: $p$-value & $8{,}4 \cdot 10^{-5}$ & $1{,}6 \cdot 10^{-4}$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+W Zadaniu 1 korekta CAPM istotnie osłabia wynik: różnica pozostaje dodatnia,
+ale przy $\alpha=0{,}05$ nie jest już statystycznie istotna. To potwierdza, że
+część prostego spreadu względem SPY była związana z wysoką betą portfela
+AI infrastructure. W Zadaniu 3 wynik pozostaje dodatni i istotny także po
+korekcie CAPM, ale nadal obowiązują wcześniejsze zastrzeżenia: istotne placebo,
+look-ahead bias w doborze spółek oraz brak modelu wieloczynnikowego.
 
 \clearpage
 % =====================================================================
 \section*{Wnioski końcowe i decyzja inwestora}
 
-\paragraph{Wnioski statystyczne.}
+\paragraph{Wnioski statystyczne po korekcie metodologicznej.}
 \begin{itemize}
   \item \textbf{Zad 1.} Welch t-test odrzuca $H_0$ ($p = 0{,}0079$,
         Hedges' $g = 0{,}59$): portfel AI infrastructure ma istotnie wyższą
-        średnią miesięczną nadwyżkę względem SPY niż portfel Defensive
-        po 30.11.2022 (+3{,}7 p.p./miesiąc).
+        średnią miesięczną nadwyżkę względem SPY niż portfel Defensive po
+        30.11.2022 (+3{,}7 p.p./miesiąc). Jest to jednak wynik obciążony
+        różnicą bet: AI infrastructure ma dużo wyższą ekspozycję rynkową niż
+        Defensive. Po korekcie CAPM różnica spada do +2{,}23 p.p./miesiąc
+        i nie jest już istotna na poziomie 5\% ($p=0{,}0685$).
   \item \textbf{Zad 2.} ANOVA odrzuca $H_0$ dla obu zmiennych: Sharpe
         ($F = 4{,}96;\ p = 0{,}005;\ \omega^2 = 0{,}23$) i CAPM $\alpha$
         ($F = 7{,}62;\ p = 4 \cdot 10^{-4};\ \omega^2 = 0{,}33$). Dla Sharpe
         Tukey wskazuje istotną przewagę AI infrastructure nad wszystkimi
         pozostałymi grupami; dla CAPM $\alpha$ przewaga AI infrastructure jest
         istotna względem AI platforms i Broad tech, ale nie względem Defensive.
+        Kontrola Kruskal-Wallis + Dunn potwierdza ten układ wyników.
   \item \textbf{Zad 3.} Wilcoxon ($K = 120$): $p = 8{,}4 \cdot 10^{-5}$;
         $\bar d = +0{,}24$ p.p./dzień; 95\% CI $[+0{,}12;\ +0{,}36]$ p.p.;
-        $d_z = +0{,}92$. Placebo test daje efekt w kierunku przeciwnym, co
-        wzmacnia interpretację czasowego związku wyniku z datą zdarzenia, ale
-        nie stanowi samodzielnego dowodu przyczynowości.
+        $d_z = +0{,}92$. Jednocześnie placebo test jest istotny statystycznie
+        w przeciwnym kierunku, co jest sygnałem błędnej specyfikacji, a nie
+        argumentem wzmacniającym przyczynowość. CAPM-adjusted robustness
+        pozostaje dodatni i istotny ($\bar d \approx +0{,}225$ p.p./dzień,
+        $p \approx 1{,}6 \cdot 10^{-4}$), ale nie usuwa problemu placebo ani
+        doboru próby ex post.
 \end{itemize}
 
-\paragraph{Decyzja inwestora --- praktyczny take-away.}
+\paragraph{Werdykt metodologiczny.}
 \begin{itemize}
-  \item Trzy niezależne testy zgodnie wspierają tezę \emph{AI Boom Premium} ---
-        ale przede wszystkim w segmencie infrastruktury (półprzewodniki, sprzęt),
-        nie w platformach chmurowych.
-  \item Premium wiąże się z istotnie wyższym ryzykiem: portfel AI infrastructure
-        miał volatility 50\% rocznie (vs 19\% Defensive) i max drawdown $-58\%$.
-        Inwestor awersyjny wobec ryzyka powinien stosować mniejszą wagę
-        w portfelu niż sugerowałaby sama wielkość średniej nadwyżki.
-  \item Wyniki są \emph{ex post} i odzwierciedlają konkretny okres 2021--2026.
-        Standardowe ostrzeżenie: ,,past performance is not indicative of future
-        results''. Czy premia utrzyma się po fazie szczytowej AI capex ---
-        pozostaje otwartą kwestią.
+  \item Raport pokazuje silną historyczną przewagę spółek infrastruktury AI,
+        ale nie dowodzi jednoznacznie istnienia czystej \emph{AI Boom Premium}
+        po kontroli wszystkich czynników ryzyka.
+  \item Najbardziej wiarygodna część badania to Zadanie 2, ponieważ łączy
+        ocenę relacji zysku do zmienności przez Sharpe Ratio z kontrolą ryzyka
+        systematycznego przez CAPM $\alpha$ oraz przechodzi dodatkową kontrolę
+        nieparametryczną.
+  \item Zadania 1 i 3 należy traktować jako analizę opisową spreadów względem
+        SPY. Ich wyniki są informacyjne, ale metodologicznie słabsze przez
+        ukryte założenie $\beta=1$, istotne placebo oraz look-ahead bias.
+        Mini-kontrola CAPM pokazuje, że Zad. 1 jest wrażliwe na korektę bety,
+        natomiast Zad. 3 zachowuje dodatni efekt mimo tej korekty.
+  \item Praktyczny take-away dla inwestora jest ostrożny: segment AI
+        infrastructure był historycznie bardzo silny, ale przewaga była związana
+        z wysoką zmiennością, wysoką betą i dużymi obsunięciami. Sama wielkość
+        zwrotu nie uzasadnia dużej alokacji bez kontroli ryzyka.
 \end{itemize}
 
 % =====================================================================
@@ -681,7 +820,7 @@ należy utrwalać automatycznie w pliku \texttt{requirements.txt} lub przez
   \item \texttt{src/plots\_extra.py} --- wykresy zaawansowane.
 \end{enumerate}
 Moduły wspólne: \texttt{src/common.py} (wczytywanie, log returns, portfele EW,
-abnormal returns, RF), \texttt{src/metrics.py} (7 metryk per spółka),
+spready względem SPY, RF), \texttt{src/metrics.py} (7 metryk per spółka),
 \texttt{src/plot\_utils.py} (style i zapis wykresów).
 
 \paragraph{Ziarno losowe.} Bootstrap w Zad. 1 używa \texttt{numpy.random.default\_rng(seed=42)}
@@ -698,12 +837,27 @@ i $B = 10\,000$ powtórzeń. Pozostałe analizy są deterministyczne.
   \item \textbf{Selection bias / próby celowe}. Wszystkie cztery grupy spółek
         dobrane są ręcznie na bazie eksperckiej oceny ekspozycji na AI --- nie
         są losowymi próbami z populacji. Wnioski dotyczą tej konkretnej próby.
+  \item \textbf{Look-ahead bias}. Skład grup, szczególnie AI infrastructure
+        i grupa eventowa w Zadaniu 3, powstał z perspektywy 2026 roku. Oznacza
+        to ryzyko, że do analizy trafiły spółki rozpoznane ex post jako
+        zwycięzcy boomu AI.
   \item \textbf{Niejednorodność wewnątrzgrupowa}. Grupy Broad tech i Defensive
         zawierają spółki o zróżnicowanych modelach biznesowych, co zwiększa
         wewnętrzną wariancję metryk.
-  \item \textbf{Single-factor benchmark}. Abnormal returns liczone są jako
-        prosty spread względem SPY. Nie kontrolujemy ekspozycji na czynniki
-        Fama-French (HML, SMB, momentum) ani na czynniki sektorowe.
+  \item \textbf{Założenie $\beta=1$ w Zad. 1 i 3}. Zwroty względne liczone są
+        jako prosty spread względem SPY. To jest równoważne założeniu, że beta
+        portfela względem rynku wynosi 1. W danych beta AI infrastructure jest
+        dużo wyższa niż beta Defensive, więc część wyniku może być premią za
+        ryzyko systematyczne.
+  \item \textbf{Single-factor benchmark}. Nie kontrolujemy ekspozycji na czynniki
+        Fama-French (HML, SMB, momentum), czynniki sektorowe ani model oczekiwanego
+        zwrotu estymowany w oknie przed zdarzeniem.
+  \item \textbf{Istotny test placebo}. Placebo 30.11.2021 daje istotne wyniki,
+        co wskazuje, że prosta metoda przed--po nie usuwa trendów rynkowych.
+        To osłabia interpretację przyczynową Zadania 3.
+  \item \textbf{Małe próby w Zad. 2}. Grupy mają tylko 10--11 obserwacji.
+        Testy normalności mają niską moc, dlatego wyniki ANOVA uzupełniono
+        kontrolą nieparametryczną Kruskal-Wallis + Dunn.
   \item \textbf{Definicja zdarzenia}. Premiera ChatGPT (30.11.2022) jest
         symbolicznym punktem startu boomu AI, ale realna fala kapitałowa
         następowała stopniowo przez kolejne 6--12 miesięcy. Stąd wrażliwość
