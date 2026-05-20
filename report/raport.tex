@@ -727,25 +727,26 @@ z estymowanym interceptem. Nie jest to także event study z modelem
 wieloczynnikowym, ale pozwala sprawdzić, czy podstawowe wnioski przetrwają
 najprostszą korektę o ryzyko systematyczne.
 
-\begin{center}\small
-\begin{tabular}{llrr}
+\begin{center}
+\scriptsize
+\begin{tabularx}{\textwidth}{l l >{\raggedleft\arraybackslash}X >{\raggedleft\arraybackslash}X}
 \toprule
 Analiza & Metryka & Spread vs SPY & CAPM-adjusted \\
 \midrule
 Zad. 1 & różnica średnich & $+3{,}73$ p.p./mies. & $+2{,}23$ p.p./mies. \\
 Zad. 1 & $p$-value & $0{,}0079$ & $0{,}0685$ \\
 \midrule
-Zad. 3 event $K=120$ & mean$_d$ & $+0{,}243$ p.p./dzień & $+0{,}225$ p.p./dzień \\
+Zad. 3 event $K=120$ & $\bar d$ & $+0{,}243$ p.p./dzień & $+0{,}225$ p.p./dzień \\
 Zad. 3 event $K=120$ & 95\% CI & $[+0{,}123;\ +0{,}363]$ & $[+0{,}107;\ +0{,}342]$ \\
 Zad. 3 event $K=120$ & $d_z$ & $+0{,}921$ & $+0{,}871$ \\
 Zad. 3 event $K=120$ & $p$-value / test & $8{,}4 \cdot 10^{-5}$ / Wilcoxon & $1{,}6 \cdot 10^{-4}$ / Wilcoxon \\
 \midrule
-Zad. 3 placebo $K=120$ & mean$_d$ & $-0{,}260$ p.p./dzień & $-0{,}162$ p.p./dzień \\
+Zad. 3 placebo $K=120$ & $\bar d$ & $-0{,}260$ p.p./dzień & $-0{,}162$ p.p./dzień \\
 Zad. 3 placebo $K=120$ & 95\% CI & $[-0{,}412;\ -0{,}108]$ & $[-0{,}309;\ -0{,}015]$ \\
 Zad. 3 placebo $K=120$ & $d_z$ & $-0{,}777$ & $-0{,}501$ \\
 Zad. 3 placebo $K=120$ & $p$-value / test & $0{,}0020$ / paired $t$ & $0{,}0327$ / paired $t$ \\
 \bottomrule
-\end{tabular}
+\end{tabularx}
 \end{center}
 
 W Zadaniu 1 korekta CAPM istotnie osłabia wynik: różnica pozostaje dodatnia,
@@ -818,8 +819,8 @@ modelu Fama-French / market model z interceptem.
 \section*{Reproducibility note}
 
 \paragraph{Środowisko.} Analizy wykonano w Pythonie. Dokładne wersje bibliotek
-należy utrwalać automatycznie w pliku \texttt{requirements.txt} lub przez
-\texttt{pip freeze}, zamiast przepisywać je ręcznie do raportu. Kluczowe pakiety:
+zostały utrwalone w pliku \texttt{requirements.txt} oraz przez środowisko
+repozytorium. Kluczowe pakiety:
 \texttt{pandas}, \texttt{numpy}, \texttt{scipy}, \texttt{statsmodels},
 \texttt{scikit-posthocs}, \texttt{matplotlib}, \texttt{seaborn},
 \texttt{yfinance}, \texttt{pyarrow}.
