@@ -1,0 +1,104 @@
+As the foundation for how we deliver our enterprise-wide digital workflows, the Now Platform integrates with our customers’ cloud platforms and systems of choice, allowing our customers to deliver workflows across their current and future preferred systems of record and collaboration platforms. The automation of workflows on our platform is enhanced by additional services we offer, such as artificial intelligence (“AI”), machine learning, robotic process automation, performance analytics, electronic service catalogs and portals, configuration management systems, data benchmarking, encryption and collaboration and low-code/no-code development tools. While every company has a different suite of user interfaces from web-based to mobile to conversation applications, the Now Platform creates a common user experience for customers to manage workflows across all interfaces.
+
+---
+
+The purchase price was preliminarily allocated based on the estimated fair value of developed technology intangible asset of
+$
+85
+million
+(
+five-year
+estimated useful life), customer related and brand assets of
+$
+11
+million
+, net tangible assets of $
+8
+million, deferred tax liabilities of
+$
+6
+million
+and goodwill of
+$
+million
+, which is not deductible for income tax purposes. On January 8, 2021, we acquired all outstanding stock of Element AI Inc., a leading enterprise artificial intelligence (“AI”) solution provider, for
+$
+million
+in an all-cash transaction. The purchase price was allocated based on the estimated fair value of developed technology intangible asset of
+$
+85
+million
+(
+five-year
+estimated useful life), net tangible assets of
+$
+16
+million
+, and goodwill of
+$
+81
+million
+, which is partially deductible for income tax purposes.
+
+---
+
+IT Service Management
+As our flagship product suite, ITSM defines, structures, consolidates, manages and automates the IT services that an enterprise offers its employees, customers and partners. Among ITSM’s capabilities are AI, machine learning, predictive intelligence, Virtual Agent, recording incidents, remediating problems, automating routine tasks and requests, performance analytics and continual improvement management capabilities. IT Business Management
+Our IT Business Management product suite enables customers to manage their IT priorities, including the scope and cost of IT projects, the development of software related to those projects and the overall management of the customer’s IT project portfolio.
+
+---
+
+The pace of innovation will continue to accelerate as customers increasingly base their purchases on digital technologies and shift to modern cloud-based infrastructure and agile ways of working. As digital transformation accelerates across the enterprise, capabilities such as AI, machine learning, hyper automation, low-code/no-code application development, system observability, database scalability, consumer-grade user experiences, collaboration, Internet-connected devices, security, cryptography, internal software development operations, and application and service awareness become increasingly relevant to customers’ evolving needs. Our customers and prospective customers are either facing competing imperatives to adopt digital technologies, or are built on fully digital, modern, dynamic IT technologies.
+
+---
+
+On February 7, 2020, we acquired Rupert Labs, Inc. d/b/a Passage AI for $
+33
+million in an all-cash transaction to advance our deep learning of conversational AI capabilities. The purchase price was allocated based on the estimated fair value to developed technology intangible assets of $
+22
+million, deferred tax liabilities of $
+5
+million and $
+15
+million of goodwill.
+
+---
+
+We believe a better service experience is the ultimate desired outcome of digital transformation. The Now Platform is uniquely positioned to enable our customers’ digital transformation from non-integrated enterprise technology solutions with manual and disconnected processes and activities, to integrated enterprise technology solutions with automation and connected processes and activities. The transformation to digital operations, enabled by the Now Platform, increases our customers’ resiliency and security and delivers great experiences and additional value to their employees and consumers.
+
+---
+
+Each year, two platform upgrades are released, each with new standard functionality and new standalone products to further simplify the way our customers work and enhance productivity. 2
+Table of Contents
+The Now Platform
+The Now Platform is a single-cloud platform with one data model and one architecture, enabling speed, flexibility and innovation that offers a one-stop shop for automation and simplification of manual processes. It is highly flexible, scalable, and extensible.
+
+---
+
+Customer Workflows
+Customer workflows help drive customer loyalty with connected digital workflows that deliver modern customer experiences. Customer workflows help customers elevate their customer service with enhanced resolution efficiency and improved service quality made possible with workflows, automation, and location-based work tasks management. Customer service departments no longer have to rely on reactive agents searching multiple systems to find a single answer to customer issues.
+
+---
+
+As organizations digitally transform, they need to pivot faster with new processes and business models. This requires faster, more agile execution with more automation delivered through software applications. With Creator Workflows, citizen developers have access to pre-built templates, low-code tools and modular building blocks created by professional developers and the user experience is further enhanced when such apps are used on the same platform they were built.
+
+---
+
+App Engine
+Our App Engine product empowers enterprise-class low code application delivery with intuitive and intelligent experiences, at speed and scale. With App Engine, customers and third-party developers can extend workflow automation by creating, testing and deploying their own consumer-grade applications that can be scaled from a single department to the entire enterprise. Examples of applications our customers have developed include: an application developed by a company with a large network of seasonal retail stores and offices to track progress and identify issues in opening and closing their seasonal locations, which enabled significant cost savings; an application developed by the IT office of a university that allocated and billed costs associated with IT maintenance, allowing the university to retire multiple legacy software systems; and an application developed by a mortgage company to ensure that loan files were complete and accurate prior to packaging and selling the loans to investors.
+
+---
+
+Using emerging technologies, we can anticipate customer demands and then bring new services and new versions of existing services to market quickly in order to remain competitive in the marketplace. We have made, and will continue to make, significant investments in research and development to broaden our platform capabilities, strengthen our existing applications, expand the number of applications on our platform, enhance our user experience and develop additional mobile, automation and machine intelligence technologies. Acquisitions and Investments
+In addition to our own research and development investments, we have made strategic acquisitions and investments and will continue to assess opportunities to complement our technology and skill sets and expand our product reach.
+
+---
+
+The products under each of our workflows are helping customers connect work across systems and silos to enable great experiences for people. The Now Platform is uniquely positioned to enable our customers’ digital transformation from non-integrated enterprise technology solutions with manual and disconnected processes and activities, to integrated enterprise technology solutions with automation and connected processes and activities. The transformation to digital operations, enabled by the Now Platform, increases our customers’ resiliency and security and delivers great experiences and additional value to their employees and consumers.
+
+---
+
+The products under each of our workflows help customers connect work across systems and silos to enable great experiences for people. The Now Platform is uniquely positioned to enable our customers’ digital transformation from non-integrated enterprise technology solutions with manual and disconnected processes and activities, to integrated enterprise technology solutions with automation and connected processes and activities which increases our customers’ resiliency and security and delivers additional value to their employees and consumers. (2)
+Summary of Significant Accounting Policies
+Principles of Consolidation
+The accompanying consolidated financial statements have been prepared in conformity with U.S.

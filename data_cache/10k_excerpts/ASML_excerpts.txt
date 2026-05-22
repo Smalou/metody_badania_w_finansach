@@ -1,0 +1,252 @@
+And not to forget our shareholders, who provide us with the backing to keep executing our technology innovation roadmap, and finally, our partnerships with the communities around us, without whom we would not thrive. Global megatrends are driving growth in the semiconductor industry
+There are several megatrends in the electronics industry that are shaping our digital, connected world and are expected to continue to fuel growth across the semiconductor market, such as artificial intelligence, 5G, virtual reality, gaming, simulation and visualization applications, and the intelligent cloud and edge. With a growing number of mobile and sensor-enabled applications and services, our society will rely more and more heavily on distributed computing and storage solutions.
+
+---
+
+At ASML, we believe that the microchip industry is in a unique position to help tackle these challenges. From artificial intelligence (AI) to a vast internet of things (IoT), microchips are at the heart of modern technology. So whether it’s transitioning to sustainable energy, improving global health, increasing the safety and efficiency of transport, tackling pollution, bridging the digital divide, or feeding eight billion people without exhausting the earth’s resources, our vision is that we will enable the groundbreaking technology that will help solve some of humanity’s toughest challenges.
+
+---
+
+Over the past 40 years, we have gradually evolved from the era of PCs and mobile devices into the cloud era, where almost every aspect of our lives is now stored and managed online. The next step of our digital future will be about distributed intelligence, driven by the seamless integration of communication, computation and artificial intelligence (AI). All these trends require more computing power, which in turn is accelerating the demand for more powerful and energy-efficient microchips.
+
+---
+
+Both Logic and Memory chips can vary greatly in complexity and capability. For example, the most advanced chips are powering leading-edge technology in artificial intelligence (AI), big data and automotive technology, while the simpler, low-cost chips are integrating sensing capabilities in everyday technology to create a vast IoT. The chip market (worldwide semiconductor revenues) has grown by 5% per year in revenue on average over the past 20 years, and is projected to grow even stronger.
+
+---
+
+The era of mobile computing – where you bring the computer with you – is evolving towards immersive ‘ubiquitous computing’, with computing power available wherever you go. The transition to ubiquitous computing is enabled by what has been termed the ‘artificial intelligence of things’ (AIoT). AIoT is a smart and connected network of devices that seamlessly communicate over powerful 5G networks, allowing us to unleash the power of data better and faster than ever.
+
+---
+
+AIoT is a smart and connected network of devices that seamlessly communicate over powerful 5G networks, allowing us to unleash the power of data better and faster than ever. This combination of artificial intelligence (AI) technologies with the internet of things (IoT) infrastructure will achieve more efficient IoT operations, improve human-to-machine interactions, and enhance data management and analytics. The potential of AIoT will gradually open up as AI and IoT increasingly intertwine, facilitated by 5G.
+
+---
+
+Developing our people is crucial to the sustained success of our business, so we invest in their career development and well-being. Societal value
+With our continuous innovations, we enable new technology that supports the growth and transformation of the semiconductor industry, using artificial intelligence to offer new applications and services to address society’s needs. Through our innovation ecosystem we nurture innovation by giving back to society, such as by sharing our expertise with universities and research institutes, supporting young tech companies, and promoting STEM education worldwide.
+
+---
+
+Any additional information in this document which is not referenced in the Form 20-F cross reference table, or the Exhibits themselves, shall not be deemed to be incorporated by reference, shall not be part of the 2021 Annual Report on Form 20-F and is furnished to the Securities and Exchange Commission for information only. ASML ANNUAL REPORT 2021    264
+Name
+Description
+3TG
+Tin, tantalum, tungsten and gold
+A
+ADAS
+Advanced driver-assistance systems
+AFM
+The Dutch Authority for the Financial Markets (Autoriteit Financiële Markten)
+AGM
+Annual general meeting
+AI
+Artificial intelligence
+AIoT
+Artificial intelligence of things
+Annual Report
+Annual Report on Form 20-F
+ARCNL
+Advanced Research Center for Nanolithography
+ArF
+Argon fluoride
+ArFi
+Argon fluoride immersion
+ASC
+Accounting Standards Codification
+ASML
+ASML Holding N.V. and / or any of its subsidiaries and / or any investments in associates
+ASML Foundation
+An independent charity with strong ties to ASML that supports educational initiative for disadvantaged 4-18 year olds in regions where ASML operates.
+
+---
+
+We believe that our EUV 0.33 and 0.55 NA lithography will help enable tomorrow’s most advanced chips. In our computational lithography solutions, we’re bringing machine learning and big data to the forefront in predicting both lithography and metrology processes, striving for 100% accuracy. We have developed an entirely new class of e-beam inspection systems to help our customers control defectivity in manufacturing in next-generation chip nodes, as those smaller structures can hardly be detected with optical inspection.
+
+---
+
+These products are based on accurate computer simulations of the lithography system and process, representing a wide variety of physical and chemical effects. Machine learning techniques are also increasingly used to further speed development. We are continually developing our computational lithography offering to increase the range and accuracy of models and reduce the computational time and cost.
+
+---
+
+NRE
+Non-recurring engineering
+NXE
+The original TWINSCAN system platform for EUV lithography
+NXT
+An enhanced version of the original TWINSCAN system platform offering significantly improved overlay and productivity
+O
+OCI
+Other comprehensive income
+ODM
+Original design manufacturer
+OECD
+Organization for Economic Co-operation and Development
+OEM
+Original equipment manufacturer
+ONE
+ASML’s Our New Enterprise program, which aims to improve our business processes and IT enterprise management system
+Overlay
+The layer-to-layer alignment of chip structures
+P
+Pattern fidelity
+A holistic measure of how well the desired pattern is reproduced on the wafer
+Pattern fidelity control
+A holistic approach to controlling the whole process of manufacturing advanced microchips in high volumes that aims to improve overall yields. It draws data from production equipment and computational lithography tools, analyzing it with techniques such as machine learning to provide real-time feedback. Patterning
+The process of creating a pattern in a surface (to build microchips)
+PGP
+Product generation process
+ASML ANNUAL REPORT 2021    268
+Name
+Description
+PME
+Bedrijfstakpensioenfonds Metalektro
+Preference shares foundation
+Stichting Preferente Aandelen ASML
+Preference share option
+An option to acquire cumulative preference shares in our capital
+Q
+QLTCS
+Quality, logistics, technology, cost and sustainability
+R
+R&D
+Research and development
+RBA
+Responsible Business Alliance
+RC
+ASML’s Remuneration Committee
+REACH
+Registration, evaluation, authorization and restriction of chemicals
+Recoverable amount
+The greater out of an asset’s fair value less costs to sell and its value in use
+Remuneration policy
+The remuneration policy applicable to the Board of Management of ASML Holding N.V.
+
+---
+
+ASML ANNUAL REPORT 2021    18
+Innovation funnel
+Our D&E engineers drive our machines forward by creating new components or subsystems, integrating them into the functional system, or developing new applications to help move the industry forward. In D&E, we work on a multitude of advanced optical and mechatronic modules, along with application software, data science
+and operating systems. D&E innovates with a strong focus on time-to-market, often starting new system development before the previous generation has even reached the customer.
+
+---
+
+To celebrate the TU/e's 65th anniversary and our appreciation for the collaboration, we donated a set of high-tech nanotechnology machines and services for the new institute and for the student labs, with a total value of €3.5 million. ASML ANNUAL REPORT 2021    82
+In 2021, we joined forces with the Jheronimus Academy of Data Science (JADS), based in 's-Hertogenbosch, the Netherlands, to collaborate in the field of data science. Data science is increasingly important for the semiconductor industry as a whole and for ASML technology in particular.
+
+---
+
+Controls are implemented and executed via our SOx and Internal Control Frameworks. Automation is used in various areas to support operational tax processes as well as tax risk management. The Audit Committee of the Supervisory Board (SB) reviews our tax strategy and annually confers with our tax professionals to discuss tax policies and the impact of tax laws and regulations on ASML.
+
+---
+
+The overview below shows an outlook on the current market size and market opportunity for the entire industry based on external research. Market
+Key driver
+2020 market size ($bn)
+2025 market opportunity ($bn)
+2030 estimation
+1
+($bn)
+Outlook CAGR 2020-2025 (%)
+Previous outlook CAGR   2019-2024 (%)
+Smartphone
+Continued refresh of all semiconductor content including image sensors
+%
+%
+Personal computing
+High-end compute and Memory, fast conversion to SSD
+%
+%
+Consumer electronics
+Legacy products and packaged ICs, advanced ICs in add-ons
+48
+74
+98
+%
+%
+Automotive
+Strong IC content growth: GPU, sensors, V2X communication sensing
+39
+82
+%
+%
+Industrial electronics
+High-end compute for AI on big data and sensors
+50
+82
+%
+%
+Wired and wireless infrastructure
+Devices for fast data processing, modem, base-station infrastructure refresh
+38
+53
+63
+%
+%
+Servers, data centers and storage
+High processor and Memory growth, hardware accelerations including GPU
+76
+%
+%
+%
+%
+1. ASML extrapolation of data to 2030 using ’15-’25 Compound Annual Growth Rate (CAGR)
+ASML ANNUAL REPORT 2021    30
+ASML ANNUAL REPORT 2021    31
+Semiconductor industry dynamics
+Several factors are shaping the semiconductor industry landscape.
+
+---
+
+Flash
+A type of non-volatile memory used for storing and transferring information. Foundry
+A contract manufacturer of logic chips
+FTEs
+Full-time equivalents
+FTSE4Good
+Series of ethical investment stock market indices launched in 2001 by the FTSE Group
+G
+GAAP
+Generally accepted accounting principles
+GDPR
+General data protection regulation
+GeSI
+Global e-Sustainability Initiative
+GHG
+Greenhouse gas
+GILTI
+Global intangible low-tax income
+GPU
+Graphics processing unit
+GRI
+Global Reporting Initiative
+GRI standards
+GRI sustainability reporting standards
+H
+H2
+Hydrogen
+HDD
+Hard disk drive
+High-NA
+High numerical aperture – specifically a next-generation EUV lithography platform (EUV 0.55 NA)
+HMI
+The brand name for ASML's range of electron beam (e-beam) wafer inspection and metrology systems
+Holistic lithography
+The ability to optimize the entire microchip manufacturing process and enable affordable scaling in chip technology by integrating lithography systems with computational modeling and wafer metrology solutions (analyzing and controlling the manufacturing process in real time)
+HTSC
+High Tech Systems Center
+I
+IAS
+International Accounting Standards
+IC
+Integrated circuit
+IDM
+Integrated device manufacturer
+IIRC
+International Integrated Reporting Council
+i-line
+Light with a wavelength of 365 nm, generated by mercury vapor lamps and used in some lithography systems
+ILO
+International Labor Organization
+Imaging
+The ability to transfer a pattern to the photoresist on to a wafer using 

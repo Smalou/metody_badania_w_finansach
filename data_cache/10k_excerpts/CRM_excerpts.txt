@@ -1,0 +1,75 @@
+BUSINESS
+Overview
+Salesforce is a global leader in customer relationship management (“CRM”) technology that brings companies and their customers together in the digital age. Founded in 1999, we enable companies of every size and industry to take advantage of powerful technologies, including cloud, mobile, social, blockchain and artificial intelligence, to connect to their customers in a whole new way and help them transform their businesses around the customer in this digital-first world. With our Customer 360 platform, we deliver a single source of truth, connecting customer data across systems, apps and devices to help companies with their digital transformation.
+
+---
+
+If we are unable to develop enhancements to, and new features for, our existing or new services that keep pace with rapid technological developments, our business could be harmed. For example, we may be required to continuously enhance our artificial intelligence offerings to improve the quality of recommendations provided to our customers. The success of enhancements, new features and services depends on several factors, including the timely completion, introduction and market acceptance of the feature, service or enhancement by customers, administrators and developers, as well as our ability to seamlessly integrate all of our product and service offerings and develop adequate selling capabilities in new markets.
+
+---
+
+For example, the development of AI and Customer 360, the latter of which provides information regarding our customers’ customers, presents emerging ethical issues and if we enable or offer solutions that draw controversy due to their perceived or actual impact on human rights, privacy, employment, or in other social contexts, we may experience brand or reputational harm, competitive harm or legal liability. Data practices by us or others that result in controversy could also impair the acceptance of artificial intelligence solutions. This in turn could undermine the decisions, predictions or analysis AI applications produce, subjecting us to competitive harm, legal liability and brand or reputational harm.
+
+---
+
+This impact may be particularly acute in countries that have passed or are considering passing legislation that requires data to remain localized “in country,” as this may impose financial costs on companies required to store data in jurisdictions not of their choosing and to use nonstandard operational processes that add complexity and are difficult and costly to integrate with global processes. This is also true with respect to countries that may be considering legal frameworks on artificial intelligence, which is a trend that may increase now that the European Commission has proposed the first such framework. Any failure or perceived failure by us to comply with such requirements could have an adverse impact on our business.
+
+---
+
+Overview
+We are a global leader in customer relationship management (“CRM”) technology that brings companies and customers together in the digital age. Founded in 1999, we enable companies of every size and industry to take advantage of powerful technologies, including cloud, mobile, social, voice, blockchain and artificial intelligence to connect to their customers in a whole new way and help them transform their businesses around the customer in this digital-first world. With our Customer 360 platform, we deliver a single source of truth, connecting customer data across systems, apps and devices to help companies with their digital transformation.
+
+---
+
+With the Customer 360 platform, the Company delivers a single source of truth, connecting customer data across systems, apps and devices to help companies sell, service, market and conduct commerce from anywhere. Since its founding in 1999, Salesforce has pioneered innovations in cloud, mobile, social, analytics and artificial intelligence (“AI”), enabling companies of every size and industry to transform their businesses in the all-digital, work-from-anywhere era. On July 21, 2021, the Company acquired Slack Technologies, Inc.
+
+---
+
+Competition
+The market for our service offerings is highly competitive, rapidly evolving and fragmented, and subject to changing technology with low barriers to entry, shifting customer needs and frequent introductions of new products and services. Our current competitors include:
+•
+internally developed enterprise applications (by our potential customers’ IT departments);
+•
+vendors of packaged business software, as well as companies offering enterprise apps delivered through on-premises offerings from enterprise software application vendors and cloud computing application service providers, either individually or with others;
+•
+software companies that provide their product or service free of charge as a single product or when bundled with other offerings, or only charge a premium for advanced features and functionality, as well as companies that offer solutions that are sold without a direct sales organization;
+•
+vendors who offer software tailored to specific services, as opposed to our full suite of service offerings;
+•
+suppliers of traditional business intelligence and data preparation products, as well as business analytics software companies;
+•
+integration software vendors and other companies offering integration or API solutions;
+•
+marketing vendors, which may specialize in advertising, targeting, messaging or campaign automation;
+•
+e-commerce solutions from established and emerging cloud-only vendors and established on-premises vendors;
+•
+productivity tool and email providers, unified communications providers and consumer application companies that have entered the business software market; and
+7
+Table of Contents
+•
+traditional platform development environment companies and cloud computing development platform companies who may develop toolsets and products that allow customers to build new apps that run on the customers’ current infrastructure or as hosted services. We believe more companies may become competitive threats due to the accelerated shift to cloud and hosted service offerings and customer experience management solutions.
+
+---
+
+Additionally, third-party developers may be reluctant to build application services on our platform since they have invested in other competing technology platforms. Our current competitors include:
+•
+internally developed enterprise applications by our current and potential customers’ IT departments;
+•
+vendors of packaged business software, as well as companies offering enterprise apps delivered through on-premises offerings from enterprise software application vendors and cloud computing application service providers, either individually or with others;
+•
+software companies that provide their product or service free of charge as a single product or when bundled with other offerings, or only charge a premium for advanced features and functionality, as well as companies that offer solutions that are sold without a direct sales organization;
+•
+vendors who offer software tailored to specific services as opposed to our full suite of service offerings;
+•
+suppliers of traditional business intelligence and data preparation products, as well as business analytics software companies;
+•
+integration software vendors and other companies offering integration or API solutions;
+•
+marketing vendors, which may specialize in advertising, targeting, messaging, or campaign automation;
+•
+e-commerce solutions from established and emerging cloud-only vendors and established on-premises vendors;
+•
+productivity tool and email providers, unified communications providers and consumer application companies that have entered the business software market; and
+•
+traditional platform development environment companies and cloud computing development platform companies who may develop toolsets and products that allow customers to build new apps that run on the customers’ current infrastructure or as hosted services. In addition, we may face more competition as we expand our product offerings.

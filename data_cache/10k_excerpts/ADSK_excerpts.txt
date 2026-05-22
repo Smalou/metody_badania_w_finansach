@@ -1,0 +1,45 @@
+We
+7
+Table of Contents
+completed the migration of our single-user subscriptions from serial numbers in fiscal 2021 and are transitioning multi-user subscriptions to named users through February 2024. We dedicate considerable technical and financial resources to research and development to deliver additional automation and insights to our customers through artificial intelligence, machine learning, and generative design, which increase efficiency and sustainability and reduce waste. These investments further enhance our existing products and create new solutions and technologies which connect the workflows and data of our customers across the ecosystem of their projects and expand our market opportunity.
+
+---
+
+•
+Net revenue, billings, earnings, cash flow, or subscriptions shortfalls or volatility of the market causing the market price of our stock to decline. •
+Social and ethical issues relating to the use of artificial intelligence in our offerings. •
+Security incidents compromising the integrity of our or our customers’ offerings, services, data, or intellectual property.
+
+---
+
+These risks could, among other things, expose our intellectual property to misappropriation and result in disruptions to product delivery schedules. Social and ethical issues relating to the use of artificial intelligence in our offerings may result in reputational harm or liability. Social and ethical issues relating to the use of new and evolving technologies such as artificial intelligence (“AI”) in our offerings, may result in reputational harm and liability, and may cause us to incur additional research and development costs to resolve such issues.
+
+---
+
+For example, the GDPR provides for penalties of up to €20 million or 4% of a company’s annual global revenue, whichever is greater, the PIPL provides for penalties of up to 50 million renminbi or 5% of a company's annual revenue and disgorgement of all illegal gains, whichever is greater, and the CCPA provides for penalties of up to $7,500 per violation. These laws, regulations and codes may also impact our innovation and business drivers in developing new and emerging technologies (e.g., artificial intelligence and machine learning). These requirements, among others, may impact demand for our offerings and force us to bear the burden of expanded obligations in our contracts.
+
+---
+
+Other acquisitions in fiscal 2022 include a cloud-based estimating solution that enables construction teams to create estimates, perform digital takeoffs, generate detailed reports and proposals and manage bid-day processes. In fiscal 2021, we acquired Spacemaker which uses cloud-based, artificial intelligence (AI), and generative design to help architects,
+38
+Table of Contents
+urban designers, and real estate developers make faster and more informed early-stage design decisions which can help maximize the long-term sustainability and return from property investments. Other acquisitions in fiscal 2021 included solutions that use artificial intelligence and machine learning to extract and process data from project plans and specifications allowing general contractors, subcontractors, and owners to automate workflows such as submittals and project closeout.
+
+---
+
+Fiscal 2021 Acquisitions
+Spacemaker AS
+On November 23, 2020, Autodesk acquired Spacemaker AS (“Spacemaker”). Spacemaker is a leading provider of cloud-based artificial intelligence technology and generative design enabling architects, urban designers, and real estate developers to optimize and maximize the potential of a building site, especially during early-stage design. The acquisition-date fair value of the consideration transferred totaled $
+million, which consisted of $
+million of cash and
+147,264
+shares of Autodesk’s common stock at an aggregate fair value of $
+million.
+
+---
+
+Our product development and manufacturing software provides manufacturers in automotive, transportation, industrial machinery, consumer products, and building product industries with comprehensive digital design, engineering, manufacturing, and production solutions. These technologies bring together data from all phases of the product development and production life cycle, creating a digital pipeline that supports greater productivity, accuracy through process automation, and insights that enable more sustainable outcomes. Our digital media and entertainment products provide tools for digital sculpting, modeling, animation, effects, rendering, and compositing for design visualization, visual effects, games production, and enables connection of workflows and data from post-production to pre-production.
+
+---
+
+From greener buildings to smarter products to more mesmerizing blockbusters, Autodesk technology helps our customers to design and make a better world for all. Our strategy is to build enduring relationships with customers, delivering innovative technology that provides valuable automation and insight into their design and make process. To drive execution of our strategy, we are focused on three strategic priorities: delivering on the promise of subscription, digitizing the company, and reimagining construction, manufacturing, and production.

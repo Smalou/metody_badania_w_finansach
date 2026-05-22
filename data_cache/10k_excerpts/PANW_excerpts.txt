@@ -1,0 +1,112 @@
+We empower enterprises, organizations, service providers, and government entities to protect themselves against today’s most sophisticated cyber threats. Our cybersecurity platforms and services help secure enterprise users, networks, clouds, and endpoints by delivering comprehensive cybersecurity backed by industry leading artificial intelligence and automation. We are a leading provider of zero trust solutions, starting with next-generation zero trust network access to secure today’s remote hybrid workforces and extending to securing all users, applications and infrastructure with zero trust principles.
+
+---
+
+Overview
+We empower enterprises, organizations, service providers, and government entities to protect themselves against today’s most sophisticated cyber threats. Our cybersecurity platforms and services help secure enterprise users, networks, clouds, and endpoints by delivering comprehensive cybersecurity backed by industry leading artificial intelligence and automation. We are a leading provider of zero trust solutions that start with the next-generation of zero trust network access to secure remote workforces and extend into securing all users, applications and infrastructure with zero trust principles.
+
+---
+
+(the “Company,” “we,” “us,” or “our”), headquartered in Santa Clara, California, was incorporated in March 2005 under the laws of the State of Delaware and commenced operations in April 2005. We empower enterprises, organizations, service providers, and government entities to secure their users, networks, clouds and endpoints by delivering comprehensive cybersecurity backed by artificial intelligence and automation. Basis of Presentation
+The accompanying consolidated financial statements have been prepared in conformity with U.S.
+
+---
+
+Products
+Firewall Appliances and Software
+. Our ML-Powered Next Generation Firewalls embed machine learning in the core of the firewall and employ inline deep learning in the cloud, empowering our customers to stop zero-day threats in real time, see and secure their entire enterprise including IoT, and reduce errors with automatic policy recommendations. All of our firewall appliances and software incorporate our PAN-OS
+®
+operating system and come with the same rich set of features ensuring consistent operation across our entire product line.
+
+---
+
+WildFire combines dynamic and static analysis, recursive analysis, and a custom-built analysis environment with network traffic profiling and fileless attack detection to discover even the most sophisticated and evasive threats. A machine learning module derived from the cloud sandbox environment is now delivered inline on the ML-Powered Next-Generation Firewalls to identify the majority of unknown threats without cloud connectivity. Once identified, whether in the cloud or inline, preventive measures are automatically generated and delivered in seconds or less across networks, clouds, endpoints, or wherever WildFire-enabled sensors are deployed.
+
+---
+
+It delivers real-time detection and prevention of unknown, evasive, and targeted web-based threats such as phishing, malware, and command-and-control. While many vendors use machine learning to categorize web content or prevent malware downloads, Advanced URL Filtering is the industry’s first inline web protection engine capable of detecting never-before-seen web-based threats and preventing them in real-time. In addition, it includes a cloud-based URL filtering database which consists of millions of URLs across many categories and is designed to analyze web traffic and prevent web-based threats such as phishing, malware, and command-and-control.
+
+---
+
+•
+DNS Security. This cloud-delivered security service uses machine learning to proactively block malicious domains and stops attacks in progress. Unlike other solutions, it does not require endpoint routing configurations to be maintained and therefore cannot be bypassed.
+
+---
+
+Unlike other solutions, it does not require endpoint routing configurations to be maintained and therefore cannot be bypassed. It allows firewalls access to DNS signatures that are generated using advanced predictive analysis, machine learning, and malicious domain data from a growing threat intelligence sharing community of which we are a part. Expanded categorization of DNS traffic and comprehensive analytics allow deep insights into threats, empowering security personnel with the context to optimize their security posture.
+
+---
+
+IoT Security is a cloud-delivered security service on our ML-Powered Next-Generation Firewalls with backward compatibility to older versions of PAN-OS. Using machine learning and our App-ID technology, it can accurately identify and classify various
+IoT and operational technology (“OT”) devices, including never-been-seen-before devices, mission critical OT devices and unmanaged legacy systems. It uses machine learning to baseline normal behavior, identify anomalous activity, assess risk, and provide policy recommendations to allow trusted behavior with a new Device-ID policy construct on our ML-Powered Next-Generation Firewalls.
+
+---
+
+This cloud-delivered security service provides consistent, reliable protection of sensitive data, such as personally identifiable information (“PII”) and intellectual property, for all traffic types, applications, and users. Native integration with our products makes it simple to deploy, and advanced machine learning minimizes management complexity. Enterprise DLP allows organizations to consistently discover, classify, monitor, and protect sensitive data, wherever it may reside.
+
+---
+
+AIOps for NGFW redefines firewall operational experience by empowering security teams to proactively strengthen security posture and resolve firewall disruptions. AIOps for NGFW provides continuous best practice recommendations powered by machine learning (“ML”) based on industry standards, security policy context, and advanced telemetry data collected from all Palo Alto Networks
+®
+firewalls to improve security posture. It also intelligently predicts firewall health, performance, and capacity problems up to seven days in advance and provides actionable insights to resolve the predicted disruptions.
+
+---
+
+It dynamically discovers public cloud resources as they are deployed and correlates cloud data services (resource configurations, flow logs, audit logs, host and container logs, etc.) to provide timely security and compliance insights for cloud applications. The platform uses machine learning to profile user, workload, and application behaviors to identify and prevent advanced threats. For security and development and operations teams, Prisma Cloud removes the impedance mismatch between security and cloud-driven agility by integrating with continuous integration and continuous development (“CI/CD”) tool chains to provide full lifecycle vulnerability management, compliance, infrastructure-as-code scanning, and runtime defense.
+
+---
+
+Prisma SD-WAN leverages real-time application performance SLAs and visibility to control and intelligently steer application traffic to deliver an exceptional user experience. Unlike legacy SD-WAN solutions that introduce cost and complexity, our Prisma SD-WAN ensures an excellent user experience with application-defined policies and simplifies network and security operations using machine learning and automation. -
+Table of Contents
+Security Operations:
+•
+Cortex XDR.
+
+---
+
+-
+Table of Contents
+Security Operations:
+•
+Cortex XDR. This cloud-based subscription enables organizations to collect telemetry from endpoint, network, identity and cloud data sources and apply advanced analytics and machine learning across all data, to quickly find and stop targeted attacks, insider abuse, and compromised endpoints. Cortex XDR has two product tiers: XDR Prevent and XDR Pro.
+
+---
+
+•
+Advanced Threat Prevention
+. This cloud-delivered security service builds on all of the capabilities of Threat Prevention, adding the industry’s first Inline Deep Learning protection engine for Command-and-Control (“C2”). It delivers real-time detection and prevention of unknown, evasive, and targeted C2 communications over HTTP, unknown-TCP, unknown-UDP and encrypted over SSL.
+
+---
+
+•
+Advanced URL Filtering
+. This cloud-delivered security service offers the industry’s first Inline Deep Learning powered web protection engine. It delivers real-time detection and prevention of unknown, evasive, and targeted web-based threats such as phishing, malware, and command-and-control.
+
+---
+
+For inline network security on multi and hybrid-cloud environments, we also offer our VM-Series and CN-Series Firewall offerings. Security Operations:
+•
+We deliver the next generation of endpoint security, security analytics and security automation solutions through our Cortex portfolio. These include our industry-leading extended detection and response platform Cortex XDR
+®
+to prevent, detect, and respond to complex cybersecurity attacks, Cortex XSOAR
+®
+for security orchestration, automation, and response (“SOAR”), Cortex Xpanse
+®
+for attack surface management (“ASM”), and Cortex Data Lake allowing our customers to collect and analyze large amounts of context-rich data across endpoints, networks, and clouds.
+
+---
+
+•
+Cortex XSOAR. Available as a cloud-based subscription or an on-premises appliance, Cortex XSOAR is a comprehensive SOAR offering that unifies playbook automation, case management, real-time collaboration, and threat intelligence management to serve security teams across the incident lifecycle. With Cortex XSOAR, security teams can standardize processes, automate repeatable tasks and manage incidents across their security product stack to improve response time and analyst productivity.
+
+---
+
+For inline network security on multi and hybrid-cloud environments, we also offer our VM-Series and CN-Series Firewall offerings. Security Operations:
+•
+We deliver the next generation of endpoint security, security analytics and security automation solutions through our Cortex portfolio. These include our industry-leading extended detection and response platform Cortex XDR
+®
+to prevent, detect, and respond to complex cybersecurity attacks, Cortex XSOAR
+®
+for security orchestration, automation, and response (“SOAR”), Cortex Xpanse
+®
+for attack surface management (“ASM”) and Cortex Data Lake allowing our customers to collect and analyze large amounts of context-rich data across endpoints, networks, and clouds.

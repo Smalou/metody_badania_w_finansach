@@ -1,0 +1,122 @@
+We serve more than 100 million customers and generated revenue of $12.7 billion in our fiscal year which ended July 31, 2022. The rise of artificial intelligence (AI) is fundamentally reshaping our world — and Intuit is taking advantage of this technological revolution to find new ways to improve the customer experience and deliver on our mission. We are focused on capitalizing on this opportunity to improve prosperity globally and inspire our workforce, while investing in our company’s reputation and durable growth in the future.
+
+---
+
+We work to make this a reality through our three-pillared growth strategy: Grow the Core by transforming financial management software and meeting customers where they are; Connect the Ecosystem, by meeting a wider range of customer needs with a single integrated platform; and Expand Globally, by serving small businesses around the world. With this strategy, we enable a powerful ecosystem, personalized using artificial intelligence, that scales across our customers’ most pressing needs. Small business owners are constantly faced with challenges and barriers in their journey to success.
+
+---
+
+Our teams design programs and resources to develop the leadership skills of our employees and measure their progress. All full-time employees have access to opportunities to develop and learn through company-sponsored learning paths and online courses on topics ranging from artificial intelligence to manager essentials in support of an employee’s ability to adapt to any work environment. Employees set goals and measure progress through our goal setting tool and have opportunities to focus on growth both during performance assessment conversations and ongoing regular check-ins.
+
+---
+
+We operate in industries that are characterized by rapidly changing technology, evolving industry standards and frequent new product introductions. To meet the changing needs of our customers and partners and attract and retain top technical talent, we must continue to innovate, develop new products and features, and enhance our ability to solve customer problems with emerging technologies, such as artificial intelligence and blockchain. We have and will continue to devote significant resources to continue to develop our skills, tools and capabilities to capitalize on existing and emerging technologies.
+
+---
+
+Much of our future success depends on the continued service and availability of skilled employees, including members of our executive team, and those in technical and other key positions. Experienced individuals with skill sets in software as a service, mobile technologies, data science, artificial intelligence and data security are in high demand and we have faced and will continue to face intense competition globally to attract and retain a diverse workforce with these and other skills that are critical to our success. This is especially the case in California and India where a significant number of our employees are located.
+
+---
+
+As we expand our products and services and evolve our business models, both domestically and internationally, we may become subject to additional government regulation or increased regulatory scrutiny. For example, the regulation of emerging technologies that we may incorporate into our offerings, such as artificial intelligence and blockchain, is still an evolving area, and it is possible that we could become subject to new regulations that negatively impact our operations and results. Further, regulators (both in the U.S.
+
+---
+
+This summary is not intended to be exhaustive, nor is it a substitute for the detailed discussion and analysis provided elsewhere in this Annual Report on Form 10-K. Industry Trends and Seasonality
+Industry Trends
+Artificial intelligence (AI) is transforming multiple industries, including financial technology. Disruptive start-ups, emerging ecosystems and mega-platforms are harnessing new technology to create personalized experiences, deliver data-driven insights and increase speed of service.
+
+---
+
+•
+Application of AI
+: AI helps our customers work smarter because we can automate, predict and personalize their experience. Using AI technologies, we are: leveraging machine learning to build decision engines and algorithms that learn from rich datasets to transform user experiences; applying knowledge engineering and turning compliance rules into code; and using natural language processing to revolutionize how customers interact with products and services. •
+Incorporating Experts
+: One of the biggest problems our customers face is lack of confidence.
+
+---
+
+Our QuickBooks offerings include financial and business management online services and desktop software, payroll solutions, time tracking, merchant payment processing solutions, and financing for small businesses. Our Mailchimp offerings include e-commerce, marketing automation, and customer relationship management. Consumer
+:
+This segment serves consumers and includes do-it-yourself and assisted TurboTax income tax preparation products and services sold in the U.S.
+
+---
+
+QuickBooks Online Advanced
+. Designed for small businesses with 10 to 100 employees that have more complex needs, QuickBooks Online Advanced has features specifically designed for high-growth, mid-market small businesses and leverages AI, automation and data insights to deliver more ways for them to grow and scale. QuickBooks Online Advanced integrates across the QuickBooks ecosystem and with best-in-class apps, and also has powerful industry-specific features that deliver automation, deeper insights, and enhanced tracking for what matters most to a users’ unique industry.
+
+---
+
+For example, some product subscriptions receive 24x7 support and additional contact channel options. MANUFACTURING AND DISTRIBUTION
+Online Products and Services
+Our online offerings include QuickBooks Online, online payroll services, merchant payment processing services, Mailchimp’s e-commerce, marketing automation, and customer relationship management offerings, TurboTax Online, ProConnect Tax Online, consumer and professional electronic tax filing services, Credit Karma offerings, and Mint. We completed the transition of our systems, networks and databases used to operate these online offerings to public cloud providers, such as Amazon Web Services and Google Cloud Platform.
+
+---
+
+Prior to joining Intuit, Mr. Goodarzi worked for Invensys, a global provider of industrial automation, transportation and controls technology, serving as global president of the products group. He also held a number of senior leadership roles in the automation control division at Honeywell Inc.
+
+---
+
+We believe that the estimates, assumptions, and judgments involved in the following accounting policies have the greatest potential impact on our consolidated financial statements, so we consider these to be our critical accounting policies:
+•
+Revenue Recognition
+•
+Business Combinations
+•
+Goodwill, Acquired Intangible Assets, and Other Long-Lived Assets – Impairment Assessments
+•
+Legal Contingencies
+•
+Accounting for Income Taxes
+– Estimates of Deferred Taxes, Valuation Allowances, and Uncertain Tax Positions
+Our senior management has reviewed the development and selection of these critical accounting policies and their disclosure in this Annual Report on Form 10-K with the Audit and Risk Committee of our Board of Directors. Intuit
+Fiscal 2022 Form 10-K
+34
+Tables of
+Contents
+Revenue Recognition
+We derive our revenue primarily from the sale of online services such as tax, accounting, payroll, merchant payment processing, delivery of qualified links, e-commerce, marketing automation, customer relationship management, and packaged desktop software products and desktop software subscriptions. Our contracts with customers often include promises to transfer multiple products and services.
+
+---
+
+Intuit
+Fiscal 2022 Form 10-K
+38
+Tables of
+Contents
+Small Business & Self-Employed
+Small Business & Self-Employed segment revenue includes both Online Ecosystem and Desktop Ecosystem revenue. Our Online Ecosystem includes revenue from:
+•
+QuickBooks Online, QuickBooks Live, QuickBooks Online Advanced and QuickBooks Self-Employed financial and business management offerings;
+•
+Small business payroll services, including QuickBooks Online Payroll, Intuit Online Payroll, Intuit Full Service Payroll;
+•
+Merchant payment processing services for small businesses who use online offerings;
+•
+Mailchimp’s e-commerce, marketing automation, and customer relationship management offerings;
+•
+QuickBooks Commerce, QuickBooks Checking, and financing for small businesses. Our Desktop Ecosystem includes revenue from:
+•
+QuickBooks Desktop software subscriptions (QuickBooks Desktop Pro Plus, QuickBooks Desktop Premier Plus, and QuickBooks Enterprise, and ProAdvisor Program memberships for the accounting professionals who serve small businesses);
+•
+QuickBooks Desktop packaged software products (Desktop Pro, Desktop for Mac, Desktop Premier, and QuickBooks Point of Sale);
+•
+Desktop payroll products (QuickBooks Basic Payroll, QuickBooks Assisted Payroll and QuickBooks Enhanced Payroll);
+•
+Merchant payment processing services for small businesses who use desktop offerings;
+•
+Financial supplies; and
+•
+Financing for small businesses.
+
+---
+
+Nature of Products and Services
+Online Offerings
+Our online offerings include TurboTax Online and TurboTax Live, ProConnect Tax Online, QuickBooks Online, online payroll, and merchant payment processing services for small businesses who use our online offerings. Our Mailchimp offerings include e-commerce, marketing automation, and customer relationship management. These online offerings provide customers with the right to use the hosted software over the contract period without taking possession of the software and are billed on either a subscription or consumption basis.
+
+---
+
+Our QuickBooks offerings include financial and business management online services and desktop software, payroll solutions, time tracking, merchant payment processing solutions, and financing for small businesses. Our Mailchimp offerings include e-commerce, marketing automation, and customer relationship management. Consumer
+:
+This segment serves consumers and includes do-it-yourself and assisted TurboTax income tax preparation products and services sold in the U.S.

@@ -1,0 +1,35 @@
+We will continue to optimize our high performance computing platform and strengthen collaboration with customers to help customers capture market growth in high performance computing markets. IoT Platform:
+We provide leading, comprehensive, and highly integrated
+ultra-low
+power (“ULP”) technology platforms to enable innovations for artificial intelligence (“AI”) of things (“AIoT”, AI+ IoT) applications. Our offerings include the new FinFET-based
+12-nanometer
+technology—N12e
+TM
+featuring energy efficiency with high performance that results in more computing power and AI inferencing,
+22-nanometer
+ultra-low
+leakage (“ULL”),
+28-nanometer
+ULP,
+40-nanometer
+ULP, and
+55-nanometer
+ULP, which have been widely adopted by various edge AI
+system-on-a-Chip
+(“SoC”) and battery-powered applications.
+
+---
+
+In addition, we have deployed secure PCs and laptops, developed a public cloud security policy with monitoring, defined and regularly reviewed the security key performance indicators (“KPI”), introduced new technology for data protection, and improved email phishing detection and regularly performed employee awareness testing. We also established an integrated and automatic security operation platform, enhanced the automation of cybersecurity event detection and response, enhanced internal assessment automation, practiced the response to ransomware attacks and conducted external security risk assessments. In addition, to reduce supply chain risks, through collaboration, we helped major suppliers improve their security maturity with KPI monitoring and share with them industry security events and best practices on demand and by schedule.
+
+---
+
+Modern integrated circuit designers need sophisticated design infrastructure to optimize productivity and cycle time. Such infrastructure includes design flow for electronic design automation (“EDA”), silicon proven building blocks such as libraries and intellectual properties, simulation and verification design kits such as process design kit (or PDK) and technology files. All of this infrastructure is built on top of the technology foundation, and each technology needs its own design infrastructure to be usable for designers.
+
+---
+
+In particular, we introduced our first
+HPC-focused
+technology, N4X, representing the ultimate performance and maximum clock frequencies in our
+5-nanometer
+family. Based on advanced process nodes, a variety of high performance computing products have been launched, such as central processing units (CPUs), graphics processor units (GPUs), field programmable gate arrays (FPGAs), server processors, accelerators, high-speed networking chips, etc. Those products can be used in current and future 5G, AI, cloud, and data centers.

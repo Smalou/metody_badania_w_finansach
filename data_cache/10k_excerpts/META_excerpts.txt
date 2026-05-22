@@ -1,0 +1,65 @@
+Technology
+Our product development philosophy centers on continuous innovation in creating and improving products that are social by design, which means that our products are designed to place people and their social interactions at the core of the product experience. As our user base grows, as engagement with products like video and VR increases, and as we deepen our investment in new technologies like artificial intelligence, our computing needs continue to expand. We make significant investments in technology both to improve our existing products and services and to develop new ones, as well as for our marketers and developers.
+
+---
+
+Government Regulation
+We are subject to a variety of laws and regulations in the United States and abroad that involve matters central to our business, many of which are still evolving and being tested in courts, and could be interpreted in ways that could harm our business. These laws and regulations involve matters including privacy, data use, data protection and personal information, biometrics, encryption, rights of publicity, content, intellectual property, advertising, marketing, distribution, data security, data retention and deletion, data localization and storage, data disclosure, artificial intelligence, electronic contracts and other communications, competition, protection of minors, consumer protection, civil rights, telecommunications, product liability, e-commerce, taxation, economic or other trade controls including sanctions, anti-corruption and political law compliance, securities law compliance, and online payment services. In particular, we are subject to federal, state, and foreign laws regarding privacy and protection of people's data.
+
+---
+
+The demand for and pricing of our advertising services may be materially and adversely impacted by the pandemic for the foreseeable future, and we are unable to predict the duration or degree of such impact with any certainty. In addition to the impact on our advertising business, the pandemic exposes our business, operations, and workforce to a variety of other risks, including:
+•
+volatility in the size of our user base and user engagement, particularly for our messaging products, whether as a result of shelter-in-place measures or other factors;
+•
+delays in product development or releases, or reductions in manufacturing production and sales of consumer hardware, as a result of inventory shortages, supply chain or labor shortages;
+•
+increased misuse of our products and services or user data by third parties, including improper advertising practices or other activity inconsistent with our terms, contracts, or policies, misinformation or other illicit or objectionable material on our platforms, election interference, or other undesirable activity;
+20
+Table of Contents
+•
+adverse impacts to our efforts to combat misuse of our products and services and user data as a result of limitations on our safety, security, and content review efforts while our workforce is working remotely, such as the necessity to rely more heavily on artificial intelligence to perform tasks that our workforce is unable to perform;
+•
+significant volatility and disruption of global financial markets, which could cause fluctuations in currency exchange rates or negatively impact our ability to access capital in the future;
+•
+negative impact on our workforce productivity, product development, and research and development due to difficulties resulting from our personnel working remotely;
+•
+illnesses to key employees, or a significant portion of our workforce, which may result in inefficiencies, delays, and disruptions in our business; and
+•
+increased volatility and uncertainty in the financial projections we use as the basis for estimates used in our financial statements. Any of these developments may adversely affect our business, harm our reputation, or result in legal or regulatory actions against us.
+
+---
+
+Many of these laws and regulations are subject to change and uncertain interpretation, and could result in claims, changes to our products and business practices, monetary penalties, increased cost of operations, or declines in user growth or engagement, or otherwise harm our business. We are subject to a variety of laws and regulations in the United States and abroad that involve matters central to our business, including privacy, data use, data protection and personal information, biometrics, encryption, rights of publicity, content, intellectual property, advertising, marketing, distribution, data security, data retention and deletion, data localization and storage, data disclosure, artificial intelligence, electronic contracts and other communications, competition, protection of minors, consumer protection, civil rights, telecommunications, product liability, e-commerce, taxation, economic or other trade controls including sanctions, anti-corruption and political law compliance, securities law compliance, and online payment services. The introduction of new products, expansion of our activities in certain jurisdictions, or other actions that we may take may subject us to additional laws, regulations, or other government scrutiny.
+
+---
+
+We do not require people to use a common identifier or link their accounts to use multiple products in our Family, and therefore must seek to attribute multiple user accounts within and across products to individual people. To calculate these metrics, we rely upon complex techniques, algorithms and machine learning models that seek to count the individual people behind user accounts, including by matching multiple user accounts within an individual product and across multiple products when we believe they are attributable to a single person, and counting such group of accounts as one person. These techniques and models require significant judgment, are subject to data and other limitations discussed below, and inherently are subject to statistical variances and uncertainties.
+
+---
+
+As a result, it is also possible that our Family metrics may indicate changes or trends in user numbers that do not match actual changes or trends. To calculate our estimates of Family DAP and MAP, we currently use a series of machine learning models that are developed based on internal reviews of limited samples of user accounts and calibrated against user survey data. We apply significant judgment in designing these models and calculating these estimates.
+
+---
+
+Any loss of access to data signals we use in our process for calculating Family metrics, whether as a result of our own product decisions, actions by third-party browser or mobile platforms, regulatory or legislative requirements, limitations while our personnel work remotely during the COVID-19 pandemic, or other factors, also may impact the stability or accuracy of our reported Family metrics, as well as our ability to report these metrics at all. Our estimates of Family metrics also may change as our methodologies evolve, including through the application of new data signals or technologies, product changes, or other improvements in our user surveys, algorithms, or machine learning that may improve our ability to match accounts within and across our products or otherwise evaluate the broad population of our users. In addition, such evolution may allow us to identify previously undetected violating accounts (as defined below).
+
+---
+
+We do not require people to use a common identifier or link their accounts to use multiple products in our Family, and therefore must seek to attribute multiple user accounts within and across products to individual people. To calculate these metrics, we rely upon complex techniques, algorithms and machine learning models that seek to count the individual people behind user accounts, including by matching multiple user accounts within an individual product and across multiple products when we believe they are attributable to a single person, and counting such group of accounts as one person. These techniques and models require significant judgment, are subject to data and other limitations discussed below, and inherently are subject to statistical variances and uncertainties.
+
+---
+
+As a result, it is also possible that our Family metrics may indicate changes or trends in user numbers that do not match actual changes or trends. To calculate our estimates of Family DAP and MAP, we currently use a series of machine learning models that are developed based on internal reviews of limited samples of user accounts and calibrated against user survey data. We apply significant judgment in designing these models and calculating these estimates.
+
+---
+
+Any loss of access to data signals we use in our process for calculating Family metrics, whether as a result of our own product decisions, actions by third-party browser or mobile platforms, regulatory or legislative requirements, limitations while our personnel work remotely during the COVID-19 pandemic, or other factors, also may impact the stability or accuracy of our reported Family metrics, as well as our ability to report these metrics at all. Our estimates of Family metrics also may change as our methodologies evolve, including through the application of new data signals or technologies, product changes, or other improvements in our user surveys, algorithms, or machine learning that may improve our ability to match accounts within and across our products or otherwise evaluate the broad population of our users. In addition, such evolution may allow us to identify previously undetected violating accounts (as defined below).
+
+---
+
+We do not require people to use a common identifier or link their accounts to use multiple products in our Family, and therefore must seek to attribute multiple user accounts within and across products to individual people. Our calculations of DAP rely upon complex techniques, algorithms, and machine learning models that seek to estimate the underlying number of unique people using one or more of these products, including by matching user accounts within an individual product and across multiple products when we believe they are attributable to a single person, and counting such group of accounts as one person. As these techniques and models require significant judgment, are developed based on internal reviews of limited samples of user accounts, and are calibrated against user survey data, there is necessarily some margin of error in our estimates.
+
+---
+
+We do not require people to use a common identifier or link their accounts to use multiple products in our Family, and therefore must seek to attribute multiple user accounts within and across products to individual people. Our calculations of MAP rely upon complex techniques, algorithms, and machine learning models that seek to estimate the underlying number of unique people using one or more of these products, including by matching user accounts within an individual product and across multiple products when we believe they are attributable to a single person, and counting such group of accounts as one person. As these techniques and models require significant judgment, are developed based on internal reviews of limited samples of user accounts, and are calibrated against user survey data, there is necessarily some margin of error in our estimates.

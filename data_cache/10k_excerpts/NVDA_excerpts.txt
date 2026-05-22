@@ -1,0 +1,78 @@
+Since our original focus on PC graphics, we have expanded to several other large and important computationally intensive fields. Fueled by the sustained demand for exceptional 3D graphics and the scale of the gaming market, NVIDIA has leveraged its GPU architecture to create platforms for scientific computing, artificial intelligence, or AI, data science, autonomous vehicles, or AV, robotics, and augmented and virtual reality, or AR and VR. The GPU was initially used to simulate human imagination, enabling the virtual worlds of video games and films.
+
+---
+
+Today, our GPUs and networking accelerate many of the fastest supercomputers across the world. In addition, the massively parallel compute architecture of our GPUs and associated software are well suited for deep learning and machine learning, powering the era of AI. While traditional CPU-based approaches no longer deliver advances on the pace described by Moore’s Law, we deliver GPU performance improvements on a pace ahead of Moore’s Law, giving the industry a path forward.
+
+---
+
+The platform consists of our energy efficient GPUs, data processing units, or DPUs, interconnects and systems, our CUDA programming model, and a growing body of software libraries, software development kits, or SDKs, which are both integrated and sold standalone, application frameworks and services. In the field of AI, NVIDIA’s platform accelerates both deep learning and machine learning workloads. Deep learning is a computer science approach where neural networks are trained to recognize patterns from massive amounts of data in the form of images, sounds and text - in some instances better than humans - and in turn provide predictions in production use cases.
+
+---
+
+Deep learning is a computer science approach where neural networks are trained to recognize patterns from massive amounts of data in the form of images, sounds and text - in some instances better than humans - and in turn provide predictions in production use cases. Machine learning is a related approach that leverages algorithms as well as data to learn how to make determinations or predictions, and is often used in data science. HPC, also referred to as scientific computing, uses numerical computational approaches to solve large and complex problems.
+
+---
+
+While our approach starts with powerful chips, what makes it a full-stack computing platform is our large body of software, including the CUDA parallel programming model, the CUDA-X collection of application acceleration libraries, Application Programming Interfaces, or APIs, SDKs and tools, and domain-specific application frameworks. We also offer the NVIDIA GPU Cloud registry, or NGC, a comprehensive catalog of easy-to-use, optimized software stacks across a range of domains including scientific computing, deep learning, and machine learning. With NGC, AI developers, researchers and data scientists can get started with the development of AI and HPC applications and deploy them on DGX systems, NVIDIA-Certified systems from our partners, or with NVIDIA’s cloud partners.
+
+---
+
+Extending our technology and platform leadership in AI. We provide a complete, end-to-end accelerated computing platform for deep learning and machine learning, addressing both training and inferencing. This includes GPUs, interconnects, systems, our CUDA programming language, algorithms, libraries, and other software.
+
+---
+
+Today, it also simulates human intelligence, enabling a deeper understanding of the physical world. Its parallel processing capabilities, supported by thousands of computing cores, are essential to running deep learning algorithms. This form of AI, in which software writes itself by learning from large amounts of data, can serve as the brain of computers, robots and self-driving cars that can perceive and understand the world.
+
+---
+
+This form of AI, in which software writes itself by learning from large amounts of data, can serve as the brain of computers, robots and self-driving cars that can perceive and understand the world. GPU-powered deep learning is being adopted by thousands of enterprises to deliver services and products that would have been impossible with traditional coding. NVIDIA has a platform strategy, bringing together hardware and systems, software, algorithms and libraries, and services to create unique value for the markets we serve.
+
+---
+
+Ray tracing, which has long been used for special effects in the movie industry, is a computationally intensive technique that simulates the physical behavior of light to achieve greater realism in computer-generated scenes. NVIDIA RTX also features deep learning super sampling, or NVIDIA DLSS, our AI technology that boosts frame rates while generating beautiful, sharp images for games. Our products for the gaming market include GeForce RTX and GeForce GTX GPUs for gaming desktop and laptop PCs, GeForce NOW cloud gaming for playing PC games on underpowered devices, SHIELD for high quality streaming on TV, as well as platforms and development services for specialized console gaming devices.
+
+---
+
+At the foundation of the NVIDIA accelerated computing platform are our GPUs, which excel at parallel workloads such as the training and inferencing of neural networks. They are available in industry standard servers from every major computer maker, including Cisco Systems, Inc., or Cisco, Dell Technologies Inc., Hewlett Packard Enterprise Company, or HP, Hitachi Vantara, Inspur Group, and Lenovo Group Limited; from every major cloud service provider such as Alicloud, Amazon Web Services, Baidu Cloud, Google Cloud, IBM Cloud, Microsoft Azure, Oracle Cloud, and Tencent Cloud; as well as in our DGX AI supercomputer, a purpose-built system for deep learning and GPU accelerated applications. To facilitate customer adoption, we have also built other ready-to-use system reference designs around our GPUs, including HGX for hyperscale and supercomputing data centers, EGX for enterprise and edge computing, and AGX for autonomous machines.
+
+---
+
+NVIDIA DRIVE can perceive and understand in real-time what is happening around the vehicle, precisely locate itself on an HD map, and plan a safe path forward. This advanced self-driving car platform combines deep learning, sensor fusion, and surround vision to change the driving experience. Our DRIVE platform scales from a palm-sized, energy-efficient module for automated highway-driving capabilities to a configuration with multiple systems aimed at enabling driverless cars.
+
+---
+
+We evangelize AI through partnerships with hundreds of universities and almost 10,000 startups through our Inception program. Additionally, our Deep Learning Institute provides instruction on the latest techniques on how to design, train, and deploy neural networks in applications using our accelerated computing platform. Extending our technology and platform leadership in computer graphics.
+
+---
+
+Our developer program makes our products available to developers prior to launch in order to encourage the development of AI frameworks, SDKs, and APIs for software applications and game titles that are optimized for our platforms. Our Deep Learning Institute provides in-person and online training for developers in industries and organizations around the world to build AI and accelerated computing applications that leverage our platforms. 8
+Table of Contents
+As NVIDIA’s business has evolved from a focus primarily on gaming products to broader markets, and from chips to platforms and complete systems to software, so, too, have our avenues to market.
+
+---
+
+To be competitive and execute our business strategy successfully, we must recruit, develop, and retain talented employees, including qualified executives, scientists, engineers, and technical and non-technical staff. Recruitment
+The demand for talent in new markets such as AI and deep learning, is increasingly competitive. With differentiated hiring strategies for university, professional, executive, and for diversity, we have been successful in attracting top talent to NVIDIA.
+
+---
+
+We are unable to estimate with any degree of precision the impact this volatility is likely to have in the future. Data Center revenue was up 58% from a year ago primarily driven by sales of NVIDIA Ampere architecture GPUs across both training and inference for cloud computing and AI workloads such as natural language processing and deep recommender models. Professional Visualization revenue was up 100% from a year ago driven by the ramp of NVIDIA Ampere architecture products and strong demand for workstations as enterprises support hybrid work environments, as well as growth in workloads such as 3D design, AI and rendering.
+
+---
+
+We continue to benefit from strong demand for NVIDIA Ampere architecture products, and believe the increase in Gaming revenue during fiscal year 2022 resulted from a combination of factors, including: the ramp of new RTX 30 Series GPUs; the release of new games supporting ray tracing; the rising popularity of gaming, esports, content creation and streaming; the demand for new and upgraded systems to support the increase in remote work; and the ability of end users to engage in cryptocurrency mining. Compute & Networking -
+Compute & Networking segment revenue increased by 61% in fiscal year 2022 compared to fiscal year 2021, driven primarily by sales of NVIDIA Ampere architecture products to hyperscale customers for cloud computing and workloads such as natural language processing and deep recommender models, as well as to vertical industries. The increase compared to fiscal year 2021 also reflects the strong sales of networking products and that fiscal year 2022 includes a full year of networking revenue as Mellanox was acquired in April 2020.
+
+---
+
+In addition to software that is delivered to customers as an integral part of our data center computing platform, we offer enterprise software products on a standalone basis as a perpetual license or subscription. Our enterprise software offerings include NVIDIA AI Enterprise, a comprehensive suite of enterprise-grade AI software; NVIDIA Fleet Command software-as-a-service for securely deploying and managing AI applications across distributed edge infrastructure; NVIDIA Base Command software-as-a-service for managing large-scale, multi-user and multi-team AI development workflows; and NVIDIA vGPU software products that enable powerful GPU performance for workloads ranging from graphics-rich virtual desktops and workstations to data science and AI. Professional Visualization
+We serve the Professional Visualization market by working closely with independent software vendors, or ISVs, to optimize their offerings for NVIDIA GPUs.
+
+---
+
+Since our original focus on PC graphics, we have expanded to several other large and important computationally intensive fields. Fueled by the sustained demand for exceptional 3D graphics and the scale of the gaming market, NVIDIA has leveraged its GPU architecture to create platforms for scientific computing, AI, data science, AV, robotics, AR and VR. Our two operating segments are "Graphics" and "Compute & Networking." Refer to Note 17 of the Notes to the Consolidated Financial Statements in Part IV, Item 15 of this Annual Report on Form 10-K for additional information.
+
+---
+
+The world’s leading cloud service providers and consumer internet companies use our GPUs to enable, accelerate or enrich the services they deliver to billions of end-users, including search, recommendations, social networking, online shopping, live video, translation, AI assistants, navigation, and cloud computing. A rapidly growing number of enterprises and startups across a broad range of industries use our GPUs and AI software to bring automation to the products and services they build. The transportation industry is turning to our platforms for autonomous driving; the healthcare industry is leveraging them for enhanced medical imaging and accelerated drug discovery; and the financi

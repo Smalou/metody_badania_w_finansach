@@ -1,0 +1,60 @@
+These SaaS capabilities are designed to simplify customer IT environments, reduce time to implement and upgrade, enable agility, reduce risk, provide an intuitive user experience for casual and experienced users, and enable customers to focus resources on business growth opportunities. Our SaaS offerings are also designed to natively incorporate advanced technologies such as Internet-of-Things (IoT), artificial intelligence, machine learning, blockchain, digital assistants and advances in the “human interface” and how users interact with Oracle Cloud SaaS offerings within a business context or to augment human capabilities to enhance productivity. Oracle Applications Licenses
+Customers have the ability to license Oracle Applications, including Oracle E-Business Suite, PeopleSoft, JD Edwards and Siebel applications, among others, for use within the Oracle Cloud or within their own cloud-based or on-premise IT environments.
+
+---
+
+We have continued to refresh and release new offerings of our cloud products and services. Machine learning and artificial intelligence are increasingly driving innovations in technology, but if they fail to operate as anticipated or our other products do not perform as promised, our business and reputation may be harmed. During fiscal 2022, we held many of our major customer events in a virtual format.
+
+---
+
+We focus our development efforts on improving the performance, security, operation, integration and cost-effectiveness of our offerings
+4
+Table of Contents
+Index to Financial Statements
+relative to our competitors; facilitating the ease with which organizations are able to deploy, use, manage and maintain our offerings; and incorporating emerging technologies within our offerings to enable leaner business processes, automation and innovation. For example, the Oracle Autonomous Database is designed to deliver transformational infrastructure as an OCI offering that utilizes machine learning capabilities. After an initial purchase of Oracle products and services, our customers can continue to benefit from our offerings, research and development efforts and deep IT expertise by electing to purchase and renew Oracle support offerings for their license and hardware deployments, which may include product enhancements that we periodically deliver to our products, and by renewing their Oracle Cloud Services contracts with us
+.
+
+---
+
+We continue to invest in OCI to improve features and performance; to expand the catalog of cloud-based infrastructure tools and services that we provide; to increase the capacity and geographic footprint to deliver these services; to simplify the processes for migrating workloads to the Oracle Cloud; and to provide customers with the ability to run workloads across different IT environments, the Oracle Cloud as well as other third-party clouds in a hybrid deployment model. Oracle customers and partners utilize OCI offerings for platform-related services that are based upon the Oracle Database, Java and Oracle Middleware, including open source and other tools for a variety of use cases across data management (including the use of Oracle Autonomous Database and MySQL HeatWave), applications development, integration, content management, analytics, IT management and governance, security, and rapidly emerging technologies such as machine learning. OCI machine learning features are designed to be embedded into customer applications for a variety of predictive use cases including, among others, the servicing of machine parts that are at risk of failing, the stocking of retailer store shelves, and the financial modeling to stay within a business’ forecasts.
+
+---
+
+In addition to the Oracle Database, we offer a portfolio of specialized databases to address specific customer requirements including MySQL, the world’s most popular open source database, as a cloud service and an on-premise offering. Oracle Autonomous Database
+Oracle Autonomous Database is designed to deliver performance and scale for enterprise database workloads with automated database operations and policy-driven optimization by combining certain Oracle infrastructure technologies including the Oracle Database, Oracle’s Next-Generation Cloud Infrastructure, Oracle Exadata, and native machine learning capabilities, among others. Oracle Autonomous Database is designed to be self-driving, automating routine database administration tasks including maintenance, tuning, patching, security and backup.
+
+---
+
+Oracle Autonomous Database is designed to be self-driving, automating routine database administration tasks including maintenance, tuning, patching, security and backup. Oracle Autonomous Database is engineered to lower labor costs and reduce human error while using machine learning-driven diagnostics for fault prediction and error handling and is also engineered to provide automatic threat detection and remediation. Oracle Autonomous Database is designed to enable on-demand, automatic scaling of database resources combined with consumption-based pricing in order to help organizations lower costs by paying only for resources used.
+
+---
+
+The integration of Oracle Autonomous Database with other Oracle Cloud Services, such as Java Cloud and the Oracle APEX low-code service, along with open interfaces and integrations, is designed to provide developers with a modern, open platform to develop new and innovative applications. For analytics workloads, Oracle Autonomous Database is designed to provide customers with easy-to-use analytics tools and machine learning capabilities that are accelerated using Oracle Exadata’s scale-out infrastructure. We believe Oracle Autonomous Database’s built-in developer capabilities and automation will enable organizations to:
+•
+quickly deploy new data marts and data warehouses;
+•
+move existing ones to the cloud; and
+•
+create data lake houses.
+
+---
+
+Our applications technologies are generally designed using industry standard architectures to manage and automate core business functions across the enterprise, as well as to help customers differentiate and innovate in those processes unique to their industries or organizations. We offer applications that are deployable to meet several business automation requirements across a broad range of industries. We also offer industry-specific applications, which provide solutions to customers in the automotive, communications, construction and engineering, consumer goods, energy and water, financial services, food and beverage, government and education, healthcare, high technology, hospitality, industrial manufacturing, life sciences, media and entertainment, oil and gas, professional services, retail, travel and transportation, and wholesale distribution industries, among others.
+
+---
+
+It is also designed to enable organizations to efficiently support dynamic workloads, conduct real-time analysis of transactional data and lower administration costs. Oracle Autonomous Database offers the following options, among others:
+•
+Shared Exadata Cloud Infrastructure, which is designed to provide a simple and elastic deployment choice in OCI regions where Oracle autonomously operates all aspects of the database lifecycle, including database placement, backup and software updates;
+•
+Dedicated Exadata Cloud Infrastructure, which is designed to provide dedicated compute, storage, networking and database resources for a single tenant in OCI regions, enabling high levels of security isolation and governance, customizable operational policies for autonomous operations, workload placement and optimization, availability, over-provisioning and peak usage; and
+•
+Exadata Cloud@Customer Infrastructure, which is designed to be deployed in customer data centers to provide the characteristics of a private, on-premise cloud but with cloud automation, consumption pricing, and Oracle management of the infrastructure and software. 10
+Table of Contents
+Index to Financial Statements
+Oracle Middleware Licenses
+We license our Oracle Middleware, which is a broad family of integrated application infrastructure software, for use in the Oracle Cloud, other cloud-based environments, on-premise data centers and related IT environments.
+
+---
+
+We have no obligation to publicly update or revise any forward-looking statements, whether as a result of new information, future events or risks, except to the extent required by applicable securities laws. If we do update one or more forward-looking statements, no inference should be drawn that we will make additional updates with respect to those or other forward-looking statements. New information, future events or risks could cause the forward-looking events we discuss in this Annual Report not to occur.

@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+title: "AI Boom Premium? Pre-event AI Exposure, Model Risk and Validated Investment Analytics"
+message: "If you use this work, please cite it as below."
+type: software
+version: "1.0.0"
+date-released: 2026-05-22
+authors:
+  - family-names: Kulawiec
+    given-names: Roksana
+  - family-names: Malinowska
+    given-names: Sylwia
+    email: malinowska0sylwia@gmail.com
+  - family-names: Konopka
+    given-names: Mateusz
+  - family-names: Grabowski
+    given-names: Antoni
+repository-code: "https://github.com/Smalou/metody_badania_w_finansach"
+license: MIT
+keywords:
+  - asset pricing
+  - event study
+  - factor models
+  - 10-K text analysis
+  - artificial intelligence
+  - working paper
+abstract: >
+  Working paper testujacy hipoteze AI Boom Premium na probie 41 spolek z
+  rynku amerykanskiego w okresie 2021-2026, z centralna innowacja w postaci
+  pre-event AI Exposure Score zbudowanego z raportow 10-K SEC dostepnych
+  przed premiera ChatGPT (30 listopada 2022). Cross-sectional regression
+  oraz modele czynnikowe (CAPM/FF3/Carhart 4) pokazuja, ze surowe AI Premium
+  zanika po kontroli ryzyka systematycznego.

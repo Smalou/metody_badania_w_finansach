@@ -1,0 +1,73 @@
+Our fiscal years for 2022, 2021 and 2020 included 52 weeks. Overview
+We are a global leader in the development and commercialization of foundational technologies for the wireless industry, including 3G (third generation), 4G (fourth generation) and 5G (fifth generation) wireless technologies and processor technologies including high-performance, low-power computing and on-device artificial intelligence (AI) technologies. Our technologies and products are used in mobile devices and other wireless products.
+
+---
+
+Further, our business liability insurance may be inadequate, may not cover the claims, and future coverage may be unavailable on acceptable terms, which could adversely impact our financial results. The above is exacerbated by the fact that our products may be used, and perform critical functions, in various high-risk applications such as: automobiles, including ADAS/AD functions; cameras and artificial intelligence, including home and enterprise security; home automation, including smoke and noxious gas detectors; medical condition monitoring; location and asset tracking and management, including wearables for child safety and elderly health; robotics, including public safety drones and autonomous municipality vehicles; and extended reality (XR) for treatment of phobias or PTSD, early detection of disorders or special needs, among others. 32
+Accordingly, defects, errors or security vulnerabilities in our products or the technologies we use could have an adverse impact on us, on our customers and the end users of our customers’ products.
+
+---
+
+Some of these inventions are contributed to and commercialized as industry standards, such as for certain video and audio codecs, Wi-Fi, GPS (Global Positioning System), UWB (ultra-wideband) and Bluetooth
+®
+. We have also developed other technologies that are used by wireless devices that are not related to industry standards, such as operating systems, user interfaces, graphics and camera processing functionality, RF (radio frequency), RFFE (radio frequency front-end) and antenna designs, AI and machine learning techniques and application processor architectures. Our patents cover a wide range of technologies across the entire wireless system (including wireless devices and network infrastructure equipment), not just the portion of such patented technologies incorporated into chipsets.
+
+---
+
+Release 17 became the third major release of the global 5G NR standard expanding the 5G technology foundations for coverage, mobility, power and reliability, which is designed to provide efficient support for lower complexity 5G devices including wearables, industrial sensors, and new deployments, including non-terrestrial networks and mmWave private networks on unlicensed 60 GHz spectrum band. Release 18, which is now under development, marks the start of 5G Advanced, with projects designed to strengthen the end-to-end 5G system foundation (such as advanced downlink and uplink MIMO, enhanced mobility, mobile integrated access and backhaul, smart repeater, evolved duplexing, AI and machine learning data-driven designs and green networks) and to proliferate 5G to virtually all devices and use cases (such as boundless extended reality, NR-light evolution, expanded sidelink, expanded positioning, drones and expanded satellite communication and multicast). Other (Non-Cellular) Wireless Technologies.
+
+---
+
+Other Technologies. In addition to the above, we have played and continue to play a leading role in developing and/or have acquired many of the other technologies used across the wireless system, computing and edge networking, including in cellular handsets and certain other consumer electronic devices and networks, including:
+•
+on-device AI features, including machine learning platforms and the application of AI and machine learning techniques to edge computing and other use cases;
+•
+operating system and user interface features;
+•
+XR platform features such as 6DoF (six-degrees of freedom) head tracking and controller capabilities, 3D Reconstruction, 3D audio and video pass-through and embedded cellular connectivity for new types of user experiences;
+•
+security and content protection systems for enhanced device security without compromising the user experience and ultrasonic fingerprint readers for single touch authentication;
+•
+volatile (LP-DDR4, 5) and non-volatile (eMMC) memory and related controllers;
+•
+fast charging features, enabling devices to charge quickly, safely and efficiently;
+•
+Qualcomm® Smart Transmit™ technology, a modem-to-antenna technology that optimizes data speeds while complying with RF transmit power limits;
+•
+power management systems for improved battery life and device charging; and
+•
+SoC architecture with heterogeneous computing features, which uses different types of specialized engines (Graphics Processing Unit (GPU)) to enable high performance and low-power computing and other optimization techniques. Acquisitions
+We make strategic investments and acquisitions in order to open new opportunities for our technologies, support the design and introduction of new products and services (or enhance existing products or services), obtain development resources, grow our patent portfolio or pursue new businesses as part of our strategic plan.
+
+---
+
+Segment Information.”
+Research and Development
+The wireless communications industry is characterized by rapid technological change, evolving industry standards, frequent new product introductions and, with the use of 5G, the expansion into industries and applications beyond mobile handsets such as automotive and IoT, requiring a continuous effort to enhance existing products and technologies and to develop new products and technologies. We have significant engineering resources, including engineers with substantial expertise in modem, radio-frequency integrated circuit, RFFE, multimedia (camera, video, display and computer vision), sensor perception and drive policy, advanced SoC, which includes specialized engines such as CPU and GPU to enable high performance and low-power computing and other optimization techniques, AI, packaging and a broad range of other technologies. We expect to continue to invest in research and development in a variety of ways in an effort to extend the demand for our products and technologies and to utilize that research and development in industries and applications beyond mobile handsets (such as automotive and IoT), including continuing the development of new modem and multimedia technologies and other technologies (such as ADAS/AD and XR), developing alternative technologies for certain specialized applications, participating in the formulation of new voice and data communication standards and technologies and assisting in deploying digital voice and data communications networks around the world.
+
+---
+
+We funded substantially all of the cash consideration payable in the transaction in exchange for (i) the Arriver business (which SSW transferred to us shortly after the Closing Date) and (ii) the right to receive a majority of the proceeds upon the sale of the Non-Arriver businesses by SSW Partners. We intend to incorporate Arriver’s computer vision, drive policy and driver assistance technologies into our Snapdragon automotive platform to deliver an integrated software SoC ADAS platform for automakers and Tier-1 automotive suppliers. SSW Partners retained Veoneer’s Tier-1 automotive supplier businesses, primarily consisting of the Active Safety and Restraint Control Systems businesses (the Non-Arriver businesses), which it intends to sell in one or more transactions.
+
+---
+
+High-performance, low-power computing technologies from mobile are being used to improve vehicles with advanced driver assistance and automated driving features that we expect to scale across vehicle tiers and continue the progression toward higher levels of autonomy, safety and convenience. Analysts estimate that 19% of new vehicles sold globally in 2025 will have Level 2 (i.e., partial driving automation) or higher autonomy, compared to an estimated 9% of new vehicles sold globally in 2022 (Strategy Analytics, October 2022). Transforming Other Industries: IoT.
+
+---
+
+Our QSI (Qualcomm Strategic Initiatives) reportable segment makes strategic investments. We also have nonreportable segments, including QGOV (Qualcomm Government Technologies) and our cloud AI inference processing initiative. Industry Trends
+As the largest technology platform in the world, mobile has transformed the way we connect, compute and communicate.
+
+---
+
+Other Businesses. Nonreportable segments include our QGOV business,
+our cloud AI inference processing initiative
+and other technology and service initiatives. QGOV provides development and other services and sells related products to U.S.
+
+---
+
+Our QSI (Qualcomm Strategic Initiatives) reportable segment makes strategic investments. We also have nonreportable segments, including QGOV (Qualcomm Government Technologies) and our cloud AI inference processing initiative. Our reportable segments are operated by QUALCOMM Incorporated and its direct and indirect subsidiaries.
+
+---
+
+Our QSI (Qualcomm Strategic Initiatives) reportable segment makes strategic investments. We also have nonreportable segments, including QGOV (Qualcomm Government Technologies) and our cloud AI inference processing initiative. Our CODM allocates resources to and evaluates the performance of our segments based on revenues and earnings (loss) before income taxes (EBT).

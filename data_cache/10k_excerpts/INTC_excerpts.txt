@@ -1,0 +1,178 @@
+Term
+Definition
+2006 Plan
+2006 Equity Incentive Plan
+2006 ESPP
+2006 Employee Stock Purchase Plan
+2009 Debentures
+3.25% junior subordinated convertible debentures due 2039
+5G
+The fifth-generation mobile network, which is expected to bring dramatic improvements in network speeds and latency, and which we view as a transformative technology and opportunity for many industries
+ADAS
+Advanced driver-assistance systems
+Adjacent products
+All of our non-platform products for CCG, DCG, and IOTG, such as modem, Ethernet and silicon photonics, as well as Mobileye, NSG, and PSG products. Combined with our platform products, adjacent products form comprehensive platform solutions to meet customer needs
+AI
+Artificial intelligence
+ASIC
+Application-specific integrated circuit
+ASP
+Average selling price
+AV
+Autonomous vehicle
+CAGR
+Compound annual growth rate
+CCG
+Client Computing Group operating segment
+CDP
+A nonprofit organization that runs a global disclosure system for investors, companies, cities, states, and regions to manage their environmental impacts
+CODM
+Chief operating decision maker
+COVID-19
+The infectious disease caused by the most recently discovered coronavirus (aka SARS-CoV-2), which was declared a global pandemic by the World Health Organization
+CPU
+Processor or central processing unit
+CXL
+Compute Express Link; an open standard for high-speed CPU-to-device and CPU-to-memory connections
+DCG
+Data Center Group operating segment
+eASIC
+An Intel line of structured ASICs that are an intermediary technology between FPGAs and standard-cell ASICs
+EC
+European Commission
+Edge computing or intelligent edge
+Placing resources to move, store, and process data closer to where data is generated and consumed
+EEO-1
+EEO-1 Component 1 report; a mandatory annual data collection that requires employers meeting certain criteria to submit demographic workforce data, including data by race/ethnicity, sex and job categories. EMIB
+Embedded multi-die interconnect bridge, a form of "2.5D" packaging technology developed by Intel that enables high-density interconnect of heterogeneous chips
+ERISA
+Employee Retirement Income Security Act
+EUNCAP
+European New Car Assessment Programme
+EV
+Electric vehicle
+EUV
+Extreme ultraviolet lithography
+Exchange Act
+Securities Exchange Act of 1934
+Form 10-K
+Annual Report on Form 10-K
+Foveros
+Intel's high-performance, three-dimensional stacked chip packaging technology
+FPGA
+Field-programmable gate array
+GPU
+Graphics processing unit
+GSR
+The EU-General Safety Regulation for motor vehicles
+IDM
+Integrated device manufacturer, a semiconductor company that both designs and builds chips
+IFS
+Intel Foundry Services
+IMECAS
+Institute of Microelectronics, Chinese Academy of Sciences
+IMRS
+Internet of Things Market Ready Solutions
+Internet of Things
+The Internet of Things market in which we sell our IOTG and Mobileye products
+I/O
+Input/output
+IOTG
+Internet of Things Group operating segment
+IP
+Intellectual property
+IPO
+Initial public offering
+Supplemental Details
+Table of Contents
+IPU
+Infrastructure Processing Unit, a programmable networking device designed to enable cloud and communication service providers to reduce overhead and free up performance for CPUs
+L1
+Level 1 of autonomous driving; most functions are controlled by a human driver; certain functions (parking assist, acceleration, and limited steering) can be done automatically by the vehicle
+L2
+Level 2 of autonomous driving; the system controls both steering and acceleration using information about the driving environment, but with the expectation that a human will perform all remaining aspects of driving; the driver can have his or her hands off the steering wheel, but must monitor the "dynamic driving task" at all times
+L2+
+Level 2+ of autonomous driving; the system controls both steering and acceleration using a multi-camera sensor suite and/or high-definition maps to enhance and solidify L2 capabilities
+L4
+Level 4 of autonomous driving; the system performs all aspects of the driving task even if the driver does not respond appropriately to a request for intervention, including all safety-critical driving functions and monitoring roadway conditions for an entire trip.
+
+---
+
+Includes high-performance compute solutions for targeted verticals and embedded applications in market segments such as retail, industrial, and healthcare. Includes comprehensive solutions required for autonomous driving, including compute platforms, computer vision, and machine learning-based sensing, mapping and localization, driving policy, and active sensors in development, utilized for both Robotaxi and consumer level autonomy. Includes memory and storage products like Intel 3D NAND technology, primarily used in SSDs.
+
+---
+
+MD&A
+27
+Table of Contents
+Mobileye
+Overview
+Mobileye is a global leader in driving assistance and self-driving solutions. Our product portfolio covers the entire stack required for assisted and autonomous driving, including compute platforms, computer vision and machine learning-based sensing, mapping and localization, driving policy, and active sensors in development. Mobileye's unique assets in ADAS allow for building a scalable self-driving stack that meets the requirements for both Robotaxi and consumer level autonomy.
+
+---
+
+Our 5th Gen EyeQ5 SoC is designed to act as the core building block of central compute for fully autonomous driving vehicles. We have been able to achieve power, performance, and cost targets by employing proprietary computational cores that are optimized for a wide variety of computer vision, signal processing, and machine learning tasks, including deep neural networks. Starting with EyeQ5, we are supporting an automotive-grade standard operating system and providing a complete software development kit to allow customers to differentiate their solutions by deploying their algorithms on EyeQ5.
+
+---
+
+These developing products and market segments require significant investment, do not always grow as projected or at all, or sometimes adopt competing technologies, and we may not realize an adequate return on our investments. For example, AI and machine learning are increasingly driving innovations in technology, but if we fail to develop leading products for these workloads, or if our customers use competing technologies, we may not realize a return on our investments in these areas. Similarly, while we see significant opportunity in networking infrastructure and the distribution of computing to the network edge, we expect intense competition for this opportunity and may not succeed in our efforts.
+
+---
+
+Our failure to address, or the appearance of our failure to address, issues that give rise to reputational risk, including those described throughout this Risk Factors section, could significantly harm our reputation and our brands. Our reputation can be impacted by catastrophic events (including our response to the COVID-19 pandemic); incidents involving unethical behavior or misconduct; product quality, security, or safety issues; allegations of legal noncompliance; internal control failures; corporate governance issues; data breaches; workplace safety incidents; environmental incidents; our response to climate change, including our greenhouse gas emission levels; the use of our products for illegal or objectionable applications, including AI and machine learning applications that present ethical, regulatory, or other issues; marketing practices; media statements; the conduct of our suppliers or representatives; and other issues, incidents, or statements that, whether actual or perceived, result in adverse publicity. To the extent we fail to respond quickly and effectively to address corporate crises, the ensuing negative public reaction could significantly harm our reputation and our brands and could lead to increases in litigation claims and asserted damages or subject us to regulatory actions or restrictions.
+
+---
+
+Habana Gaudi accelerators are at the forefront of AI solutions for data centers. Amazon Web Services launched the EC2 DL1 instance featuring Habana Gaudi in Amazon Elastic Compute Cloud for training deep learning models. Fundamentals of Our Business
+Our Capital
+10
+Table
+of
+Contents
+Software.
+
+---
+
+We anticipate one or more additional countries will soon provide similar regulation, enabling regular deployment and operation of MaaS fleets with self-driving vehicles starting in 2022. Products and Competition
+Our offering for ADAS and AV is propelled by our computer vision, AI expertise, and software assets, deployed on our EyeQ SoC family. The tight co-design of hardware and software gives the EyeQ SoC the ability to support complex and computationally intense tasks and sets it apart from competition because it is purpose-fit for high-compute, low-power, automotive-compliant mission profiles.
+
+---
+
+EyeQ5 serves as the computational foundation for our scalable camera-only surround sensing system. The system consists of multiple independent computer vision engines and deep networks for algorithmic redundancy. The result is a robust and comprehensive model of the environment that allows end-to-end autonomous driving.
+
+---
+
+The result is a robust and comprehensive model of the environment that allows end-to-end autonomous driving. The surround computer vision system is the backbone of Mobileye's AV architecture and the flagship offering for next-generation ADAS. We recently introduced EyeQ6L and EyeQ6H, which are designed to provide a scalable solution from entry level ADAS to L2+ and L4 systems.
+
+---
+
+▪
+We seek to accelerate adoption of oneAPI and Intel software developer tools through diverse ecosystem activities including developer trainings, summits, centers of excellence, and access to Intel hardware and software through a developer cloud. The Intel® DevCloud for oneAPI hosts global users spanning AI, data science, high-performance computing, and media & graphics and other accelerated computing workloads. ▪
+We believe AI will be ubiquitous, and with our tools and the broad open software ecosystem, we are well-positioned to scale AI.
+
+---
+
+We reduce complexity in the ecosystem with common silicon architectures and software to help enable our customers to create, store, and process data at the edge. Key Developments
+"The market continues to validate the strategic direction we began several years ago; for operational workloads, compute will move closer to where the data is created and AI inference will be the dominant technology driver."
+—Tom Lantzsch,
+IOTG
+General Manager
+■
+Revenue was up 33%, driven by increased demand for IOTG platform products due to recovery from the economic impacts of COVID-19 across all key market segments. Most notably, we saw strength in our retail, industrial, and healthcare market segments.
+
+---
+
+■
+We continue to update solutions to improve developers' digital strategies and to accelerate market adoption of AI applications at the edge. This includes advancing the OpenVINO toolkit for AI inference model deployment. It is supported by Intel DevCloud for the Edge, which allows users to prototype and experiment with AI workloads on Intel hardware prior to deployment.
+
+---
+
+Intel
+®
+Arc™ graphics
+We revealed the brand for our upcoming consumer high-performance graphics products: Intel Arc. The Arc brand will cover hardware, software, and services, and will span multiple hardware generations, with the first generation discrete GPU (Alchemist) based on the Xe HPG microarchitecture and shipping to OEMs in Q1 2022. First closing of divestiture of NAND memory business
+On December 29, 2021, subsequent to our fiscal 2021 year-end, we completed the first closing of the divestiture of our NAND memory business to SK hynix, Inc.
+
+---
+
+xPU architecture. The future is a diverse mix of scalar, vector, matrix, and spatial architectures deployed in CPU, GPU, accelerator, and FPGA sockets, enabled by a scalable software stack and integrated into systems by advanced packaging technology. We are buil

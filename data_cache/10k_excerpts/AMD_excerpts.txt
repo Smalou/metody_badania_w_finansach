@@ -1,0 +1,105 @@
+We invest in high-performance CPUs for client systems, as well as for high performance computing solutions, cloud infrastructure and the private and public cloud environment. We also invest in high-performance GPUs and software for markets such as gaming, compute, artificial intelligence, cloud gaming, and virtual and augmented reality. We combine our high-performance CPUs and GPUs to deliver solutions that are differentiated at the chip level, such as our semi-custom SoCs and APUs, and at the solution level, such as PC and server platforms.
+
+---
+
+Industries that utilize computer assisted design (CAD), that develop content for media and entertainment markets and that generate professional visualizations and renderings can benefit greatly from graphics solutions optimized for the professional graphics market. 3
+In addition to traditional graphics markets, there is a large and growing demand for accelerated computing, powered by graphics processors in markets such as high performance computing (HPC), artificial intelligence, and Cloud Visualization (Virtual Desktop Infrastructure & Cloud Gaming). Another area of the market for graphics compute is blockchain technology, which is a decentralized digital ledger used to securely store, transmit and process sensitive and valuable data.
+
+---
+
+Combined with our AMD ROCm™ open software platform, our customers can deliver differentiated acceleration platforms to address the next-generation of computing challenges while minimizing power and space needs in the data center. In November, 2021, we introduced the AMD Instinct MI200 series accelerators based on the 2nd Gen AMD CDNA architecture, which is optimized for HPC and AI/ML (Artificial Intelligence/Machine Learning) workloads. The MI200 series includes the MI250 Open Accelerator Module (OAM) form factor for purpose-built HPC/AI platforms and the MI210 PCIe form factor for mainstream server platforms.
+
+---
+
+AMD Advantage systems combine AMD Radeon RX 6000M Series Mobile Graphics, AMD Radeon Software and AMD Ryzen 5000 Series Mobile Processors with AMD smart technologies. We also introduced the AMD Instinct MI200 series accelerators based on the 2nd Gen AMD CDNA architecture, optimized for HPC and AI/ML (Artificial Intelligence/Machine Learning) workloads. The MI200 series includes the MI250 Open Accelerator Module (OAM) form factor for purpose-built HPC/AI platforms and the MI210 PCIe form factor for mainstream server platforms.
+
+---
+
+With respect to integrated graphics, higher unit shipments of our APUs and Intel’s integrated graphics may drive computer manufacturers to reduce the number of systems they build paired with discrete graphics components, particularly for notebooks, because they may offer satisfactory graphics performance for most mainstream PC users at a lower cost. For GPU data center products, our principal competitor is NVIDIA, which established its market share in HPC and machine learning through its CUDA software platform. Another competitor, Intel, builds products for acceleration in the data center, such as Intel Xe or Habana AI processors.
+
+---
+
+HBM memory chips are vertically stacked, like floors in a skyscraper to shorten the distance of the information being communicated. Another area of focus is machine intelligence which is the platform for the growing field of machine learning. Our CPUs, GPUs, accelerators, and APUs offer the computation capability and flexibility required for various machine learning deployments.
+
+---
+
+5
+Data Center Graphics
+. Our AMD Instinct™ family of GPU products are specifically designed to address the growing demand for compute-accelerated data center workloads, including deep learning training and a range of HPC applications where the compute capabilities of GPUs provide additional performance. Combined with our AMD ROCm™ open software platform, our customers can deliver differentiated acceleration platforms to address the next-generation of computing challenges while minimizing power and space needs in the data center.
+
+---
+
+Another competitor, Intel, builds products for acceleration in the data center, such as Intel Xe or Habana AI processors. Other competitors include numerous deep learning accelerator companies, consisting mostly of early to late stage start-ups. Large cloud service providers have also shown interest in building their own products to accelerate AI.
+
+---
+
+Another area of the market for graphics compute is blockchain technology, which is a decentralized digital ledger used to securely store, transmit and process sensitive and valuable data. Blockchain applications are typically performed using specially designed application-specific integrated circuits (ASICs) or a general-purpose CPU or GPU. Our Computing Products
+Our microprocessors are incorporated into computing platforms, which are a collection of technologies that are designed to work together to provide a more complete computing solution.
+
+---
+
+We believe that integrated, balanced computing platforms consisting of microprocessors, chipsets (either as discrete devices or integrated into an SoC) and GPUs (either as discrete GPUs or integrated into an APU or SoC) that work together at the system level bring end users improved system stability, increased performance and enhanced power efficiency. In addition, we believe our customers also benefit from an all-AMD platform (consisting of an APU or CPU, a discrete GPU, and a chipset when needed), as we are able to optimize interoperability, provide our customers a single point of contact for the key platform components and enable them to bring the platforms to market quickly in a variety of PC and server system form factors. We currently base our microprocessors and chipsets on the x86 instruction set architecture and the AMD Infinity Fabric™, which connects an on-chip memory controller and input/output (I/O) channels directly to one or more microprocessor cores.
+
+---
+
+In the High-End Desktop (HEDT) and Workstation segments, we offer the TRX40 and the WRX80 chipsets, respectively, to support the 3rd Gen Ryzen Threadripper and Threadripper PRO platforms offering high speed I/O and platform bandwidth. 4
+Our Graphics Products
+Graphics processing is a fundamental component across many of our products and can be found in an APU, GPU, SoC or a combination of a discrete GPU with one of the other foregoing products working in tandem. Our customers generally use our graphics solutions to enable or increase the speed of rendering images, to help improve image resolution and color definition, and increasingly to process massive data sets for cloud and data center applications.
+
+---
+
+Our hardware and software components are used to implement ray tracing technology to simulate the paths of light rays moving through a movie or game scene, resulting in photorealistic 3D images. Our APUs deliver visual processing functionality for value and mainstream PCs by integrating a CPU and a GPU on a single chip, while discrete GPUs (which are also known as dGPUs) offer high-performance graphics processing across all platforms. AMD Accelerated Parallel Processing or General Purpose GPU (GPGPU) refers to a set of advanced hardware and software technologies that enable discrete AMD GPUs, working in concert with the CPU, to accelerate computational tasks beyond traditional CPU processing by utilizing the vast number of GPU cores while working with the CPU to process information cooperatively.
+
+---
+
+In addition, computing devices with heterogeneous computing features can run computationally-intensive tasks more efficiently, which we believe provides a superior application experience to the end user. Moreover, heterogeneous computing allows for the elevation of the GPU to the same level as the CPU for memory access, queuing, and execution. Discrete Desktop and Notebook Graphics
+.
+
+---
+
+Discrete Desktop and Notebook Graphics
+. Our AMD Radeon™ series discrete GPU processors for desktop and notebook PCs support current generation application program interfaces (APIs) like DirectX® 12 Ultimate and Vulkan®, support new displays using AMD FreeSync™, AMD FreeSync Premium, and AMD FreeSync Premium Pro technologies, and are designed to support virtual reality (VR) in PC platforms. Our AMD Radeon Software expands remote gaming functionality and enables new features and customization capabilities.
+
+---
+
+AMD Radeon PRO graphics cards are designed for demanding use cases such as design and manufacturing for CAD, and media and entertainment for broadcast and animation pipelines. AMD Radeon PRO supports end users utilizing GPU accelerated visualization for construction, architecture and mechanical design through gaming and visualization engines on high resolution displays; Radeon VR Creator cards are also capable of supporting this functionality with VR and augmented reality (AR). Software drivers for AMD Radeon PRO cards are designed to deliver high stability and performance across a wide variety of software packages including those requiring professional software vendor certifications.
+
+---
+
+Cloud Gaming and VDI
+. Our visual cloud GPU offerings include products in the Radeon Instinct and Radeon PRO V families. Our visual cloud data center GPUs include a range of solutions tailored towards workloads requiring remote visualization, such as Desktop-as-a-Service, Workstation-as-a-Service and Cloud Gaming.
+
+---
+
+Our visual cloud data center GPUs include a range of solutions tailored towards workloads requiring remote visualization, such as Desktop-as-a-Service, Workstation-as-a-Service and Cloud Gaming. These GPUs are designed to cover the full range of graphical application acceleration, from light desktop to workstation tasks, multi-GPU high end rendering, and cloud gaming activities. Our software solutions carry certification for a number of professional software vendor applications as well as being optimized for modern gaming titles.
+
+---
+
+Our software solutions carry certification for a number of professional software vendor applications as well as being optimized for modern gaming titles. In November 2021, AMD introduced the Radeon PRO V620, a data center GPU using the RDNA 2 architecture and incorporating new capabilities including ray tracing acceleration and Infinity Cache. The Enterprise, Embedded and Semi-Custom Markets
+Our Enterprise, Embedded and Semi-Custom products address the need for computational and visual data processing.
+
+---
+
+The Enterprise, Embedded and Semi-Custom Markets
+Our Enterprise, Embedded and Semi-Custom products address the need for computational and visual data processing. We serve these markets with our CPU, GPU, APU, and customized SoC products. Server
+.
+
+---
+
+We have used this collaborative co-development approach with many of today’s leading game console and handheld PC gaming manufacturers and can also address customer needs in many other markets. We leverage our existing IP to create a variety of products tailored to a specific customer’s needs, ranging from complex fully-customized SoCs to more modest adaptations and integrations of existing CPU, APU or GPU products. 6
+Our Enterprise, Embedded and Semi-Custom Products
+Server Processors
+.
+
+---
+
+Semi-Custom Products
+. Our semi-custom products are tailored, co-developed, high-performance, customer-specific solutions based on AMD CPU, GPU and multi-media technologies. We work closely with our customers to define solutions to precisely match the requirements of the device or application.
+
+---
+
+We believe that our commitment to customer service and design support improves our customers’ time-to-market and fosters relationships that encourage customers to use the next generation of our products. We also work with our customers to create differentiated products that leverage our CPU, GPU and APU technology. Certain customers pay us non-recurring engineering fees for design and development services and a purchase price for the resulting products.
+
+---
+
+Large cloud service prov

@@ -1,0 +1,31 @@
+We are building a distributed computing fabric – across cloud and the edge – to help every organization build, run, and manage mission-critical workloads anywhere. In the next phase of innovation, artificial intelligence (“AI”) capabilities are rapidly advancing, fueled by data and knowledge of the world. We are enabling metaverse experiences at all layers of our stack, so customers can more effectively model, automate, simulate, and predict changes within their industrial environments, feel a greater sense of presence in the new world of hybrid work, and create custom immersive worlds to enable new opportunities for connection and experimentation.
+
+---
+
+A growing part of our business involves cloud-based services available across the spectrum of computing devices. Our strategic vision is to compete and grow by building best-in-class platforms and productivity services for an intelligent cloud and an intelligent edge infused with artificial intelligence (“AI”). At the same time, our competitors are rapidly developing and deploying cloud-based services for consumers and business customers.
+
+---
+
+(“Nuance”) for a total purchase price of $18.8 billion, consisting primarily of cash. Nuance is a cloud and artificial intelligence (“AI”) software provider with healthcare and enterprise AI experience, and the acquisition will build on our industry-specific cloud offerings. The financial results of Nuance have been included in our consolidated financial statements since the date of the acquisition.
+
+---
+
+(“Nuance”) for a total purchase price of $
+billion, consisting primarily of cash. Nuance is a cloud and artificial intelligence (“AI”) software provider with healthcare and enterprise AI experience, and the acquisition will build on our industry-specific cloud offerings. The financial results of Nuance have been included in our consolidated financial statements since the date of the acquisition.
+
+---
+
+We are accelerating adoption of AI innovations from research to products. Our innovation helps every developer be an AI developer, with approachable new tools from Azure Machine Learning Studio for creating simple machine learning models, to the powerful Azure Machine Learning Workbench for the most advanced AI modeling and data science. From GitHub to Visual Studio, we provide a developer tool chain for everyone, no matter the technical experience, across all platforms, whether Azure, Windows, or any other cloud or client platform.
+
+---
+
+Server Products and Cloud Services
+Azure is a comprehensive set of cloud services that offer developers, IT professionals, and enterprises freedom to build, deploy, and manage applications on any platform or device. Customers can use Azure through our global network of datacenters for computing, networking, storage, mobile and web application services, AI, IoT, cognitive services, and machine learning. Azure enables customers to devote more resources to development and use of applications that benefit their organizations, rather than managing on-premises hardware and software.
+
+---
+
+Microsoft 365 brings together Office 365, Windows, and Enterprise Mobility + Security to help organizations empower their employees with AI-backed tools that unlock creativity, increase collaboration, and fuel innovation, all the while enabling compliance coverage and data protection. Microsoft Teams is a comprehensive platform for work, with meetings, calls, chat, collaboration, and business process automation. Microsoft Viva is an employee experience platform that brings together communications, knowledge, learning, resources, and insights powered by Microsoft 365.
+
+---
+
+Together with the Microsoft Cloud, Dynamics 365, Microsoft Teams, and Azure Synapse bring a new era of collaborative applications that transform every business function and process. Microsoft Power Platform is helping domain experts drive productivity gains with low-code/no-code tools, robotic process automation, virtual agents, and business intelligence. In a dynamic labor market, LinkedIn is helping professionals use the platform to connect, learn, grow, and get hired.

@@ -1,0 +1,25 @@
+That driver could be approaching its technological limit, leading semiconductor manufacturers to investigate more complex changes in multiple technologies in an effort to continue technology development. In addition, the emergence of “big data” and new tools such as machine learning and artificial intelligence that capitalize on the availability of large data sets is leading semiconductor manufacturers and equipment manufacturers to pursue new products and approaches that exploit
+Lam Research Corporation 2022 10-K
+14
+Table of Contents
+those tools to advance technology development. In the face of uncertainty on which technology solutions will become successful, we will need to focus our efforts on developing the technology changes that are ultimately successful in supporting our customer requirements.
+
+---
+
+Our business, operating results, financial condition, and cash flows could therefore be adversely affected by:
+•
+a decline in demand for even a limited number of our products;
+•
+a failure to achieve continued market acceptance of our key products;
+•
+export restrictions or other regulatory or legislative actions that could limit our ability to sell those products to key customers or customers within certain markets;
+•
+an improved version of products being offered by a competitor in the markets in which we participate;
+•
+increased pressure from competitors that offer broader product lines;
+•
+increased pressure from regional competitors;
+•
+technological changes that we are unable to address with our products; or
+•
+a failure to release new or enhanced versions of our products on a timely basis. In addition, the fact that we offer limited product lines creates the risk that our customers may view us as less important to their business than our competitors that offer additional products and/or product capabilities, including new products that take advantage of “big data” or other new technologies such as machine learning and artificial intelligence. This may impact our ability to maintain or expand our business with certain customers.

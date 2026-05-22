@@ -1,0 +1,27 @@
+Volatility in our stock price could adversely affect our business and financing opportunities and force us to increase our cash compensation to employees or grant larger stock awards than we have historically, which could hurt our operating results or reduce the percentage ownership of our existing stockholders, or both. Legal and Regulatory Risks
+Government Regulation Is Evolving and Unfavorable Changes Could Harm Our Business
+We are subject to general business regulations and laws, as well as regulations and laws specifically governing the Internet, physical, e-commerce, and omnichannel retail, digital content, web services, electronic devices, advertising, artificial intelligence technologies and services, and other products and services that we offer or sell. These regulations and laws cover taxation, privacy, data use, data protection, data security, network security, consumer protection, pricing, content, copyrights, distribution, transportation, mobile communications, electronic device certification, electronic waste, energy consumption, environmental regulation, electronic contracts and other communications, competition, employment, trade and protectionist measures, web services, the provision of online payment services, registration, licensing, and information reporting
+13
+Table of Contents
+requirements, unencumbered Internet access to our services or access to our facilities, the design and operation of websites, health, safety, and sanitation standards, the characteristics, legality, and quality of products and services, product labeling, the commercial operation of unmanned aircraft systems, healthcare, and other matters.
+
+---
+
+These regulations and laws cover taxation, privacy, data use, data protection, data security, network security, consumer protection, pricing, content, copyrights, distribution, transportation, mobile communications, electronic device certification, electronic waste, energy consumption, environmental regulation, electronic contracts and other communications, competition, employment, trade and protectionist measures, web services, the provision of online payment services, registration, licensing, and information reporting
+13
+Table of Contents
+requirements, unencumbered Internet access to our services or access to our facilities, the design and operation of websites, health, safety, and sanitation standards, the characteristics, legality, and quality of products and services, product labeling, the commercial operation of unmanned aircraft systems, healthcare, and other matters. It is not clear how existing laws governing issues such as property ownership, libel, privacy, data use, data protection, data security, network security, and consumer protection apply to aspects of our operations such as the Internet, e-commerce, digital content, web services, electronic devices, advertising, and artificial intelligence technologies and services. A large number of jurisdictions regulate our operations, and the extent, nature, and scope of such regulations is evolving and expanding as the scope of our businesses expand.
+
+---
+
+We seek to invest efficiently in several areas of technology and content, including AWS, and expansion of new and existing product categories and service offerings, as well as in technology infrastructure to enhance the customer experience and improve our process efficiencies. We believe that advances in technology, specifically the speed and reduced cost of processing power, data storage and analytics, improved wireless connectivity, and the practical applications of artificial intelligence and machine learning, will continue to improve users’ experience on the Internet and increase its ubiquity in people’s lives. To best take advantage of these continued advances in technology, we are investing in AWS, which offers a broad set of on-demand technology services, including compute, storage, database, analytics, and machine learning, and other services, to developers and enterprises of all sizes.
+
+---
+
+We earn fixed fees, a percentage of sales, per-unit activity fees, interest, or some combination thereof, for our seller programs. Developers and Enterprises
+We serve developers and enterprises of all sizes, including start-ups, government agencies, and academic institutions, through AWS, which offers a broad set of on-demand technology services, including compute, storage, database, analytics, and machine learning, and other services. Content Creators
+We serve authors and independent publishers with Kindle Direct Publishing, an online service that lets independent authors and publishers choose a royalty option and make their books available in the Kindle Store, along with Amazon’s own publishing arm, Amazon Publishing.
+
+---
+
+We offer programs that enable sellers to grow their businesses, sell their products in our stores, and fulfill orders through us, and programs that allow authors, musicians, filmmakers, Twitch streamers, skill and app developers, and others to publish and sell content. We serve developers and enterprises of all sizes through AWS, which offers a broad set of on-demand technology services, including compute, storage, database, analytics, and machine learning, and other services. We also manufacture and sell electronic devices.

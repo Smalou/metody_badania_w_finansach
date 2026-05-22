@@ -1,0 +1,51 @@
+Our customers include marketers, advertisers, agencies, publishers, merchandisers, merchants, web analysts, data scientists, developers and executives across the C-suite. The foundation of our offering is Adobe Experience Platform, which provides businesses and brands with an open and extensible system for customer experience management that transforms customer data into robust customer profiles that update in real time and uses insights driven by artificial intelligence (“AI”) to enable the delivery of personalized digital experiences across various channels in milliseconds. With the creative power of our Digital Media business and the data-based tools of our Digital Experience business, we are able to offer a comprehensive suite of offerings to our customers.
+
+---
+
+Social and ethical issues relating to the use of new and evolving technologies, such as AI, in our offerings may result in reputational harm and liability. Social and ethical issues relating to the use of new and evolving technologies such as artificial intelligence (“AI”) in our offerings, may result in reputational harm and liability, and may cause us to incur additional research and development costs to resolve such issues. We are increasingly building AI into many of our offerings.
+
+---
+
+While we have invested in readiness to comply with applicable requirements, the dynamic nature of these laws, regulations and codes, as well as their interpretation by regulators and courts, may affect our ability (and our enterprise customers’ ability) to reach current and prospective customers, to respond to both enterprise and individual customer requests under the laws (such as individual rights of access, correction and deletion of their personal information) and to implement our business models effectively. These laws, regulations and codes may also impact our innovation and business drivers in developing new and emerging technologies (e.g., artificial intelligence and machine learning). These requirements, among others, may impact demand for our offerings and force us to bear the burden of more onerous obligations in our contracts.
+
+---
+
+We fulfill this promise by providing access to a solution that integrates cloud-based and on-premise/on-device features that, together through their integration, provide functionalities, utility and workflow efficiencies that could not be obtained from either the on-premise/on-device software or cloud services on their own. Cloud-based features that are integral to our Creative Cloud and Document Cloud offerings and that work together with the on-premise/on-device software include, but are not limited to: Creative Cloud Libraries, which enable customers to access their work, settings, preferences and other assets seamlessly across desktop and mobile devices and collaborate across teams in real time; shared reviews which enable simultaneous editing and commenting of PDFs across desktop, mobile and web; automatic cloud rendering of a design which enables it to be worked on in multiple mediums; and Sensei, Adobe’s cloud-hosted artificial intelligence and machine learning framework, which enables features such as automated photo-editing, photograph content-awareness, natural language processing, optical character recognition and automated document tagging. Business Combinations
+We allocate the purchase price of acquired companies to tangible and intangible assets acquired and liabilities assumed based upon their estimated fair values at the acquisition date.
+
+---
+
+Digital Media
+In our Digital Media segment, we are a market leader with Creative Cloud, our subscription-based offering which provides desktop tools, mobile apps and cloud-based services for designing, creating and publishing rich and immersive content. Creative Cloud delivers value with deep, cross-product integration, frequent product updates and feature enhancements, cloud-enabled services including storage and syncing of files across users’ machines, machine learning and artificial intelligence, access to marketplace, social and community-based features with our Adobe Stock and Behance services, app creation capabilities, tools which assist with enterprise deployments and team collaboration, and affordable pricing for cost-sensitive customers. We offer Creative Cloud for individuals, students, teams and enterprises.
+
+---
+
+We fulfill this promise by providing access to a solution that integrates cloud-based and on-premise/on-device features that, together through their integration, provide functionalities, utility and workflow efficiencies that could not be obtained from either the on-premise/on-device software or cloud services on their own. Cloud-based features that are integral to our Creative Cloud and Document Cloud offerings and that work together with the on-premise/on-device software include, but are not limited to: Creative Cloud Libraries, which enable customers to access their work, settings, preferences and other assets seamlessly across desktop and mobile devices and collaborate across teams in real time; shared reviews which enable simultaneous editing and commenting of PDFs across desktop, mobile and web; automatic cloud rendering of a design which enables it to be worked on in multiple mediums; and Sensei, Adobe’s cloud-hosted artificial intelligence and machine learning framework, which enables features such as automated photo-editing, photograph content-awareness, natural language processing, optical character recognition and automated document tagging. Standalone selling price is established by maximizing the amount of observable inputs, primarily actual historical selling prices for performance obligations where available, and includes consideration of factors such as go-to-market model and geography.
+
+---
+
+Adobe Sign also provides a green alternative to costly, paper-based solutions and offers a modern, convenient solution for customers to digitally manage their documents, automate processes and contract workflows. We believe that by growing the awareness of electronic signatures in the broader contract delivery and signing market, utilizing Adobe Sensei to enhance customer experiences through machine learning and AI and continuing to add new capabilities to our Acrobat, Adobe Scan and Adobe Sign offerings, we can help our customers continue to migrate away from paper-based processes and adopt our solutions to modernize and digitize document experiences, growing our revenue with this business in the process. Digital Experience
+Opportunity
+Digital transformation is a macro trend that affects every business, government and educational institution today—every business is a digital business.
+
+---
+
+We offer Adobe Workfront, a work management platform directed toward marketers to orchestrate campaign workflows. We also believe the AI and machine learning framework enabled by our strategy with Adobe Sensei enhances the delivery of digital experiences. Adobe Experience Cloud offers domain-specific AI services powered by Adobe Sensei that work with Adobe Experience Platform to augment existing Experience Cloud product offerings.
+
+---
+
+Adobe Analytics
+Adobe Analytics helps our customers create a holistic view of their business by turning consumer interactions into actionable insights. Driven by AI and machine learning, Adobe Analytics collects, organizes and structures vast streams of data from virtually any channel to deliver real-time insights that are easy for users to process, analyze and share to quickly identify problems and opportunities and to drive conversion and relevant consumer experiences. Our customers can use these analytics to continuously improve marketing activities and better direct their marketing spend.
+
+---
+
+Adobe Experience Platform standardizes data for intelligence and profile creation and provides an open and extensible cloud infrastructure, real-time updates, AI-driven insights and scalability, with a wide variety of supporting products and services. Adobe Experience Platform also offers Query Service and Data Science Workspace, which enable users to gain deeper insights from stored datasets, and customer journey intelligence, which leverages predefined data-driven operational best practices, AI and business intelligence to enable and optimize real-time decisions, actions and business processes. Users are able to leverage Adobe Experience Platform to activate AI-driven insights across all Adobe Experience Cloud applications in real time.
+
+---
+
+Adobe Target
+Adobe Target is an AI- and machine-driven personalization engine that lets our customers test, target and optimize content across channels. With Adobe Target, our customers have the tools they need to create omnichannel personalized experiences and create A/B and multivariate tests, done at scale through AI-powered automation so they can quickly discover
+13
+Table of Content
+s
+the best customer experience and deliver that experience across all touchpoints. New features include integration with Adobe Real-Time Customer Data Platform, same page segment qualification and enhanced AI-powered capabilities.

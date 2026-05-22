@@ -1,0 +1,35 @@
+Our products and services do this by optimizing performance, minimizing power consumption, shortening the time to bring our customers’ products to market, improving engineering productivity and reducing their design, development and manufacturing costs. Our electronic systems customers deliver entire devices, such as smartphones, laptop computers, gaming systems, automobiles and autonomous driving systems, servers, cloud data center infrastructure, artificial intelligence (“AI”) systems, aerospace and defense, medical equipment and networking products. These systems companies internally develop, or externally purchase, the sub-components for their products, including printed circuit boards (“PCBs”), which interconnect all the hardware components, ICs, which are often referred to as computer chips, and software at various levels which runs on the hardware.
+
+---
+
+The third layer of our strategy addresses pervasive intelligence in new electronics. It starts with providing solutions and services to develop AI-enhanced systems and includes machine learning and deep learning capabilities being added to the Cadence
+®
+technology portfolio to make IP and tools more automated and to produce optimized results faster. Our software and emulation products also support cloud access to address the growing computational needs of our customers.
+
+---
+
+Many of these attributes contribute to the sustainability of our planet by enabling our customers to create innovative products that optimize power, space and energy needs. We are applying machine learning or computational software techniques within our products to enhance QoR, productivity, performance, manufacturing, reliability and methodology. Products and Product Strategy
+Our Intelligent System Design strategy enables our customers to address a broad range of challenges that arise as they develop electronic products.
+
+---
+
+In order to make our customers successful, our products must handle this exponential growth rate in complexity, without requiring a corresponding increase in our customers’ costs. Historically, the industry that provided the tools used by IC engineers was referred to as Electronic Design Automation (“EDA”). Today, our offerings include and extend beyond EDA to enable computational software for Intelligent System Design across three layers as illustrated below—starting with IC and SoC design excellence, followed by system innovation, and then pervasive intelligence.
+
+---
+
+The Protium platform leverages a common front end with the Palladium environment to move designs rapidly from emulation to the prototyping stage, allowing for software development to start weeks to months earlier than otherwise possible. These engines are also supported by other verification tools that provide an environment that allows for effective verification throughput and management, including verification planning and metric tracking, testbench automation, debugging and software-driven tests, enabling our customers to coordinate verification activities across multiple verification engines, teams and locations for effective verification closure. IP
+Our IP offerings consist of pre-verified, customizable functional blocks, which customers integrate into their ICs to accelerate the development process and to reduce the risk of errors in the design process.
+
+---
+
+During the sales cycle, our direct sales force generally provides technical presentations, product demonstrations and support for on-site customer evaluation of our solutions. We also promote our products and services through advertising, marketing automation, trade shows, public relations and the internet. We selectively utilize value-added resellers to broaden our reach and reduce cost of sales.
+
+---
+
+Prior to joining Cadence, from May 2005 to March 2012, Dr. Devgan served as Corporate Vice President and General Manager of the Custom Design Business Unit at Magma Design Automation, Inc., an EDA company. Dr.
+
+---
+
+Our inability to develop or acquire these application-specific capabilities could impede our ability to expand our business in these categories and ultimately affect our future growth. Currently, the industries we serve are experiencing the following trends:
+•
+changes in the design and manufacturing of ICs, including migration to advanced-process nodes and three-dimensional transistors, such as FinFETs, present major challenges to the semiconductor industry, particularly in IC design, design automation, design of manufacturing equipment, and the manufacturing process itself. With migration to advanced-process nodes, the industry must adapt to more complex physics and manufacturing challenges, such as the need to draw features on silicon that are many times smaller than the wavelength of light used to draw the features via lithography.

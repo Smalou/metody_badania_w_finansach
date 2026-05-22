@@ -82,16 +82,12 @@
 }
 
 \title{\textbf{AI Boom Premium?} \\[2pt]
-       \large Czy spółki silnie powiązane z infrastrukturą AI osiągnęły wyższe
-       zwroty po rozpoczęciu boomu generatywnej AI --- i ile z tego może
-       wynikać z ryzyka rynkowego? \\[6pt]
+       \large Dlaczego pierwsza odpowiedź nie była wystarczająca:
+       analiza zwrotów, ryzyka i pre-event ekspozycji AI \\[6pt]
        \normalsize \emph{Projekt zaliczeniowy IAD --- Metody Badań w Finansach,
        ćwiczenia 3}}
 \author{%
-  Roksana Kulawiec (454474) \\
-  Sylwia Malinowska (487648) \\
-  Mateusz Konopka (487528) \\
-  Antoni Grabowski (452622)%
+  Sylwia Malinowska
 }
 \date{\today}
 
@@ -104,21 +100,49 @@ Wszystkie skrypty Pythona, cache danych (\texttt{parquet}/\texttt{csv}),
 wygenerowane wykresy i źródło niniejszego raportu LaTeX są dostępne
 w powyższym repozytorium.}
 
-\infobox{Streszczenie dla czytelnika}{
+\begin{abstract}
+\noindent Raport sprawdza, czy spółki powiązane z infrastrukturą i platformami
+AI osiągnęły anormalne stopy zwrotu po publicznej premierze ChatGPT
+(30 listopada 2022). Analiza rozpoczyna się od prostych porównań względem
+benchmarku, a następnie progresywnie dodaje kontrole metodologiczne:
+abnormal returns skorygowane o CAPM, test placebo, pre-event AI Exposure
+Score zbudowany z raportów 10-K SEC, cross-sectional regression, robustness
+checks oraz walidację przez modele czynnikowe (CAPM, Fama-French 3 i Carhart 4).
+Wyniki pokazują, że spółki AI infrastructure wyraźnie pobiły benchmark
+w surowych i benchmark-relative zwrotach. Dowody słabną jednak istotnie
+po kontroli pre-event bety, zmienności, momentum i ekspozycji czynnikowych.
+Disclosure-based AI Exposure Score jest dodatnio związany z post-event
+abnormal returns w prostej specyfikacji, lecz efekt zanika po kontrolach
+ryzyka w głównym oknie sześciomiesięcznym. Walidacja semantyczna przez LLM
+ujawnia, że dowody są wrażliwe na sposób pomiaru: miara LLM-based pozostaje
+istotna nawet po kontroli ryzyka, ale opiera się na podpróbie z samo-selekcją.
+Główny wniosek brzmi: \emph{dowody na samodzielną premię AI są mieszane
+i wrażliwe na specyfikację}; pozorna AI Boom Premium jest częściowo efektem
+high-beta technologicznego, a nie wyraźnie potwierdzoną fundamentalną premią.
+Raport ilustruje także wagę walidacji human-in-the-loop
+w AI-wspomaganej analityce inwestycyjnej.
+
+\smallskip
+\noindent\textbf{Słowa kluczowe}: asset pricing, event study, factor models,
+10-K text analysis, AI exposure, model risk.
+\end{abstract}
+
+\infobox{Streszczenie dla czytelnika nieakademickiego}{
 Raport sprawdza, czy po premierze ChatGPT spółki infrastruktury AI osiągały
 wyższe zwroty niż grupy kontrolne. Wyniki wskazują silną przewagę segmentu
-\textbf{AI infrastructure} w analizowanym okresie, jednak pogłębiona diagnostyka
-metodologiczna pokazuje, że proste spready względem SPY nie kontrolują różnic
-w becie, test placebo w Zadaniu 3 ujawnia misspecification, a dobór spółek ma
-charakter ex post. Najmocniejszym elementem raportu pozostaje porównanie metryk
-ryzyko--zwrot i CAPM alpha w Zadaniu 2; Zadania 1 i 3 traktujemy jako opisowe,
-a nie przyczynowe.}
+\textbf{AI infrastructure} w analizowanym okresie. Najmocniejszym elementem
+raportu jest \textbf{część rozszerzona}: konstrukcja \emph{pre-event AI
+Exposure Score} z raportów 10-K, cross-sectional regression oraz walidacja
+wyników przez modele czynnikowe. Zadanie 2 pozostaje najsilniejszym z trzech
+pierwotnych zadań statystycznych, ale dopiero rozszerzenie o NLP i modele
+czynnikowe pozwala właściwie ocenić ryzyko błędnej interpretacji prostego
+wyniku. Zadania 1 i 3 traktujemy jako opisowe, a nie przyczynowe.}
 
 \tableofcontents
 \clearpage
 
 % =====================================================================
-\section*{Wprowadzenie i hipoteza projektowa}
+\section{Wprowadzenie i hipoteza projektowa}
 
 W projekcie przyjęto premierę ChatGPT (30 listopada 2022) jako symboliczny punkt
 startu masowej fazy boomu generatywnej AI. W kolejnych kwartałach temat AI stał
@@ -763,7 +787,583 @@ modelu Fama-French / market model z interceptem.
 
 \clearpage
 % =====================================================================
-\section*{Wnioski końcowe i decyzja inwestora}
+\section{Pre-event AI Exposure Score z raportów 10-K (centralna innowacja)}
+\label{sec:nlp}
+
+\subsection{Motywacja}
+Standardowe klasyfikacje spółek jako ,,AI-related'' powstają po fakcie i są
+podatne na look-ahead bias: do grupy wpadają firmy uznane za beneficjentów AI
+boom dopiero w okresie 2023--2025. Aby częściowo ograniczyć ten problem,
+wprowadzamy własną \emph{pre-event} miarę ekspozycji każdej spółki na sztuczną
+inteligencję, zbudowaną wyłącznie z dokumentów dostępnych publicznie
+\emph{przed} 30.11.2022. Miara ta służy następnie jako zmienna objaśniająca
+w cross-sectional regression post-event abnormal returns
+(sekcja~\ref{sec:cross}).
+
+\subsection{Dane wejściowe --- 10-K SEC}
+Dla każdej z 41 spółek pobrano \emph{najnowszy} formularz 10-K złożony
+publicznie przed 30.11.2022 (foreign filers TSM i ASML --- 20-F). Źródło:
+SEC EDGAR submissions API z User-Agent zawierającym kontakt grupy zgodnie
+z polityką \emph{fair access}. Filtr: \texttt{filing\_date < 2022-11-30}.
+Pełna metadata (CIK, accession number, filing date, period of report)
+w \texttt{data\_cache/10k\_metadata.csv}; surowe teksty po ekstrakcji
+z iXBRL/HTML w \texttt{data\_cache/10k\_filings/}. Skrypt:
+\texttt{src/sec\_edgar\_fetcher.py}.
+
+\subsection{Konstrukcja deterministyczna --- specyfikacja główna}
+Dla każdej spółki liczymy liczbę wystąpień fraz z dwóch słowników:
+
+\paragraph{Słownik konserwatywny (main)} --- terminy obecne w finansowym
+dyskursie pre-2022, chroniące przed \emph{semantic look-ahead bias}:
+\begin{quote}\small
+\texttt{artificial intelligence}, \texttt{machine learning}, \texttt{deep learning},
+\texttt{neural network}, \texttt{natural language processing}, \texttt{computer vision},
+\texttt{predictive analytics}, \texttt{autonomous systems}, \texttt{recommendation system},
+\texttt{data science}, \texttt{automation}, \texttt{algorithmic decision-making}.
+\end{quote}
+
+\paragraph{Słownik rozszerzony (robustness)} --- terminy spopularyzowane post-ChatGPT:
+\begin{quote}\small
+\texttt{generative AI}, \texttt{large language model}, \texttt{foundation model},
+\texttt{transformer model}, \texttt{inference}, \texttt{training compute},
+\texttt{AI accelerator}.
+\end{quote}
+
+\paragraph{Termin \texttt{GPU} --- liczony kontekstowo} tylko gdy w oknie $\pm 50$ słów
+występuje co najmniej jeden z: \texttt{AI / machine learning / training /
+inference / data center / accelerator / neural network / deep learning}.
+Bez kontekstu \texttt{GPU} może oznaczać gaming chips bez związku z AI.
+
+\paragraph{Normalizacja}: $\text{mentions\_per\_10k} = \frac{\text{raw\_count}}
+{\text{doc\_length} / 10\,000}$; następnie $\log(1+\cdot)$, winsoryzacja $[1\%, 99\%]$,
+percentile rank po próbie 41 spółek. Wynik: $\text{ai\_exposure\_det\_main} \in [0, 1]$.
+Percentile rank chroni przed dominacją outlierów (np. NVDA) i jest interpretowalny
+jako ,,w którym kwantylu ekspozycji AI plasuje się spółka'' względem analizowanej
+próby.
+
+\subsection{Walidacja LLM (Claude Haiku, robustness)}
+Dla każdej spółki generujemy wycinki zdań zawierające termy AI ze słowników
+i przekazujemy do modelu Anthropic Claude Haiku (slug API: \texttt{claude-haiku-4-5};
+pełna nazwa wersji modelu logowana w \texttt{data\_cache/llm\_raw\_responses.jsonl}),
+przy \texttt{temperature=0} i fixed prompt SHA-256.
+Prompt klasyfikacyjny 0--3 (brak / marginalna wzmianka / istotny element /
+core business). Wszystkie raw responses i metadane (model version, prompt hash,
+timestamp) zapisywane do \texttt{data\_cache/llm\_raw\_responses.jsonl}.
+Skrypt: \texttt{src/llm\_classifier.py} z flagą \texttt{--no-llm} dla pełnej
+reprodukcji bez API key.
+
+\paragraph{Wynik walidacji LLM.}
+Pipeline LLM uruchomiono dla pełnej listy 41 spółek, natomiast faktyczne
+wywołanie klasyfikacyjne wykonano \textbf{tylko dla 34 spółek}, dla których
+skrypt znalazł fragmenty zawierające frazy ze słownika konserwatywnego.
+Dla pozostałych 7 spółek (AAPL, PG, MRK, MCD, COST, CL, GIS) brak excerptów
+potraktowano jako \emph{brak wystarczającego materiału do klasyfikacji LLM}
+i zapisano \texttt{ai\_exposure\_llm = NaN}. Wszystkie surowe odpowiedzi
+z metadanymi (model version, prompt SHA-256, timestamp) są zapisane w
+\texttt{data\_cache/llm\_raw\_responses.jsonl}, co pozwala na pełną reprodukcję
+analizy bez ponownego wywoływania API. W robustness checks
+(sekcja~\ref{sec:rob}) testujemy także wariant \texttt{ai\_exposure\_llm\_missing0},
+w którym brakujące wartości zastępujemy zerem, aby sprawdzić wrażliwość wyniku
+na samo-selekcję podpróby.
+
+\paragraph{Korelacja Spearmana \texttt{det\_main} vs \texttt{llm}: $\rho = 0{,}463$ ($n = 34$).}
+Umiarkowana, dodatnia korelacja oznacza, że \emph{obie miary uchwytują
+częściowo różne aspekty} pre-event AI exposure: \texttt{det\_main} łapie literalne
+występowanie fraz słownikowych, \texttt{llm} łapie semantyczny sens (na skali
+0--3 odpowiadającej kategoriom brak / marginalna wzmianka / istotny element /
+core business).
+
+\paragraph{Najciekawsze rozbieżności (wybór z 34 ważnych obserwacji).}
+\begin{center}\small
+\begin{tabular}{p{1.2cm}rrp{8.5cm}}
+\toprule
+Ticker & \texttt{det\_main} & \texttt{llm} & Komentarz \\
+\midrule
+NVDA  & $1{,}00$ & $1{,}00$ & spójne --- core business AI \\
+MSFT  & $0{,}46$ & $1{,}00$ & LLM widzi semantykę AI w działalności cloud, mimo mniejszej liczby literalnych fraz \\
+GOOGL & $0{,}46$ & $1{,}00$ & analogicznie --- LLM identyfikuje ekspozycję AI w działalności search/cloud \\
+ADBE  & $0{,}83$ & $1{,}00$ & LLM interpretuje AI jako istotny komponent działalności software/creative tools \\
+TXN   & $1{,}00$ & $0{,}00$ & LLM identyfikuje analog/embedded jako non-AI mimo wysokiej liczby fraz słownikowych \\
+AAPL  & $0{,}00$ & \texttt{NaN} & brak fraz w 10-K $\rightarrow$ brak excerptów do LLM \\
+\bottomrule
+\end{tabular}
+\end{center}
+\smallskip
+Powyższe komentarze interpretują wyłącznie zawartość 10-K dostępnych
+\emph{przed} 30.11.2022; nie odnoszą się do żadnych konkretnych produktów
+spółek wprowadzonych w późniejszym okresie.
+
+\resultbox{LLM validation potwierdza ogólny kierunek deterministycznego scoringu
+($\rho = 0{,}46$), ale ujawnia istotne rozbieżności semantyczne (MSFT, GOOGL,
+TXN). To jest dokładnie typ \emph{measurement risk}, który motywował naszą
+decyzję o pre-rejestracji deterministic scoru jako specyfikacji głównej
+i LLM jako miary robustness --- a nie arbitralnym mixu (np. 0.6/0.4).
+Wyniki LLM służą jako uczciwie raportowane uzupełnienie, nie jako sterownik
+narracji. Pełna analiza obu miar w robustness checks (sekcja~\ref{sec:rob}).}
+
+\paragraph{Statystyki opisowe per grupa.}
+\begin{center}\small
+\begin{tabular}{lrrrrr}
+\toprule
+Grupa & $n$ & średnia $S$ & odch. std. & min & max \\
+\midrule
+AI infrastructure   & 11 & $0{,}499$ & $0{,}249$ & $0{,}195$ & $1{,}000$ \\
+AI platforms        & 10 & $\mathbf{0{,}734}$ & $0{,}188$ & $0{,}415$ & $0{,}976$ \\
+Broad technology    & 10 & $0{,}641$ & $0{,}250$ & $0{,}098$ & $0{,}951$ \\
+Defensive control   & 10 & $0{,}176$ & $0{,}107$ & $0{,}098$ & $0{,}366$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{Top 10 spółek wg \texttt{ai\_exposure\_det\_main}.}
+NVDA $1{,}00$, IBM $0{,}98$, PANW $0{,}95$, SNOW $0{,}93$, NOW $0{,}90$,
+INTU $0{,}88$, ADBE $0{,}85$, ACN $0{,}83$, AVGO $0{,}81$, ADSK $0{,}78$.
+
+\resultbox{Nowa miara plasuje NVDA na pierwszym miejscu, a klasyczne FMCG/healthcare
+na ostatnim --- co stanowi sanity check sensowności konstrukcji.}
+
+\paragraph{Paradoks AI platforms vs AI infrastructure.}
+Istotnym wynikiem samym w sobie jest fakt, że \textbf{najwyższą średnią ujawnioną
+ekspozycję AI mają AI platforms (0{,}73), a nie AI infrastructure (0{,}50)} ---
+mimo że to drugi segment wygenerował później dramatycznie wyższe stopy zwrotu.
+Oznacza to, że rynek po 30.11.2022 nie nagradzał po prostu firm najczęściej
+raportujących AI w 10-K. Najsilniejsze zwroty pojawiły się raczej w segmencie
+infrastrukturalnym, który był bezpośrednim beneficjentem capexu na obliczenia,
+GPU i data centers. To osłabia prostą interpretację ,,więcej AI disclosure
+= większa premia'' i wspiera główną tezę raportu o ryzyku prostych narracji
+łączących disclosure z post-event returns.
+
+\paragraph{Obserwacja wymagająca komentarza.}
+AAPL w 10-K za FY2022 ma $0$ wystąpień z naszego konserwatywnego słownika,
+mimo że jest powszechnie uznawany za firmę z istotną ekspozycją na technologie
+AI/ML. Jest to prawdopodobnie efekt językowy: Apple unika żargonu
+,,machine learning'' w SEC filings i częściej używa frazeologii produktowej
+lub ogólnych określeń inteligencji urządzeń. Tego typu efekty są nieuniknione
+w dictionary-based NLP i ilustrują, dlaczego walidacja LLM jest cenna jako
+miara robustness.
+
+\clearpage
+% =====================================================================
+\section{Cross-sectional regression: AI Premium ~ AI Exposure}
+\label{sec:cross}
+
+\subsection{Specyfikacja}
+Cross-sectional OLS na próbie $n=41$ spółek:
+\[
+  \text{AR}_i = \beta_0 + \beta_1 \cdot \text{AI\_Exposure}_i
+              + \gamma' \mathbf{X}_i + \varepsilon_i,
+\]
+gdzie:
+\begin{itemize}
+  \item $\text{AR}_i$ --- post-event abnormal return spółki $i$, w specyfikacji
+        głównej 6-miesięczny ($2022\text{-}11\text{-}30 \to 2023\text{-}05\text{-}31$);
+  \item $\text{AI\_Exposure}_i$ --- \texttt{ai\_exposure\_det\_main} z sekcji~\ref{sec:nlp};
+  \item $\mathbf{X}_i$ --- kontrole liczone z okna pre-event
+        ($2021\text{-}01\text{-}01 \to 2022\text{-}11\text{-}29$):
+        $\beta_{pre}$, annualized volatility, momentum 12M,
+        $\log(\text{market\_cap})$.
+\end{itemize}
+
+Cztery zagnieżdżone modele (parsymonia przy $n=41$ --- bez 11 GICS dummies,
+bez interakcji):
+
+\begin{center}\small
+\begin{tabular}{ll}
+\toprule
+Model & Specyfikacja \\
+\midrule
+M1 & AI\_Exp \\
+M2 & + $\beta_{pre}$ + vol\_pre \\
+M3 & + momentum 12M \\
+M4 & + $\log$ market cap \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Inference}
+Dla każdego modelu raportujemy łącznie:
+\begin{itemize}
+  \item OLS standardowy SE i White (HC1) robust SE (White, 1980),
+  \item bootstrap 95\% CI dla $\beta_1$ ($B=10\,000$, ziarno 42),
+  \item współczynnik determinacji $R^2$.
+\end{itemize}
+
+Zgodnie z pre-rejestracją: ,,Given the small cross-section, inference is interpreted
+through coefficient direction, economic magnitude, confidence intervals, and
+robustness across specifications rather than through mechanical significance
+thresholds.''
+
+\subsection{Wyniki głównej regresji}
+\begin{center}\small
+\begin{tabular}{lcccccc}
+\toprule
+Model & $n$ & $R^2$ & $\hat\beta_1$ & HC1 SE & 95\% CI HC1 & 95\% CI boot \\
+\midrule
+M1 & 41 & $0{,}094$ & $\mathbf{+0{,}259^{*}}$ & $0{,}129$ & $[+0{,}007;\ +0{,}512]$ & $[+0{,}017;\ +0{,}515]$ \\
+M2 & 41 & $0{,}439$ & $-0{,}009$ & $0{,}108$ & $[-0{,}221;\ +0{,}203]$ & $[-0{,}219;\ +0{,}231]$ \\
+M3 & 41 & $0{,}447$ & $+0{,}013$ & $0{,}112$ & $[-0{,}206;\ +0{,}232]$ & $[-0{,}192;\ +0{,}274]$ \\
+M4 & 41 & $0{,}535$ & $+0{,}044$ & $0{,}109$ & $[-0{,}169;\ +0{,}257]$ & $[-0{,}150;\ +0{,}296]$ \\
+\bottomrule
+\multicolumn{7}{l}{\scriptsize $^{*}$ $p_{\text{HC1}} = 0{,}044$ dla M1; $p > 0{,}68$ dla M2--M4.}
+\end{tabular}
+\end{center}
+
+\resultbox{$\beta_1$ jest istotnie dodatnia w \emph{prostej} regresji bez kontroli
+ryzyka (M1: $+0{,}26$, $p=0{,}044$), ale \textbf{całkowicie zanika} po dodaniu
+$\beta_{pre}$ i pre-event volatility (M2--M4: $|\hat\beta_1| < 0{,}05$, wszystkie
+$p > 0{,}68$). Jednocześnie $R^2$ rośnie z $0{,}09$ do $0{,}54$ --- to znaczy,
+że \textbf{większość wyjaśnionej zmienności w M4 pochodzi z kontroli ryzyka
+i charakterystyk pre-event} (zwłaszcza beta i volatility), a nie z samej miary
+ekspozycji na AI.}
+
+\paragraph{Wykres scatter + linia OLS z M1.}
+\begin{center}
+\includegraphics[width=\textwidth]{../figures/cross_sectional_scatter.pdf}
+\end{center}
+
+\paragraph{Coefficient plot $\hat\beta_1$ per model.}
+\begin{center}
+\includegraphics[width=0.8\textwidth]{../figures/cross_sectional_coefs.pdf}
+\end{center}
+
+\subsection{Macierz korelacji zmiennych regresji}
+\label{sec:corr}
+\begin{center}\small
+\begin{tabular}{lrrrrrr}
+\toprule
+ & AI\_Exp & beta & vol & mom12 & log\_mc & AR\_6m \\
+\midrule
+AI\_Exp        & $1{,}00$  &           &           &           &           &           \\
+beta\_pre      & $+0{,}50$ & $1{,}00$  &           &           &           &           \\
+vol\_pre       & $+0{,}48$ & $+0{,}93$ & $1{,}00$  &           &           &           \\
+mom\_12m\_pre  & $-0{,}49$ & $-0{,}70$ & $-0{,}63$ & $1{,}00$  &           &           \\
+log\_mkt\_cap  & $+0{,}03$ & $+0{,}15$ & $-0{,}02$ & $-0{,}30$ & $1{,}00$  &           \\
+AR\_6m         & $+0{,}31$ & $+0{,}61$ & $+0{,}66$ & $-0{,}36$ & $+0{,}22$ & $1{,}00$  \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Diagnostyka multicollinearity (VIF, M4)}
+\begin{center}\small
+\begin{tabular}{lr}
+\toprule
+Zmienna & VIF \\
+\midrule
+ai\_exposure\_det\_main & $1{,}42$ \\
+beta\_pre              & $\mathbf{9{,}31}$ \\
+vol\_pre               & $\mathbf{8{,}41}$ \\
+momentum\_12m\_pre     & $2{,}29$ \\
+log\_market\_cap       & $1{,}35$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Interpretacja}
+Macierz korelacji bezpośrednio dokumentuje mechanizm znikania efektu w M2--M4:
+\textbf{AI Exposure jest dodatnio skorelowane z pre-event betą ($+0{,}50$)
+i zmiennością ($+0{,}48$)}, a te z kolei są bardzo silnymi predyktorami AR\_6m
+(odpowiednio $+0{,}61$ i $+0{,}66$). Po dodaniu beta i vol do modelu większość
+cross-sectional wariancji AR\_6m zostaje wyjaśniona przez kontrole ryzyka,
+a sam komponent ,,AI exposure'' nie wnosi już istotnej dodatkowej informacji.
+
+VIF wskazują na \textbf{istotną współliniowość} między \emph{beta} i \emph{vol}
+($\rho = 0{,}93$, VIF $\approx 8$--$9$). Nie podważa to głównego wniosku, ale
+sugeruje, że indywidualnych współczynników dla \emph{beta} i \emph{volatility}
+nie należy interpretować oddzielnie --- w tej pracy pełnią one rolę
+\textbf{łącznego bloku kontroli ryzyka}. Sama AI Exposure ma niski VIF
+($1{,}42$), więc nie cierpi z powodu collinearity z innymi predyktorami ---
+oznacza to, że brak istotności $\hat\beta_1$ w M2--M4 \textbf{nie wygląda
+na prosty artefakt technicznej współliniowości} AI Exposure z pozostałymi
+predyktorami. Nadal jednak należy interpretować go ostrożnie ze względu na
+małą próbę i szerokie przedziały ufności. Wobec $n = 41$ wyniki regresji
+interpretujemy \textbf{przede wszystkim} przez stabilność współczynników
+i przedziały ufności, a nie precyzyjną identyfikację przyczynową.
+
+\paragraph{Wniosek metodologiczny.}
+\emph{Prima facie} AI exposure wydaje się tłumaczyć post-event premium, ale
+po wprowadzeniu kontroli ryzyka sam komponent disclosure-based AI exposure
+nie ma wykrywalnego niezależnego wpływu na 6-miesięczne abnormal returns.
+To jest dokładnie typ wniosku, którego nie wygenerowała prostsza analiza
+Zadania~1 (między-portfelowa) ani Zadania~3 (przed/po).
+
+\clearpage
+% =====================================================================
+\section{Robustness checks dla cross-sectional regresji}
+\label{sec:rob}
+
+Pre-rejestrowane (\texttt{docs/PRE\_REGISTRATION.md}, sekcja 9):
+leave-one-out, excluding extreme firms, alternative AI scores, alternative
+windows i alternative scaling. Wszystkie sprawdzane na baseline M3.
+
+\subsection{(1) Leave-one-out}
+41 regresji, każda bez jednej spółki. Baseline M3 $\hat\beta_1 = +0{,}013$.
+\textbf{7 z 41 LOO regresji odwraca znak} $\hat\beta_1$ (17\%) ---
+$\hat\beta_1 \in [-0{,}036;\ +0{,}081]$, mediana $+0{,}013$. Najbardziej wpływowa:
+\textbf{IBM} (AI\_platforms) --- po jej wykluczeniu $\hat\beta_1 = +0{,}081$.
+
+\begin{center}
+\includegraphics[width=\textwidth]{../figures/leave_one_out_beta1.pdf}
+\end{center}
+
+\subsection{(2) Excluding extreme firms (M3)}
+\begin{center}\small
+\begin{tabular}{lrrrrr}
+\toprule
+Wariant & $n$ & $\hat\beta_1$ & $p_{\text{HC1}}$ & 95\% CI \\
+\midrule
+full sample          & 41 & $+0{,}013$ & $0{,}909$ & $[-0{,}206;\ +0{,}232]$ \\
+bez NVIDIA           & 40 & $-0{,}036$ & $0{,}721$ & $[-0{,}234;\ +0{,}162]$ \\
+bez top-3 AI exposure & 38 & $+0{,}059$ & $0{,}649$ & $[-0{,}196;\ +0{,}315]$ \\
+bez top-3 post-event AR & 38 & $+0{,}005$ & $0{,}949$ & $[-0{,}155;\ +0{,}166]$ \\
+bez bottom-3 AR      & 38 & $+0{,}082$ & $0{,}503$ & $[-0{,}158;\ +0{,}321]$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{Obserwacja.} Bez NVIDIA znak się odwraca (z $+0{,}013$ na $-0{,}036$),
+choć wszystkie warianty pozostają nieistotne. To uczciwe pokazanie, że nawet
+mały efekt dodatni w M3 jest częściowo napędzany przez pojedynczą obserwację.
+
+\subsection{(3) Alternative AI scores (M3)}
+\begin{center}\small
+\begin{tabular}{lrrrr}
+\toprule
+Specyfikacja $X$ & $n$ & $\hat\beta_1$ & $p_{\text{HC1}}$ & 95\% CI \\
+\midrule
+\texttt{ai\_exposure\_det\_main} (główna)                  & 41 & $+0{,}013$ & $0{,}909$ & $[-0{,}206;\ +0{,}232]$ \\
+\texttt{ai\_exposure\_det\_main\_gpu}                      & 41 & $+0{,}019$ & $0{,}870$ & $[-0{,}207;\ +0{,}245]$ \\
+\texttt{ai\_exposure\_det\_main\_no\_automation}           & 41 & $+0{,}044$ & $0{,}710$ & $[-0{,}189;\ +0{,}277]$ \\
+\texttt{ai\_exposure\_det\_extended}                       & 41 & $+0{,}087$ & $0{,}777$ & $[-0{,}514;\ +0{,}687]$ \\
+\texttt{ai\_exposure\_llm} (Claude Haiku)                  & 34 & $\mathbf{+0{,}379^{**}}$ & $\mathbf{0{,}0022}$ & $\mathbf{[+0{,}136;\ +0{,}622]}$ \\
+\texttt{ai\_exposure\_llm\_missing0} (NaN $\rightarrow 0$) & 41 & $\mathbf{+0{,}176^{*}}$  & $\mathbf{0{,}0408}$ & $\mathbf{[+0{,}007;\ +0{,}345]}$ \\
+\bottomrule
+\multicolumn{5}{l}{\scriptsize $^{*}$ $p < 0{,}05$;\quad $^{**}$ $p < 0{,}01$.} \\
+\end{tabular}
+\end{center}
+
+Cztery miary deterministyczne dają nieistotne $\hat\beta_1$ w M3 (w tym
+\texttt{no\_automation}, co potwierdza, że szerokie pojęcie ,,automation'' nie
+sterowało wynikiem). \textbf{Obie miary LLM-based są istotnie dodatnie po
+kontroli ryzyka}: na podpróbie $n=34$ silnie ($\hat\beta_1 = +0{,}38$,
+$p = 0{,}002$), a w wariancie z brakami = $0$ na pełnym $n = 41$ słabiej, ale
+nadal istotnie ($\hat\beta_1 = +0{,}18$, $p = 0{,}041$). Spadek o połowę między
+wariantami sugeruje, że samo-selekcja podpróby (wykluczenie 7 spółek o niskiej
+ekspozycji AI) wzmacnia ale nie tworzy efektu LLM.
+
+\cautionbox{Wynik LLM-based ($n=34$) wzmacniany jest samo-selekcją 7 spółek,
+głównie Defensive (PG, MRK, MCD, COST, CL, GIS) plus AAPL --- systematycznie
+spółek o niskiej ekspozycji AI. Wariant \texttt{missing0} ($n=41$) jest słabszy,
+ale wciąż istotny: samo-selekcja prawdopodobnie wzmacnia wynik LLM, a
+\texttt{missing0} \textbf{ogranicza obawę}, że efekt jest wyłącznie artefaktem
+podpróby, ale \textbf{nie usuwa ryzyka biasu pomiarowego} (zależność od
+prompta, wyboru excerptów, wersji modelu). Wynik traktujemy jako sygnał
+motywujący dalsze badania, nie jako rozstrzygnięcie tezy AI Premium.}
+
+\paragraph{Interpretacja merytoryczna.} Rozbieżność deterministic (nieistotne)
+vs LLM (istotne na obu próbach) jest dokładnie tym, czego oczekiwaliśmy w
+sekcji~\ref{sec:nlp} przy korelacji $\rho_{\text{Spearman}} = 0{,}46$: dwie
+miary uchwytują różne aspekty ekspozycji AI. Deterministic łapie literalne
+frazy, więc spółki o mniejszej ilości żargonu otrzymują niski score, mimo że
+LLM klasyfikuje je wyżej na skali ekspozycji. LLM score \textbf{może lepiej
+uchwycić semantyczną ekspozycję} firm, których dokumenty nie używają literalnego
+słownictwa AI. Nie można jednak traktować go jako bezpośredniego pomiaru
+rzeczywistej ekspozycji operacyjnej, ponieważ wynik zależy od prompta, wyboru
+excerptów, wersji modelu oraz systematycznego braku klasyfikacji dla części
+spółek.
+
+\subsection{(4) Alternative windows $Y$ (M3)}
+\begin{center}\small
+\begin{tabular}{lrrr}
+\toprule
+Okno $Y$ & $\hat\beta_1$ & $p_{\text{HC1}}$ & 95\% CI \\
+\midrule
+3 miesiące & $+0{,}012$ & $0{,}828$ & $[-0{,}098;\ +0{,}122]$ \\
+6 miesięcy (główne) & $+0{,}013$ & $0{,}909$ & $[-0{,}206;\ +0{,}232]$ \\
+\textbf{12 miesięcy} & $\mathbf{+0{,}254^{*}}$ & $\mathbf{0{,}031}$ & $\mathbf{[+0{,}023;\ +0{,}485]}$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{Ciekawa obserwacja.} Dla 12-miesięcznego okna $\hat\beta_1$ staje się
+\emph{istotnie} dodatnia ($+0{,}25$, $p=0{,}031$, CI nie zawiera zera)
+nawet po kontroli ryzyka. To sugeruje, że \emph{ile} z AI premium było
+fundamentalnie powiązane z disclosed exposure, ujawniało się dopiero
+w dłuższym horyzoncie. Ten wynik raportujemy jako pre-rejestrowany robustness check
+--- nie jako efekt główny --- bo specyfikacja długoterminowa jest bardziej narażona
+na confounding events (Q4 2023, rajdy NVDA w 2024).
+
+\subsection{(5) Alternative scaling $X$ (M3)}
+\begin{center}\small
+\begin{tabular}{lrrr}
+\toprule
+Skala $X$ & $\hat\beta_1$ & $p_{\text{HC1}}$ & 95\% CI \\
+\midrule
+percentile rank (główna) & $+0{,}013$ & $0{,}909$ & $[-0{,}206;\ +0{,}232]$ \\
+$z$-score                & $+0{,}015$ & $0{,}739$ & $[-0{,}072;\ +0{,}101]$ \\
+$\log(1+\cdot)$          & $+0{,}019$ & $0{,}756$ & $[-0{,}102;\ +0{,}141]$ \\
+raw mentions / 10k       & $+0{,}010$ & $0{,}739$ & $[-0{,}047;\ +0{,}067]$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Wszystkie skale produkują niemal identyczne (zerowe) szacunki w M3.
+
+\paragraph{Pełny wykres summary.}
+\begin{center}
+\includegraphics[width=\textwidth]{../figures/robustness_summary.pdf}
+\end{center}
+
+\resultbox{Robustness checks potwierdzają wniosek z M3: po kontroli ryzyka
+$\hat\beta_1$ jest nieodróżnialna od zera dla większości specyfikacji.
+Jedynym istotnym wyjątkiem jest okno 12-miesięczne ($p=0{,}031$), które
+sygnalizuje, że dłuższy horyzont może uwidocznić efekt fundamentalny ---
+ale wymaga to oddzielnego badania z lepszą kontrolą confounding events.}
+
+\clearpage
+% =====================================================================
+\section{Modele czynnikowe (CAPM / FF3 / Carhart 4) dla portfeli EW}
+\label{sec:factor}
+
+\subsection{Specyfikacja}
+Dla każdego z czterech portfeli równoważonych (EW) per grupa estymujemy trzy
+modele asset pricing na dziennych danych 2021-01-04 -- 2026-03-31:
+\begin{align*}
+\text{CAPM:}\quad r_i^p - r_f &= \alpha + \beta_{\text{MKT}}(\text{Mkt-RF}) + \varepsilon \\
+\text{FF3:}\quad   r_i^p - r_f &= \alpha + \beta_{\text{MKT}}(\text{Mkt-RF}) + \beta_{\text{SMB}}\text{SMB} + \beta_{\text{HML}}\text{HML} + \varepsilon \\
+\text{Carhart 4:}\quad r_i^p - r_f &= \alpha + \beta_{\text{MKT}}(\text{Mkt-RF}) + \beta_{\text{SMB}}\text{SMB} + \beta_{\text{HML}}\text{HML} + \beta_{\text{MOM}}\text{MOM} + \varepsilon
+\end{align*}
+Czynniki: \emph{Kenneth French Data Library} (\texttt{F-F\_Research\_Data\_Factors\_daily}
++ \texttt{F-F\_Momentum\_Factor\_daily}), pobrane bezpośrednio z Tuck/Dartmouth.
+Risk-free w modelach czynnikowych = $RF$ z serii Famy-Frencha (nie \texttt{\^{}IRX});
+decyzja udokumentowana w \texttt{docs/decision\_log.md} (spójność z definicją
+$RF$ użytą do konstrukcji $\text{Mkt-RF}$, $\text{SMB}$, $\text{HML}$, $\text{MOM}$).
+Inference: Newey-West HAC SE ($\text{maxlags}=5$) (Newey i West, 1987).
+
+\subsection{Wyniki --- annualized $\alpha$ per grupa}
+\begin{center}\small
+\begin{tabular}{lrrrrrr}
+\toprule
+Grupa & \multicolumn{2}{c}{CAPM} & \multicolumn{2}{c}{FF3} & \multicolumn{2}{c}{Carhart 4} \\
+\cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7}
+      & $\hat\alpha$ & $p_{\text{HAC}}$ & $\hat\alpha$ & $p_{\text{HAC}}$ & $\hat\alpha$ & $p_{\text{HAC}}$ \\
+\midrule
+AI infrastructure & $+0{,}087$ & $0{,}41$ & $+0{,}147$ & $0{,}15$ & $+0{,}132$ & $0{,}19$ \\
+AI platforms      & $-0{,}093$ & $0{,}13$ & $-0{,}044$ & $0{,}39$ & $-0{,}039$ & $0{,}44$ \\
+Broad tech        & $-0{,}089$ & $0{,}05$ & $-0{,}065$ & $0{,}14$ & $-0{,}062$ & $0{,}16$ \\
+Defensive         & $+0{,}026$ & $0{,}62$ & $-0{,}008$ & $0{,}87$ & $-0{,}003$ & $0{,}95$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{Główne pytanie testowane}: czy AI infrastructure ma trwałą $\alpha$
+także po kontroli momentum?
+
+\resultbox{AI infrastructure ma dodatnią szacowaną alfę ($+8{,}7$ -- $+14{,}7\%$
+rocznie), ale w żadnym z trzech modeli (CAPM, FF3, Carhart 4) nie osiąga ona
+istotności na poziomie $0{,}10$ przy $\text{HAC SE}$. Po dodaniu momentum
+$\hat\alpha$ \emph{nieznacznie spada} (z $+14{,}7\%$ w FF3 do $+13{,}2\%$
+w Carhart 4) --- czyli momentum nie tłumaczy istotnej części portfelowej alfy,
+ale rozszerzenie modelu nie zmienia werdyktu o (nie)istotności.
+Pozostałe trzy grupy mają $\hat\alpha$ statystycznie nieodróżnialne od zera
+we wszystkich modelach.}
+
+\paragraph{Wykres.}
+\begin{center}
+\includegraphics[width=\textwidth]{../figures/factor_model_alpha_per_group.pdf}
+\end{center}
+
+\subsection{Interpretacja}
+Wynik factor-model jest spójny z wnioskami cross-sectional regresji: AI Premium
+jest \emph{wizualnie} obecne, ale modele czynnikowe nie dostarczają
+\textbf{wystarczająco precyzyjnego dowodu} na dodatnią alfę AI infrastructure.
+Szacunki alfy są dodatnie ($+8{,}7\%$ -- $+14{,}7\%$ rocznie), ale przy HAC SE
+statystycznie nieodróżnialne od zera. To nie oznacza, że efekt nie istnieje ---
+przy małej próbie ($n = 41$ spółek w 4 portfelach EW, ~1300 sesji dziennych)
+moc testu może być ograniczona. Hipoteza H4 (pre-rejestrowana w
+\texttt{docs/PRE\_REGISTRATION.md} sekcja 2) \textbf{nie znajduje silnego
+empirycznego wsparcia} przy obecnej próbie i specyfikacji ($\alpha = 0{,}10$).
+
+Z perspektywy publikacyjnej oznacza to, że \emph{rygorystyczna kontrola
+ryzyka systematycznego i momentum nie pozwala jednoznacznie odróżnić ,,AI
+Premium'' od pasywnej premii high-beta growth w okresie 2022--2026}.
+
+\clearpage
+% =====================================================================
+\section{Dyskusja: model risk w AI-wspomaganej analityce inwestycyjnej}
+\label{sec:disc}
+
+\subsection{Co nasze wyniki znaczą}
+Trzy niezależne testy --- Zadanie~2 (Sharpe + CAPM~$\alpha$), cross-sectional
+regression (sekcja~\ref{sec:cross}) oraz factor models (sekcja~\ref{sec:factor})
+--- prowadzą do spójnego wniosku: AI Boom Premium jest \emph{widoczne}
+w surowych zwrotach, ale jego niezależność od klasycznych ekspozycji na ryzyko
+\textbf{nie jest stabilnie potwierdzona} w głównej specyfikacji.
+
+\resultbox{\emph{Dowody na samodzielną premię AI są mieszane i wrażliwe
+na specyfikację.} W większości specyfikacji efekt znika po kontroli ryzyka
+systematycznego, ale w dwóch istotnych wariantach (LLM-based score oraz okno
+12-miesięczne) wynik pozostaje statystycznie istotny.}
+
+Zadanie~2 pokazuje, że na poziomie metryk efektywności AI infrastructure
+istotnie dominuje (Sharpe), ale ta przewaga w CAPM~$\alpha$ wymaga ostrożnej
+interpretacji (różnica vs Defensive nieistotna). Cross-sectional regression
+pokazuje, że \emph{deterministyczna} pre-event AI exposure nie ma niezależnego
+efektu na 6-miesięczny post-event AR po kontroli ryzyka, ale \emph{semantyczna}
+miara LLM-based pozostaje istotna ($\hat\beta_1 = +0{,}38$ na $n=34$;
+$\hat\beta_1 = +0{,}18$ na $n=41$ z missing=0). Factor models pokazują, że
+portfelowa alfa AI infrastructure pozostaje dodatnia, ale przy HAC SE
+nieodróżnialna od zera.
+
+Bardziej trafny opis niż ,,AI rajduje wszystko'' to: \emph{post-event premium
+spółek AI infrastructure może w znacznej mierze odzwierciedlać premię za wysoką
+betę i wysoką zmienność technologicznego sektora, a niezależny komponent
+fundamentalny pozostaje statystycznie nieprecyzyjnie zmierzony przy obecnej
+próbie i specyfikacji}.
+
+\subsection{Powiązanie z literaturą}
+Nasz wynik wpisuje się w nurt event studies w finansach
+(MacKinlay, 1997; Brown i Warner, 1985) pokazujący, że proste spready
+względem benchmarku często wychwytują reżimy makro/sektorowe.
+Loughran i McDonald (2011) pokazali wagę słownika domain-specific
+w analizie tekstu 10-K --- nasza decyzja o słowniku konserwatywnym
+(pre-2022 terms) jest analogiczna do ich krytyki słowników general-purpose
+sentiment. Hoberg i Phillips (2016) wprowadzili text-based industry
+classification z 10-K; nasza miara AI Exposure to bliska duchem aplikacja
+dla pojedynczej technologicznej kategorii. Babina i in. (2024)
+i Eisfeldt i in. (2023) dokumentują związki AI adoption z firm-level
+outcomes; nasz wynik dodaje uwagę metodologiczną: \emph{prosta klasyfikacja
+spółek jako AI-related ex post podatna jest na look-ahead bias, a kontrola
+ryzyka rynkowego znacząco zmienia obraz post-event premium}.
+
+\subsection{Co przeoczyła pierwsza wersja analizy generowana przez AI}
+Pierwsza wersja tego projektu (commitowana w repozytorium) raportowała
+,,silny AI Boom Premium'' na podstawie wyników Zadania~1 i 3 bez kontroli bety.
+Dopiero pogłębiona diagnostyka pokazała:
+\begin{enumerate}
+  \item dramatyczną różnicę bet ($\beta_{AI} \approx 1{,}98$ vs $\beta_{Def} \approx 0{,}24$),
+  \item istotny test placebo, który falsyfikuje prostą specyfikację,
+  \item brak istotności $\hat\beta_1$ w M2--M4 cross-sectional regression,
+  \item brak istotności Carhart~4 alfy dla AI infrastructure portfolio.
+\end{enumerate}
+To jest precyzyjnie scenariusz, przed którym ostrzega literatura model risk
+(Christensen i Miguel, 2018): surowy wynik jest spójny z apriorycznym
+oczekiwaniem (,,AI = premium''), a pre-registracja, kontrola ryzyka oraz
+robustness checks pokazują, że narracja jest słabsza, niż się wydaje.
+
+\subsection{Praktyczna implikacja dla inwestora}
+\begin{itemize}
+  \item Wybór ekspozycji do segmentu AI infrastructure w okresie 2022--2026
+        historycznie generował wysokie zwroty, ale przy bardzo wysokiej
+        zmienności i głębokich obsunięciach.
+  \item Nasza analiza nie wspiera tezy o ,,fundamentalnej alfie AI'' niezależnej
+        od ryzyka rynkowego --- po kontroli czynników ryzyka segment AI był
+        \emph{nieistotnie} różny od pozostałych high-beta sektorów.
+  \item Dla decyzji \emph{ex ante} (a nie \emph{ex post}) implikacja jest taka,
+        że pure-play strategie AI w okresie 2022--2026 były równoważne strategiom
+        high-beta growth z większą koncentracją.
+\end{itemize}
+
+
 
 \paragraph{Wnioski statystyczne po korekcie metodologicznej.}
 \begin{itemize}
@@ -793,22 +1393,52 @@ modelu Fama-French / market model z interceptem.
         interpretacja zależy od kontroli placebo i specyfikacji modelu.
 \end{itemize}
 
+\paragraph{Nowe wnioski z części publikacyjnej (sekcje \ref{sec:nlp}--\ref{sec:factor}).}
+\begin{itemize}
+  \item \textbf{Sekcja~\ref{sec:nlp} (Pre-event AI Exposure z 10-K).}
+        Zbudowano deterministyczną miarę ekspozycji każdej z 41 spółek na AI
+        wyłącznie z dokumentów dostępnych \emph{przed} 30.11.2022 (najnowsze
+        10-K przed cutoff date). NVDA na pierwszym miejscu rankingu, Defensive
+        z najniższymi wartościami --- sanity check sensowności konstrukcji.
+  \item \textbf{Sekcja~\ref{sec:cross} (Cross-sectional regression).}
+        W modelu M1 (bez kontroli) $\hat\beta_1 = +0{,}26$ ($p=0{,}044$):
+        wyższa AI exposure pozytywnie koreluje z 6-mies. post-event AR.
+        Po dodaniu $\beta_{pre}$ i pre-event volatility w M2--M4 efekt
+        \textbf{całkowicie zanika} ($|\hat\beta_1| < 0{,}05$, wszystkie $p > 0{,}68$),
+        a $R^2$ rośnie z $0{,}09$ do $0{,}54$. Główna teza: surowe ,,AI premium''
+        to artefakt korelacji AI exposure z high-beta tilt.
+  \item \textbf{Sekcja~\ref{sec:rob} (Robustness).} Leave-one-out: 7/41
+        sign changes (17\%), najbardziej wpływowa IBM. Bez NVIDIA znak
+        $\hat\beta_1$ się odwraca. \textbf{Istotne odstępstwa od wyniku zerowego}
+        w dwóch wariantach: (a) okno 12-miesięczne ($\hat\beta_1=+0{,}25$,
+        $p=0{,}031$); (b) miara LLM-based zamiast deterministycznej
+        ($\hat\beta_1=+0{,}38$, $p=0{,}002$, $n=34$). Oba raportowane uczciwie
+        jako pre-rejestrowane robustness checks, nie jako wynik główny.
+        Sygnał LLM jest najmocniejszy, ale obarczony samo-selekcją 7 spółek
+        bez excerptów.
+  \item \textbf{Sekcja~\ref{sec:factor} (Factor models).} AI infrastructure
+        portfolio ma dodatnią szacowaną alfę we wszystkich trzech modelach
+        (CAPM/FF3/Carhart~4), $+8{,}7$ -- $+14{,}7\%$ rocznie, ale w żadnym
+        nie osiąga istotności na poziomie $0{,}10$ przy HAC SE. Pozostałe trzy
+        grupy mają $\hat\alpha \approx 0$ we wszystkich modelach.
+\end{itemize}
+
 \paragraph{Werdykt metodologiczny.}
 \begin{itemize}
   \item Raport pokazuje silną historyczną przewagę spółek infrastruktury AI,
         ale nie dowodzi jednoznacznie istnienia czystej \emph{AI Boom Premium}
         po kontroli wszystkich czynników ryzyka.
-  \item Najbardziej wiarygodna część badania to Zadanie 2, ponieważ łączy
-        ocenę relacji zysku do zmienności przez Sharpe Ratio z kontrolą ryzyka
-        systematycznego przez CAPM $\alpha$ oraz przechodzi dodatkową kontrolę
-        nieparametryczną.
+  \item Najsilniejszą cześcią empiryczną jest \textbf{sekcja~\ref{sec:cross}
+        (Cross-sectional regression)} oraz \textbf{sekcja~\ref{sec:factor}
+        (Factor models)}: wspólnie pokazują, że \emph{dowody na samodzielne
+        AI Premium są niestabilne i zależne od specyfikacji po kontroli ryzyka}.
+        Najwiarygodniejszy klasyczny test to Zadanie~2, ale wzbogacenie
+        o pre-event AI Exposure Score zmienia narrację: nawet ten najlepiej
+        kontrolowany wynik nie daje jednoznacznego dowodu czystej fundamentalnej
+        premii AI.
   \item Zadania 1 i 3 należy traktować jako analizę opisową spreadów względem
         SPY. Ich wyniki są informacyjne, ale metodologicznie słabsze przez
         ukryte założenie $\beta=1$, istotne placebo oraz look-ahead bias.
-        Mini-kontrola CAPM pokazuje, że Zad. 1 jest wrażliwe na korektę bety,
-        natomiast Zad. 3 zachowuje dodatni efekt mimo tej korekty. Ponieważ
-        CAPM-adjusted placebo także jest istotne, nie traktujemy wyniku jako
-        dowodu przyczynowego wpływu premiery ChatGPT.
   \item Praktyczny take-away dla inwestora jest ostrożny: segment AI
         infrastructure był historycznie bardzo silny, ale przewaga była związana
         z wysoką zmiennością, wysoką betą i dużymi obsunięciami. Sama wielkość
@@ -816,7 +1446,8 @@ modelu Fama-French / market model z interceptem.
 \end{itemize}
 
 % =====================================================================
-\section*{Reproducibility note}
+\section{Reproducibility note}
+\label{sec:repro}
 
 \paragraph{Środowisko.} Analizy wykonano w Pythonie. Dokładne wersje bibliotek
 zostały utrwalone w pliku \texttt{requirements.txt} oraz przez środowisko
@@ -832,25 +1463,81 @@ repozytorium. Kluczowe pakiety:
 
 \paragraph{Skrypty (kolejność wykonania).}
 \begin{enumerate}
-  \item \texttt{src/data\_fetch.py} --- pobranie i zapis do parquet.
+  \item \texttt{src/data\_fetch.py} --- pobranie cen i zapis do parquet.
   \item \texttt{src/task1\_two\_portfolios.py} --- Zadanie 1.
   \item \texttt{src/task2\_four\_groups.py} --- Zadanie 2 (Sharpe i alpha).
-  \item \texttt{src/task3\_paired\_event.py} --- Zadanie 3 (event + placebo).
-  \item \texttt{src/plots\_extra.py} --- wykresy zaawansowane.
+  \item \texttt{src/task3\_paired\_event.py} --- Zadanie 3 (event + placebo + CAPM-adj).
+  \item \texttt{src/sec\_edgar\_fetcher.py} --- pobranie 10-K z SEC EDGAR.
+  \item \texttt{src/nlp\_ai\_exposure.py} --- deterministic AI Exposure Score.
+  \item \texttt{src/llm\_classifier.py} --- LLM validation (Claude Haiku;
+        \texttt{--no-llm} dla pełnej reprodukcji bez API key).
+  \item \texttt{src/cross\_sectional.py} --- regresja M1--M4 + bootstrap.
+  \item \texttt{src/robustness.py} --- LOO, exclude-firms, alt scores/windows/scaling.
+  \item \texttt{src/factor\_models.py} --- CAPM/FF3/Carhart 4 z HAC SE.
+  \item \texttt{src/plots\_extra.py} --- wykresy uzupełniające.
 \end{enumerate}
 Moduły wspólne: \texttt{src/common.py} (wczytywanie, log returns, portfele EW,
 spready względem SPY, RF), \texttt{src/metrics.py} (7 metryk per spółka),
 \texttt{src/plot\_utils.py} (style i zapis wykresów).
 
+\paragraph{Dokumenty metodologiczne.}
+\begin{itemize}
+  \item \texttt{docs/PRE\_REGISTRATION.md} --- pre-rejestracja hipotez,
+        modelu głównego, kontroli i robustness checks. Plik utworzony
+        \mbox{2026-05-22 09:51} (timestamp systemu plików). Główna regresja
+        cross-sectional (\texttt{data\_cache/cross\_sectional\_regression.csv})
+        została wygenerowana \mbox{2026-05-22 16:21}, czyli ok. 6{,}5 godziny
+        później --- co dokumentuje, że pre-rejestracja powstała przed
+        uruchomieniem testów centralnych.
+  \item \texttt{docs/decision\_log.md} --- chronologiczny rejestr decyzji
+        analitycznych z uzasadnieniem.
+  \item \texttt{docs/DATA\_LICENSES.md} --- źródła danych i licencje.
+  \item \texttt{prompts/ai\_exposure\_llm\_prompt.md} --- prompt LLM v1.0
+        (SHA-256 zapisywany przy każdym wywołaniu Claude).
+\end{itemize}
+
 \paragraph{Ziarno losowe.} Bootstrap w Zad. 1 używa \texttt{numpy.random.default\_rng(seed=42)}
 i $B = 10\,000$ powtórzeń. Pozostałe analizy są deterministyczne.
 
+\paragraph{Reprodukcja end-to-end.}
+Pełna analiza jest opakowana w \texttt{Makefile}, który jawnie określa
+kolejność wykonania skryptów (sekcja powyżej). Po sklonowaniu repozytorium
+i ustawieniu \texttt{ANTHROPIC\_API\_KEY} można uruchomić poszczególne etapy
+przez \texttt{make data}, \texttt{make sec}, \texttt{make nlp},
+\texttt{make analysis}, \texttt{make robustness}, \texttt{make factors},
+\texttt{make report}. Wariant bez ponownego wywoływania LLM
+(deterministic-only fallback, \texttt{ai\_exposure\_llm = NaN}):
+\begin{verbatim}
+python src/llm_classifier.py --no-llm
+\end{verbatim}
+Recenzent bez API key może odtworzyć wyniki LLM z committowanego
+\texttt{data\_cache/llm\_raw\_responses.jsonl} (zawiera parsed scores
+z metadanymi reprodukcyjnymi).
+
+\paragraph{Kompilacja PDF.} Raport zakłada strukturę repozytorium z folderem
+\texttt{figures/} jeden poziom wyżej względem \texttt{report/}. Kompilacja:
+\begin{verbatim}
+cd report
+latexmk -pdf raport.tex
+\end{verbatim}
+
+\paragraph{Pinned dependencies.} Plik \texttt{requirements-lock.txt}
+(\texttt{pip freeze}) zawiera dokładne wersje wszystkich pakietów użytych
+w czasie kompilacji raportu --- zwiększa szansę odtworzenia wyników
+w możliwie zbliżonym środowisku. Pełna bit-exact reprodukcja zależy
+dodatkowo od systemu operacyjnego, wersji BLAS/NumPy, dystrybucji LaTeX
+oraz stabilności zewnętrznych API (yfinance, SEC EDGAR, Anthropic).
+
 \paragraph{Repozytorium.}
 \href{https://github.com/Smalou/metody_badania_w_finansach}{\texttt{github.com/Smalou/metody\_badania\_w\_finansach}}
---- pełny kod, dane cache i źródło LaTeX dostępne publicznie.
+--- pełny kod, dane cache, prompty LLM, dokumenty metodologiczne
+(pre-registration, decision log, data licenses) i źródło LaTeX
+dostępne publicznie. Licencje: \texttt{LICENSE-CODE} (MIT) dla kodu,
+\texttt{LICENSE-DOCS} (CC BY 4.0) dla raportu i dokumentacji.
 
 % =====================================================================
-\section*{Limitations}
+\section{Limitations}
+\label{sec:limit}
 
 \begin{itemize}
   \item \textbf{Selection bias / próby celowe}. Wszystkie cztery grupy spółek
@@ -868,9 +1555,13 @@ i $B = 10\,000$ powtórzeń. Pozostałe analizy są deterministyczne.
         portfela względem rynku wynosi 1. W danych beta AI infrastructure jest
         dużo wyższa niż beta Defensive, więc część wyniku może być premią za
         ryzyko systematyczne.
-  \item \textbf{Single-factor benchmark}. Nie kontrolujemy ekspozycji na czynniki
-        Fama-French (HML, SMB, momentum), czynniki sektorowe ani model oczekiwanego
-        zwrotu estymowany w oknie przed zdarzeniem.
+  \item \textbf{Single-factor benchmark w Zad. 1 i 3}. Podstawowe spread-based
+        testy w Zadaniach 1 i 3 używają prostego benchmarku SPY i nie kontrolują
+        czynników Fama-French ani momentum. Modele czynnikowe dodane w
+        sekcji~\ref{sec:factor} ograniczają ten problem na poziomie portfeli EW
+        (CAPM/FF3/Carhart 4 z HAC SE), ale nie usuwają go całkowicie z pierwotnych
+        testów opisowych ani z cross-sectional regression spółek
+        w sekcji~\ref{sec:cross}.
   \item \textbf{Istotny test placebo}. Placebo 30.11.2021 daje istotne wyniki,
         co wskazuje, że prosta metoda przed--po nie usuwa trendów rynkowych.
         To osłabia interpretację przyczynową Zadania 3.
@@ -891,10 +1582,33 @@ i $B = 10\,000$ powtórzeń. Pozostałe analizy są deterministyczne.
   \item \textbf{Spojrzenie ex-post}. Cały kierunek hipotezy (,,AI Premium'')
         jest motywowany obserwacjami z lat 2023--2025. Test jest
         konfirmacyjny, nie predykcyjny.
+  \item \textbf{Disclosure $\neq$ operational exposure}. Raporty 10-K mierzą
+        \emph{ujawnioną} ekspozycję, a nie faktyczną skalę wdrożenia AI,
+        przychody z AI ani zależność operacyjną od AI. Spółka może raportować
+        AI w narracji marketingowej bez istotnego biznesu AI, i odwrotnie.
+  \item \textbf{Dictionary measurement risk}. Wyniki AI Exposure Score zależą
+        od doboru słownika (main/extended), normalizacji (mentions per 10k
+        words), długości dokumentów (10-K vs 20-F) i stylu raportowania firm.
+        Wariant \texttt{no\_automation} dał podobne wyniki, ale inne słowniki
+        mogłyby zmienić obraz.
+  \item \textbf{LLM classification risk}. Walidacja LLM zależy od prompta
+        (wersjonowanego w \texttt{prompts/ai\_exposure\_llm\_prompt.md},
+        SHA-256 logowany), wyboru excerptów ($\pm$ kontekst zdań), wersji
+        modelu (logowana w \texttt{llm\_raw\_responses.jsonl}) i braku
+        klasyfikacji dla 7 spółek bez fraz słownikowych. Wariant
+        \texttt{missing0} jest słabszy ($\hat\beta_1 = +0{,}18$ vs $+0{,}38$):
+        samo-selekcja jest materialna, a wariant \texttt{missing0} sugeruje
+        jednak, że sygnał LLM nie znika całkowicie po uwzględnieniu brakujących
+        klasyfikacji.
+  \item \textbf{Small cross-section}. Cross-sectional regression opiera się
+        na 41 spółkach, więc wyniki są wrażliwe na obserwacje wpływowe
+        (leave-one-out: 7/41 sign changes) i nie powinny być interpretowane
+        jako precyzyjny estimator populacyjny. Przy małej próbie moc testu
+        może być ograniczona, więc brak istotności $\neq$ brak efektu.
 \end{itemize}
 
 % =====================================================================
-\section*{Dodatek --- wykresy uzupełniające}
+\section{Dodatek --- wykresy uzupełniające}
 
 \paragraph{Heatmapa korelacji dziennych log-zwrotów.}
 \begin{center}
@@ -911,15 +1625,39 @@ AI infrastructure utrzymuje najwyższy poziom zmienności w całym okresie,
 ze szczytami wokół wybuchu AI capex 2023 i fazy korekt 2024--2025.
 
 % =====================================================================
-\section*{Bibliografia}
+\section{Bibliografia}
 \begin{enumerate}
+  % --- Asset pricing ---
+  \item Sharpe, W. F. (1964). Capital asset prices: A theory of market
+        equilibrium under conditions of risk. \emph{The Journal of Finance},
+        19(3), 425--442.
+  \item Fama, E. F., \& French, K. R. (1993). Common risk factors in the
+        returns on stocks and bonds. \emph{Journal of Financial Economics},
+        33(1), 3--56.
+  \item Carhart, M. M. (1997). On persistence in mutual fund performance.
+        \emph{The Journal of Finance}, 52(1), 57--82.
   \item Sharpe, W. F. (1994). The Sharpe Ratio. \emph{The Journal of Portfolio
         Management}, 21(1), 49--58.
   \item Sortino, F. A., \& Price, L. N. (1994). Performance measurement in a
         downside risk framework. \emph{Journal of Investing}, 3(3), 59--64.
+
+  % --- Event studies ---
+  \item MacKinlay, A. C. (1997). Event Studies in Economics and Finance.
+        \emph{Journal of Economic Literature}, 35(1), 13--39.
+  \item Brown, S. J., \& Warner, J. B. (1985). Using daily stock returns:
+        The case of event studies. \emph{Journal of Financial Economics},
+        14(1), 3--31.
+
+  % --- Inference / econometrics ---
   \item Welch, B. L. (1947). The generalization of ``Student's'' problem when
         several different population variances are involved. \emph{Biometrika},
         34(1--2), 28--35.
+  \item White, H. (1980). A heteroskedasticity-consistent covariance matrix
+        estimator and a direct test for heteroskedasticity.
+        \emph{Econometrica}, 48(4), 817--838.
+  \item Newey, W. K., \& West, K. D. (1987). A simple, positive semi-definite,
+        heteroskedasticity and autocorrelation consistent covariance matrix.
+        \emph{Econometrica}, 55(3), 703--708.
   \item Games, P. A., \& Howell, J. F. (1976). Pairwise multiple comparison
         procedures with unequal $N$'s and/or variances. \emph{Journal of
         Educational Statistics}, 1(2), 113--125.
@@ -928,15 +1666,46 @@ ze szczytami wokół wybuchu AI capex 2023 i fazy korekt 2024--2025.
   \item Hedges, L. V. (1981). Distribution theory for Glass's estimator of
         effect size and related estimators. \emph{Journal of Educational
         Statistics}, 6(2), 107--128.
-  \item MacKinlay, A. C. (1997). Event Studies in Economics and Finance.
-        \emph{Journal of Economic Literature}, 35(1), 13--39.
-  \item Fama, E. F., \& French, K. R. (1993). Common risk factors in the
-        returns on stocks and bonds. \emph{Journal of Financial Economics},
-        33(1), 3--56.
+
+  % --- Financial text analysis ---
+  \item Loughran, T., \& McDonald, B. (2011). When is a liability not a liability?
+        Textual analysis, dictionaries, and 10-Ks. \emph{The Journal of Finance},
+        66(1), 35--65.
+  \item Hoberg, G., \& Phillips, G. (2016). Text-based network industries and
+        endogenous product differentiation. \emph{Journal of Political Economy},
+        124(5), 1423--1465.
+  \item Tetlock, P. C. (2007). Giving content to investor sentiment: The role of
+        media in the stock market. \emph{The Journal of Finance}, 62(3),
+        1139--1168.
+  \item Garc\'ia, D. (2013). Sentiment during recessions.
+        \emph{The Journal of Finance}, 68(3), 1267--1300.
+
+  % --- AI / firm valuation ---
+  \item Babina, T., Fedyk, A., He, A., \& Hodson, J. (2024). Artificial
+        intelligence, firm growth, and product innovation. \emph{Journal of
+        Financial Economics}, 151, 103745.
+  \item Eisfeldt, A. L., Schubert, G., \& Zhang, M. B. (2023). Generative AI
+        and firm values. \emph{NBER Working Paper}, 31222.
+
+  % --- Reproducibility / open science ---
+  \item Christensen, G., \& Miguel, E. (2018). Transparency, reproducibility,
+        and the credibility of economics research. \emph{Journal of Economic
+        Literature}, 56(3), 920--980.
+
+  % --- Online sources ---
   \item OpenAI (2022). \emph{Introducing ChatGPT},
         \url{https://openai.com/index/chatgpt/}.
   \item Yahoo Finance / \texttt{yfinance} --- dokumentacja API,
         \url{https://github.com/ranaroussi/yfinance}.
+  \item Kenneth R. French Data Library --- Tuck School of Business at Dartmouth,
+        \url{https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html}.
+  \item U.S. Securities and Exchange Commission --- EDGAR system,
+        \url{https://www.sec.gov/edgar}.
 \end{enumerate}
+
+\paragraph{Format BibTeX.} Pełna lista referencji w formacie BibTeX
+(\texttt{biblatex} z backend \texttt{biber}) jest dostępna w pliku
+\texttt{report/refs.bib} w repozytorium, gotowa do migracji raportu na
+\texttt{\textbackslash parencite}/\texttt{\textbackslash textcite}.
 
 \end{document}

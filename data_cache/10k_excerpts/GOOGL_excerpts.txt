@@ -1,0 +1,26 @@
+BUSINESS
+Overview
+As our founders Larry and Sergey wrote in the original founders' letter, "Google is not a conventional company. We do not intend to become one." That unconventional spirit has been a driving force throughout our history, inspiring us to tackle big problems and invest in moonshots like artificial intelligence (AI) research and quantum computing. We continue this work under the leadership of Sundar Pichai, who has served as CEO of Google since 2015 and as CEO of Alphabet since 2019.
+
+---
+
+As we said in the original founders' letter, we will not shy away from high-risk, high-reward projects that we believe in, as  they are the key to our long-term success. The power of AI
+Across the company, investments in AI and machine learning are increasingly driving many of our latest innovations and have enabled us to build products that are smarter and more helpful. For example, in May of 2021, we introduced Multitask Unified Model — or MUM — which has the potential to transform how Google helps with complex tasks.
+
+---
+
+We continue to invest in infrastructure, security, data management, analytics, and AI. We see significant opportunity in helping businesses utilize these strengths with features like data migration, modern development environments, and machine learning tools to provide enterprise-ready cloud services, including Google Cloud Platform and Google Workspace. Google Cloud Platform enables developers to build, test, and deploy applications on its highly scalable and reliable infrastructure.
+
+---
+
+These investment areas face intense competition from large, experienced, and well-funded competitors and our offerings may not be able to compete effectively or to operate at sufficient levels of profitability. In addition, new and evolving products and services, including those that use AI and machine learning, raise ethical, technological, legal, regulatory, and other challenges, which may negatively affect our brands and demand for our products and services. Because all of these new ventures are inherently risky, no assurance can be given that such strategies and offerings will be successful and will not harm our reputation, financial condition, and operating results.
+
+---
+
+Capital Expenditures and Leases
+We make investments in land and buildings for data centers and offices and information technology assets through purchases of property and equipment and lease arrangements to provide capacity for the growth of our services and products. Capital Expenditures
+Our capital investments in property and equipment consist primarily of the following major categories:
+•
+technical infrastructure, which consists of our investments in servers and network equipment for computing, storage and networking requirements for ongoing business activities, including machine learning (collectively referred to as our information technology assets) and data center land and building construction; and
+•
+office facilities, ground up development projects and related building improvements. Construction in progress consists primarily of technical infrastructure and office facilities which have not yet been placed in service for our intended use.

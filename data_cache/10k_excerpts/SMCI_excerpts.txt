@@ -1,0 +1,136 @@
+PART I
+Item 1. Business
+Our Company
+We are a Silicon Valley-based provider of accelerated compute platforms that are application-optimized high-performance and high-efficiency server and storage systems for various markets, including enterprise data centers, cloud computing, artificial intelligence, 5G and edge computing. Our solutions, which we refer to as Total IT Solutions, include complete servers, storage systems, modular blade servers, blades, workstations, complete rack scale plug and play solutions delivering pre-defined and pre-tested full rack scale solutions, networking devices, server sub-systems, system management and security software.
+
+---
+
+This 2U, 3-node, short-depth design increases node density by 50% for high-density computing at the intelligent edge. Capitalizing on New Applications and Technologies
+In addition to serving traditional needs for server and storage systems, we have devoted, and will continue to devote, substantial resources to developing systems that support emerging and growing applications including cloud computing, artificial intelligence, 5G/edge computing, storage and others. We believe there are significant opportunities for us in each of these rapidly developing markets due to stringent design requirements for these applications that often require the use of the latest technologies, allowing us to leverage our capabilities in product innovation, superior time-to-market, and portfolio breadth.
+
+---
+
+SMCI | 2022 Form 10-K | 2
+Products and Services
+We offer a broad range of accelerated compute platforms that are application-optimized server solutions, rackmount and blade servers, storage, and subsystems and accessories, which can be used to build complete server and storage systems. These Total IT Solutions and products are designed to serve a variety of markets, such as enterprise data centers, cloud computing, artificial intelligence (“AI”) and 5G/edge computing. The percentage of our net sales represented by sales of server and storage systems increased to 85.9% in fiscal year 2022 compared to 78.4% in fiscal year 2021 and 78.5% in fiscal year 2020, and the percentage of our net sales represented by sales of subsystems and accessories was
+14.1%
+in fiscal year 2022, 21.6% in fiscal year 2021 and 21.5% in fiscal year 2020.
+
+---
+
+In addition, over the three years ended June 30, 2022, we have sold to thousands of end users through our indirect sales channel. These customers represent a diverse set of market verticals including enterprise data centers, cloud computing, artificial intelligence, 5G and edge computing markets. In each of fiscal years 2022, 2021 and 2020, no customer represented greater than 10% of our total net sales.
+
+---
+
+This discussion contains forward-looking statements that involve risks and uncertainties. Our actual results could differ materially from those anticipated in these forward-looking statements as a result of various factors, including those discussed below and elsewhere in this Annual Report, particularly under the heading "Risk Factors."
+Overview
+We are a Silicon Valley-based provider of accelerated compute platforms that are application-optimized high performance and high-efficiency server and storage systems for a variety of markets, including enterprise data centers, cloud computing, artificial intelligence, 5G and edge computing. Our Total IT Solutions include complete servers, storage systems, modular blade servers, blades, workstations, full rack scale solutions, networking devices, server sub-systems, server management and security software.
+
+---
+
+As a result, when new technologies are brought to market, we are generally able to quickly assemble a broad portfolio of solutions by leveraging common building blocks across product lines. We work closely with the leading microprocessor, graphics processing units (“GPU”), memory, disk/flash, and interconnect vendors and other hardware and software suppliers to coordinate our new products' design with their product release schedules. This enhances our ability to introduce new products incorporating the latest technology rapidly.
+
+---
+
+This allows us to offer customers a broad choice of products to match their target application requirements. In November 2021, we announced the Universal GPU server; which enables customers to choose the most suitable CPUs and GPUs, and switch configurations for their specific applications and workloads. In February 2022, we introduced the SuperEdge multi-node Server for 5G, IoT, and edge applications.
+
+---
+
+Server and Storage Systems
+We sell accelerated compute platforms comprised of a combination of server and storage systems in rackmount, blade, multi-node and embedded form factors, which support single, dual, and multiprocessor architectures. Our key product lines include:
+•
+SuperBlade
+®
+and
+MicroBlade
+™® system families designed to share common computing resources, thereby saving space and power over standard rackmount servers;
+•
+SuperStorage
+systems that provide high-density storage while leveraging an efficient use of power to achieve performance-per-watt savings;
+•
+Twin
+family of multi-node server systems designed for density, performance, and power efficiency;
+•
+Ultra Server
+systems for demanding enterprise workloads;
+•
+GPU
+or
+Accelerated
+systems for rapidly growing AI markets;
+•
+Data Center Optimized
+server systems that deliver increased scalability and performance-per-watt with an improved thermal architecture;
+•
+Embedded (5G/IoT/Edge)
+systems optimized for evolving networks and intelligent management of connected devices; and
+•
+MicroCloud
+server systems that deliver node density in environments with space and power constraints. In addition to our accelerated compute platforms business, we offer a large array of modular server subsystems and accessories, such as server boards, chassis, power supplies and other accessories.
+
+---
+
+As with most electronics-based product life cycles, average selling prices typically are highest at the time of introduction of new products that utilize the latest technology and tend to decrease over time as such products mature in the market and are replaced by next generation products. Additionally, in order to remain competitive throughout all industry cycles, we actively change our selling price per unit in response to changes in costs for key components such as CPU/GPU, memory and storage. The following table presents net sales by product type for fiscal years 2022, 2021 and 2020 (dollars in millions):
+Years Ended June 30,
+2022 over 2021 Change
+2021 over 2020 Change
+$
+%
+$
+%
+Server and storage systems
+$
+4,463.8
+$
+2,790.3
+$
+2,620.8
+$
+1,673.5
+%
+$
+%
+Percentage of total net sales
+%
+%
+%
+Subsystems and accessories
+(34.8)
+(4.5)
+%
+%
+Percentage of total net sales
+%
+%
+%
+Total net sales
+$
+5,196.1
+$
+3,557.4
+$
+3,339.3
+$
+1,638.7
+%
+$
+%
+SMCI | 2022 Form 10-K | 42
+Fiscal Year 2022 Compared with Fiscal Year 2021
+During fiscal year 2022 we experienced increased revenue from server and storage systems, particularly from our large enterprise and datacenter customers.
+
+---
+
+We expect both of these trends to continue until the COVID-19 pandemic and other macroeconomic factors exacerbated by the COVID-19 pandemic end. We have invested capital to procure key components (such as CPUs, memory, SSDs and GPUs) so we can maintain reasonable lead times to fulfill orders for our customers. There are positive signs with the expiration of various COVID-19 mandates, vaccine availability and the rollout of boosters; however, with the possibility of the emergence of other new virus strains and vaccine supply constraints, we are unable to predict the ultimate extent to which the global COVID-19 pandemic (or other potential infectious diseases, such as the currently spreading monkeypox virus) may further impact our business operations, financial performance and results of operations.
+
+---
+
+Our sales cycle may become longer, and more expensive, as larger customers typically spend more time negotiating contracts than smaller customers. Such larger orders may require greater commitments of working capital, which may require increased borrowings under our credit facilities to fund purchases of key components (such as CPUs, memory, SSDs and GPUs) necessary for such orders, which could adversely affect our cash flow and expose us to the risk of holding excess and obsolete inventory, if there are delays or cancellations. Furthermore, larger customers also often seek greater levels of support in the implementation and use of our server solutions.
+
+---
+
+There are uncertainties and risks related to COVID-19, the global economic downturn and recent events in eastern Europe, for which we have taken certain actions including our increased purchase of certain critical materials and components as a part of our response planning. Specifically, we sought to actively manage our supply chain for potential risks of shortage by first building inventories of critical components required for our motherboards and other system printed circuit boards and continued to add to our inventories of key components such as CPUs, memory, SSDs and to a lesser extent GPUs such that customer orders can be fulfilled as they are received. Nevertheless, no assurances can be given that such efforts will be successful to manage inventory, and we could be exposed to risks of insufficient, excess, or obsolete inventory.
+
+---
+
+These applications include greater use of online transactions for everyday purchases by consumers of food, clothing, entertainment from gaming and video streaming, as well as tele-health, social networking, messaging, email, autonomous driving solutions and video conferencing companies. We have actively managed our supply chain for potential shortage risk by building inventories of critical components required such as CPUs, memory, SSDs and GPUs to support our ability to fulfill customer orders. Our architecture, which is based on a “Building Block Solutions” design approach, has also assisted us during the COVID-19 pandemic, to qualify different components for compatibility with our systems to help us overcome some shortages.

@@ -1,0 +1,37 @@
+The semiconductor industry is driven by demand for advanced electronic products, including smartphones and other mobile devices, servers, personal computers, automotive electronics, storage, and other products. The growth of data and emerging end-market drivers such as artificial intelligence, the Internet of Things, 5G networks, smart vehicles and augmented and virtual reality are also creating the next wave of growth for the industry. As a result, products within the Semiconductor Systems segment are subject to significant changes in customer requirements, including transitions to smaller dimensions, increasingly complex chip architectures, new materials and an increasing number of applications.
+
+---
+
+Spending by semiconductor customers, which include companies that operate in the foundry, logic and memory markets, is driven by demand for advanced electronic products, including smartphones and other mobile devices, servers, personal computers, automotive devices, storage, and other products. The growth of data and emerging end-market drivers such as artificial intelligence, the Internet of Things, 5G networks, smart vehicles and augmented and virtual reality are also creating the next wave of growth for the industry. As a result, products within the Semiconductor Systems segment are subject to significant changes in customer requirements, including transitions to smaller dimensions, increasingly complex chip architectures, new materials and an increasing number of applications.
+
+---
+
+Applied enables customers to characterize and control critical dimension (CD) and defect issues, especially at advanced generation technology nodes. SEMVision eBeam Review
+PROVision eBeam Metrology and Inspection
+Enlight Optical Inspection
+UVision Optical Inspection
+VeritySEM CD-SEM Metrology
+Aera Mask Inspection
+5
+Table of Contents
+Applied Global Services
+The Applied Global Services® (AGS) segment provides integrated solutions to optimize equipment and fab performance and productivity, including spares, upgrades, services, remanufactured earlier generation equipment and factory automation software for semiconductor, display and other products. Customer demand for products and services is fulfilled through a global distribution system in more than 170 locations and trained service engineers located in close proximity to customer sites to support over 45,900 installed Applied semiconductor, display and other manufacturing systems worldwide.
+
+---
+
+Applied 200mm equipment supports market inflections and new technology for a broad variety of devices including analog, power, and MEMS. Automation Software
+Applied SmartFactory® automation software portfolio coordinates and streamlines every aspect of a factory-the processes, equipment and people-to provide competitive advantage to customers. 6
+Table of Contents
+Display and Adjacent Markets
+The Display and Adjacent Markets segment is comprised of products for manufacturing liquid crystal displays (LCDs), organic light-emitting diodes (OLEDs), and other display technologies for TVs, monitors, laptops, personal computers (PCs), electronic tablets, smart phones, and other consumer-oriented devices.
+
+---
+
+There was no single region that accounted for at least 30 percent of total net sales for the Semiconductor Systems segment for any of the past three fiscal years. 40
+Table of Contents
+Applied Global Services Segment
+The Applied Global Services segment provides integrated solutions to optimize equipment and fab performance and productivity, including spares, upgrades, services, certain remanufactured earlier generation equipment and factory automation software for semiconductor, display and solar products. Demand for Applied Global Services’ solutions are driven by Applied’s large and growing installed base of manufacturing systems, and customers’ needs to shorten ramp times, improve device performance and yield, and optimize factory output and operating costs.
+
+---
+
+The Semiconductor Systems reportable segment includes semiconductor capital equipment for etch, rapid thermal processing, deposition, chemical mechanical planarization, metrology and inspection, wafer packaging, and ion implantation. The Applied Global Services segment provides integrated solutions to optimize equipment and fab performance and productivity, including spares, upgrades, services, certain remanufactured earlier generation equipment and factory automation software for semiconductor, display and other products. The Display and Adjacent Markets segment includes products for manufacturing liquid crystal displays (LCDs), organic light-emitting diodes (OLEDs), equipment upgrades and other display technologies for TVs, monitors, laptops, personal computers, smart phones, and other consumer-oriented devices.

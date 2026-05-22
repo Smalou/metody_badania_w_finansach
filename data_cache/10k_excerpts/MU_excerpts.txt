@@ -1,0 +1,112 @@
+2024 Notes
+4.640% Senior Notes due February 2024, repaid November 2021
+Intel
+Intel Corporation
+2024 Term Loan A
+Senior Term Loan A due October 2024
+LIBOR
+London Interbank Offered Rate
+2025 Notes
+5.500% Senior Notes due February 2025, repaid November 2019
+LPDDR
+Low-Power Double Data Rate DRAM
+2026 Notes
+4.975% Senior Notes due February 2026
+LPDRAM
+Low-Power DRAM
+2027 Notes
+4.185% Senior Notes due February 2027
+MCP
+Multichip packaged solutions with managed NAND and LPDRAM
+2029 Notes
+5.327% Senior Notes due February 2029
+Micron
+Micron Technology, Inc. (Parent Company)
+2030 Notes
+4.663% Senior Notes due February 2030
+MTU
+Micron Technology Utah, LLC
+2032 Green Bonds
+2.703% Senior Notes due April 2032
+NVMe
+Hardware interface for SSDs that connect via a PCIe bus
+2032D Notes
+3.125% Convertible Senior Notes due May 2032, settled August 2021
+OEM
+Original Equipment Manufacturer
+2041 Notes
+3.366% Senior Notes due November 2041
+PCIe
+High-speed motherboard connection for peripheral devices such as storage drives
+2051 Notes
+3.477% Senior Notes due November 2051
+Qimonda
+Qimonda AG
+AI
+Artificial Intelligence
+QLC
+Quad-Level Cell (four bits per cell)
+DDR
+Double Data Rate DRAM
+Revolving Credit Facility
+$2.5 billion Revolving Credit Facility due May 2026
+EBITDA
+Earnings before interest, taxes, depreciation, and amortization
+SATA
+Hardware interface for connecting to storage devices such as hard disk drives and SSDs
+ESG
+Environmental, Social, and Governance
+SLC
+Single-Level Cell (one bit per cell)
+EUV
+Extreme ultraviolet lithography
+SOFR
+Secured Overnight Financing Rate
+Extinguished 2024 Term Loan A
+Senior Term Loan A due October 2024, repaid May 2021
+SSD
+Solid State Drive
+GDDR
+Graphics Double Data Rate
+TI
+Texas Instruments Incorporated
+HBM
+High-bandwidth memory, a stacked DRAM technology optimized for memory-bandwidth intensive applications
+TLC
+Triple-Level Cell (three bits per cell)
+HBM2E
+Second generation HBM
+UFS
+Universal Flash Storage
+IMFT
+IM Flash Technologies, LLC
+uMCP
+UFS-based MCP
+Micron, Crucial, any associated logos, and all other Micron trademarks are the property of Micron. Intel and 3D XPoint are trademarks of Intel Corporation or its subsidiaries.
+
+---
+
+With a relentless focus on our customers, technology leadership, and manufacturing and operational excellence, Micron delivers a rich portfolio of high-performance DRAM, NAND, and NOR memory and storage products through our Micron® and Crucial® brands. Every day, the innovations that our people create fuel the data economy, enabling advances in artificial intelligence and 5G applications that unleash opportunities — from the data center to the intelligent edge and across the client and mobile user experience. We manufacture our products at wholly-owned facilities and also utilize subcontractors for certain manufacturing processes.
+
+---
+
+With a relentless focus on our customers, technology leadership, and manufacturing and operational excellence, Micron delivers a rich portfolio of high-performance DRAM, NAND, and NOR memory and storage products through our Micron® and Crucial® brands. Every day, the innovations that our people create fuel the data economy, enabling advances in artificial intelligence and 5G applications that unleash opportunities — from the data center to the intelligent edge and across the client and mobile user experience. The accompanying consolidated financial statements include the accounts of Micron Technology, Inc.
+
+---
+
+The enterprise and cloud storage markets are driven by the growth of applications that store, access, and analyze data in the cloud. Applications such as machine learning servers require fast access to data with low latency, predictable performance, and high storage capacities. 10
+Table of Contents
+Client SSDs:
+SBU sales to the client SSD market in 2022 consisted primarily of our 2450, 3400, and 2210 series client SSDs.
+
+---
+
+Managed NAND is used in smartphones and other mobile devices, and in consumer, automotive, and embedded markets. Low-density NAND is ideal for applications like automotive, surveillance, machine-to-machine, automation, printer, and home networking. NOR
+:
+NOR products are non-volatile re-writable semiconductor memory devices that provide fast read speeds.
+
+---
+
+Industrial
+: EBU sales to the industrial market in 2022 consisted primarily of DDR4 and DDR3 DRAM, LPDDR4 DRAM, SLC NAND, NAND MCPs, and NOR. Our products enable applications in the growing industrial IoT market, including machine-to-machine communication, factory automation, transportation, surveillance, retail, and smart infrastructure. Automotive
+: EBU sales to the automotive market in 2022 consisted primarily of LPDDR4 DRAM, e.MMC managed NAND, DDR3 DRAM, and LPDDR2 DRAM.

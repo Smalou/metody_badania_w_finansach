@@ -1,0 +1,30 @@
+Our security strategy is focused on delivering a simple and effective cyber-security architecture combining network, cloud and endpoint-based solutions that recognizes the critical importance of data privacy. We are investing significant resources across our security portfolio focused on cloud-based offerings, artificial intelligence-driven threat detection and end-to-end security architectures. We recently unveiled our strategic plan for a global, cloud-delivered, integrated platform that secures and connects organizations of any shape and size.
+
+---
+
+We offer end-to-end collaboration solutions that can be delivered from the cloud, on-premise or within hybrid cloud environments allowing customers to transition their collaboration
+4
+Table of Contents
+solutions from on-premise to the cloud. Artificial intelligence (AI) and machine learning capabilities are embedded across the Webex portfolio, providing collaboration experiences that integrate people insights, relationship and audio intelligence to help improve productivity. Our CPaaS is a cloud communications platform that integrates communication channels and existing back-end business systems together to help enable the orchestration and automation of all customer and employee interactions.
+
+---
+
+We have continued to expand our SD-WAN offering, through our Cloud OnRamp integrations with several webscale providers to deliver predictable and highly secure application experiences. To further our innovation in this area, we are applying the latest technologies, such as machine learning and advanced analytics, to operate and enhance network capabilities. These network product offerings are designed to help enable customers to detect cybersecurity threats, even in encrypted traffic.
+
+---
+
+Our strategy to help our customers transform their infrastructure with the network at the core began with Software-Defined Access (SD-Access) technology, one of our leading enterprise architectures, and continued with the launch of our Catalyst 9000 series of switches. We have continued to transform our enterprise access portfolio by bringing together several technologies to form the only integrated architecture with built-in simplicity, automation and security at the foundation. This architecture is designed to enable our customers to securely connect their users and devices to applications and data over any network, no matter where they are.
+
+---
+
+Additionally, we recently announced new offerings aimed at securing our customers’ operations with Talos On-Demand, allowing for custom research on the threat environment, and Secure Cloud Analytics, which leverages the network as a sensor to detect threats across network infrastructure, both on-premises and in private and public clouds. Strategic Pillars
+To execute on our strategy and address our customer priorities, we are focusing on the following six strategic pillars:
+•
+Secure, Agile Networks
+— Build networking solutions with built-in simplicity, security, agility and automation that can be consumed as-a-service. •
+Optimized Application Experiences
+— Enable greater speed, agility and scale of cloud-native applications.
+
+---
+
+Within campus switching are our Catalyst 9000 series of switches that include hardware with embedded software, along with a software subscription referred to as Cisco DNA. Cisco DNA provides automation, analytics and security features and can be centrally monitored, managed, and configured. With the expansion of WiFi-6, we have expanded our portfolio to include multigigabit technology in our switches in order to manage higher bandwidth and manage network speed.

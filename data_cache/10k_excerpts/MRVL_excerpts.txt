@@ -1,0 +1,140 @@
+Our product solutions serve five large end markets: (i) data center, (ii) carrier infrastructure, (iii) enterprise networking, (iv) consumer, and (v) automotive/industrial. These markets and their corresponding customer products and applications are noted in the table below:
+End market
+Customer products and applications
+Data center
+•
+Cloud and on-premise Artificial intelligence (AI) systems
+•
+Cloud and on-premise ethernet switching
+•
+Cloud and on-premise network-attached storage (NAS)
+•
+Cloud and on-premise servers
+•
+Cloud and on-premise storage area networks
+•
+Cloud and on-premise storage systems
+•
+Data center interconnect (DCI)
+Carrier infrastructure
+•
+Digital Subscriber Line Access Multiplexers (DSLAMs)
+•
+Ethernet switches
+•
+Optical transport systems
+•
+Routers
+•
+Wireless radio access network (RAN) systems
+Enterprise networking
+•
+Campus and small medium enterprise routers
+•
+Campus and small medium enterprise ethernet switches
+•
+Campus and small medium enterprise wireless access points (WAPs)
+•
+Network appliances (firewalls, and load balancers)
+•
+Workstations
+Consumer
+•
+Broadband gateways and routers
+•
+Gaming consoles
+•
+Home data storage
+•
+Home wireless access points (WAPs)
+•
+Personal Computers (PCs)
+•
+Printers
+•
+Set-top boxes
+Automotive/industrial
+•
+Advanced driver-assistance systems (ADAS)
+•
+Autonomous vehicles (AV)
+•
+In-vehicle networking
+•
+Industrial ethernet switches
+•
+United States military and government solutions
+•
+Video surveillance
+4
+The following table summarizes net revenue disaggregated by end market (in thousands, except percentages):
+Year Ended
+January 29, 2022
+January 30, 2021
+February 1, 2020
+Data center
+$
+1,784,644
+40
+%
+$
+1,040,726
+35
+%
+$
+823,841
+31
+%
+Carrier infrastructure
+820,377
+18
+%
+599,527
+20
+%
+369,901
+14
+%
+Enterprise networking
+907,736
+20
+%
+636,032
+22
+%
+569,574
+21
+%
+Consumer
+699,985
+16
+%
+574,627
+19
+%
+845,825
+31
+%
+Automotive/industrial
+249,641
+6
+%
+117,988
+4
+%
+90,020
+3
+%
+Total
+$
+4,462,383
+$
+2,968,900
+$
+2,699,161
+This market-focused view provides more information and transparency about the key growth drivers of our business. We believe this presentation provides a better understanding of our business.
+
+---
+
+Our current product offerings include custom ASICs, electro-optics, ethernet solutions, fibre channel adapters, processors and storage controllers. Custom ASICs
+We develop custom SoC (System-on-a-Chip) solutions tailored to individual customer specifications that deliver system-level differentiation for next-generation carrier, networking, data center, machine learning, automotive, aerospace and defense applications. These custom offerings leverage our broad portfolio of technologies being used in our standard products.

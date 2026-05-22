@@ -1,0 +1,69 @@
+states have adopted, or are considering adopting, similar laws. •
+Other government bodies have implemented laws and are considering further regulating artificial intelligence and machine learning. •
+The certifications we may maintain and the standards that may apply to our business, such as the U.S.
+
+---
+
+We believe the Data Cloud can enable a world without data silos, allowing organizations to effortlessly discover, access, derive insights from, and share data from a variety of sources. Customers can share and provide access to each other’s data, augment data science and machine learning algorithms with more data sets, connect global supply chains through data hubs, and create new monetization channels by connecting data providers and consumers. As the Data Cloud grows through broad adoption and increasing usage, there are enhanced benefits from greater data availability.
+
+---
+
+•
+Data Science. A majority of data science efforts involve transforming massive amounts of raw data at scale to enable advanced analytics, such as advanced statistical analysis and machine learning techniques. For Data Science, our platform enables organizations to:
+◦
+Accelerate transformations across massive data sets.
+
+---
+
+◦
+Integrate with leading data science tools and languages. Manage resources for data transformation and use leading data science tools, with the support of Scala, R, Java, and Python, to build machine learning algorithms in a single cloud platform. •
+Data Application Development.
+
+---
+
+◦
+Acquire data sets to enrich analytics. Leverage public data sets on our Data Marketplace to enrich insights, augment analysis, and inform machine learning algorithms. ◦
+Monetize new data sets.
+
+---
+
+Our system integrator partners help make the adoption of and migration to our platform easier by providing implementations, value-added professional services, managed services, and resale services. Our technology partners provide strategic value to our customers by providing software tools, such as data loading, business intelligence, machine learning, data governance, and security, as well as data sets on our Data Marketplace, to augment the capabilities of our platform. We continue to invest in formal alliances with the leading consulting, data management, and implementation service providers to help our customers migrate their legacy database solutions to the cloud.
+
+---
+
+It also provides frictionless and governed data access so users can securely share data inside and outside of their organizations, generally without copying or moving the underlying data. As a result, customers can blend existing data with new data for broader context, augment data science efforts, and create new monetization streams. Delivered as a service, our platform requires near-zero maintenance, enabling customers to focus on deriving value from their data rather than managing infrastructure.
+
+---
+
+These deployments are generally interconnected to deliver the Data Cloud, enabling a consistent, global user experience. Our platform supports a wide range of workloads that enable our customers’ most important business objectives, including data warehousing, data lakes, data engineering, data science, data application development, and data sharing. From January 1, 2022 to January 31, 2022, we processed an average of over 1,496 million daily queries across all of our customer accounts, up from an average of over 777 million daily queries during the corresponding month of the prior fiscal year.
+
+---
+
+For example, we launched our Powered by Snowflake program in 2021 to help customers and partners build, operate, and grow their applications built using Snowflake. Our Platform
+Our platform unifies data and supports a growing variety of workloads, including data warehousing, data lakes, data engineering, data science, data application development, and data sharing. Customers can leverage our platform for any one of these workloads, but when taken together, it provides an integrated, end-to-end solution that delivers greater insights, faster data transformations, and improved data sharing.
+
+---
+
+For Data Warehouse, our platform enables organizations to:
+◦
+Support multiple users and activities concurrently. Enable multiple activities, such as repeatable analytics, rendering of dashboards, or ad hoc explorations, such as data science model training, with flexible compute capacity, no resource contention, and no provisioning of any infrastructure. 10
+Table of Contents
+◦
+Generate comprehensive data insights.
+
+---
+
+•
+Data Engineering. Our platform enables data engineers, IT departments, data science teams, and business analytics teams to efficiently build and manage data pipelines using SQL or other programming languages to transform raw data into actionable data for business insights. For Data Engineering, our platform enables organizations to:
+◦
+Drive faster decision making.
+
+---
+
+As our research and development employees return to an office, we expect them to be located primarily in or around Bellevue, Washington; Berlin, Germany; San Mateo, California; Toronto, Canada; and Warsaw, Poland. 14
+Table of Contents
+Our research and development organization consists of teams specializing in software engineering, user experience, product management, data science, technical program management, and technical writing. As of January 31, 2022, we had 788 employees in our research and development organization.
+
+---
+
+We believe that the pace of innovation will continue to accelerate as customers increasingly base their purchases of cloud data platforms on a broad range of factors, including performance and scale, markets addressed, types of data processed, ease of data ingestion, user experience, and data governance and regulatory compliance. We introduced data warehousing on our platform in 2014 as our core use case, and our customers subsequently began using our platform for additional use cases, including data lake, data engineering, data science, data application development, and data sharing. Our future success depends on our ability to continue to innovate and increase customer adoption of our platform and the Data Cloud.

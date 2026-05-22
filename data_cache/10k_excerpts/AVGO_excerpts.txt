@@ -1,0 +1,109 @@
+6
+Table of Contents
+The table below presents our software portfolios and their material offerings during fiscal year 2021. Software Portfolio
+Portfolio Description
+Major Portfolio Offerings
+Mainframe Software
+•   Solutions for DevOps, AIOps, Security and Database Management
+Systems
+•   Operational Analytics & management
+•   Automation
+•   Database & Database Management
+•   Application Development & Testing
+•   Identity & Access Management
+•   Compliance & Data Protection
+•   Security Insights
+Distributed Software
+•  Solutions that optimize the planning, development and delivery of business critical services
+•   ValueOps
+•   DevOps
+•   AIOps
+Symantec Cyber Security
+•   Comprehensive threat protection and compliance solutions that secure against threats and compliance risks by protecting users and data on any app, device, or network
+•   Endpoint Security
+•   Network Security
+•   Information Security
+•   Identity Security
+FC SAN Management
+•   Solutions that transforms current storage networks with autonomous SAN capabilities
+•   Fibre Channel switch
+Payment Authentication
+•   Software designed to reduce Card Not Present
+•   Payment Security Suite
+Operational Analytics & Management
+:
+These solutions combine big data, machine learning and artificial intelligence (“AI”) with mainframe expertise to deliver meaningful and actionable insights to augment and automate day-to-day operations and deliver exceptional customer experiences. Automation
+:
+These solutions reduce manual effort by enabling customers to proactively optimize resources and orchestrate automation across enterprise applications and systems.
+
+---
+
+The cost of complying with and implementing these privacy-related and data governance measures could be significant as they may create additional burdensome security, business process, business record or data localization requirements. Concerns about government interference, sovereignty, expanding privacy, cyber security and data governance legislation could adversely affect our customers and our products and services, particularly in cloud computing, artificial intelligence and our own data management practices. The theft, loss or misuse of personal data collected, used, stored or transferred by us to run our business could result in significantly increased business and security costs or costs related to defending legal claims.
+
+---
+
+We develop semiconductor devices with a focus on complex digital and mixed signal complementary metal oxide semiconductor (“CMOS”) based devices and analog III-V based products. We have a history of innovation in the semiconductor industry and offer thousands of products that are used in end products such as enterprise and data center networking, home connectivity, set-top boxes, broadband access, telecommunication equipment, smartphones and base stations, data center servers and storage systems, factory automation, power generation and alternative energy systems, and electronic displays. We differentiate ourselves through our high performance design and integration capabilities and focus on developing products for target markets where we believe we can earn attractive margins.
+
+---
+
+Many of the largest companies in the world, including most of the Fortune 500, and many government agencies rely on our software solutions to help manage and secure their on-premise and hybrid cloud environments. Our portfolio of industry-leading infrastructure and security software is designed to modernize, optimize, and secure the most complex hybrid environments, enabling scalability, agility, automation, insights, resiliency and security. We also offer mission critical fibre channel storage area networking (“FC SAN”) products and related software in the form of modules, switches and subsystems incorporating multiple semiconductor products.
+
+---
+
+The table below presents our material semiconductor product families and their major end markets and applications during fiscal year 2021. Major End Markets
+Major Applications
+Material Product Families
+Broadband
+•   Set-top Box (“STB”) and Broadband Access
+•   STB SoCs
+•   Cable, digital subscriber line (“DSL”) and passive optical networking (“PON”) central office/consumer premise equipment (“CO/CPE”) SoCs
+•   Wireless local area network (“WLAN”) access point SoCs
+Networking
+•   Data center, Telecom, Enterprise and Embedded Networking
+•   Ethernet switching and routing merchant silicon
+•   Embedded processors and controllers
+•   Serializer/Deserializer (“SerDes”), application specific integrated circuits (“ASICs”)
+•   Optical and copper, physical layer (“PHYs”)
+•   Fiber optic transmitter and receiver components
+Wireless
+•   Mobile Handsets
+•   RF front end modules (“FEMs”), filters, power amplifiers
+•   Wi-Fi, Bluetooth, global positioning system/global navigation satellite system (“GPS/GNSS”) SoCs
+•   Custom touch controllers
+Storage
+•   Servers and Storage Systems
+•   Serial attached small computer system interface (“SAS”) and redundant array of independent disks (“RAID”) controllers and adapters
+•   Peripheral component interconnect express (“PCIe”) switches
+•   Fibre channel host bus adapters (“HBA”)
+•   Hard Disk Drives (“HDD”); Solid-State Drives (“SSD”)
+•   Read channel based SoCs; Custom flash controllers
+•   Preamplifiers
+Industrial
+•   Power isolation, conversion and protection
+•   Optocouplers
+•   Factory automation, in-car infotainment and renewable energy systems
+•   Industrial fiber optics
+•   Motor Controls and Factory Automation, In-car Infotainment Automation
+•   Motion control encoders and subsystems
+Set-Top Box Solutions:
+We offer complete SoC platform solutions for cable, satellite, Internet Protocol television, over-the-top and terrestrial STBs. Our products enable global service providers to introduce new and enhanced technologies and services in STBs, including transcoding, digital video recording functionality, higher definition video processing, increased networking capabilities, and more tuners to enable faster channel change and more simultaneous recordings.
+
+---
+
+We develop semiconductor devices with a focus on complex digital and mixed signal complementary metal oxide semiconductor based devices and analog III-V based products. We have a history of innovation in the semiconductor industry and offer thousands of products that are used in end products such as enterprise and data center networking, home connectivity, set-top boxes, broadband access, telecommunication equipment, smartphones and base stations, data center servers and storage systems, factory automation, power generation and alternative energy systems, and electronic displays. Our infrastructure software solutions enable customers to plan, develop, automate, manage and secure applications across mainframe, distributed, mobile and cloud platforms.
+
+---
+
+Our infrastructure software solutions enable customers to plan, develop, automate, manage and secure applications across mainframe, distributed, mobile and cloud platforms. Our portfolio of industry-leading infrastructure and security software is designed to modernize, optimize, and secure the most complex hybrid environments, enabling scalability, agility, automation, insights, resiliency and security. We also offer mission critical fibre channel storage area networking (“FC SAN”) products and related software in the form of modules, switches and subsystems incorporating multiple semiconductor products.
+
+---
+
+We develop semiconductor devices with a focus on complex digital and mixed signal complementary metal oxide semiconductor based devices and analog III-V based products. We have a history of innovation in the semiconductor industry and offer thousands of products that are used in end products such as enterprise and data center networking, home connectivity, set-top boxes, broadband access, telecommunication equipment, smartphones and base stations, data center servers and storage systems, factory automation, power generation and alternative energy systems, and electronic displays. Our infrastructure software solutions enable customers to plan, develop, automate, manage and secure applications across mainframe, distributed, mobile and cloud platforms.
+
+---
+
+Our infrastructure software solutions enable customers to plan, develop, automate, manage and secure applications across mainframe, distributed, mobile and cloud platforms. Our portfolio of industry-leading infrastructure and security software is designed to modernize, optimize, and secure the most complex hybrid environments, enabling scalability, agility, automation, insights, resiliency and security. We also offer mission critical fibre channel storage area networking (“FC SAN”) products and related software in the form of modules, switches and subsystems incorporating multiple semiconductor products.
+
+---
+
+We provide a portfolio of software solutions that enables customers to plan, develop, automate, manage and secure applications across mainframe, distributed, mobile and cloud platforms. Our portfolio of industry-leading infrastructure and security software is designed to modernize, optimize, and secure the most complex hybrid environments, enabling scalability, agility, automation, insights, resiliency and security. We also offer mission critical FC SAN products and related software.

@@ -1,0 +1,52 @@
+The chart also lists, in declining order of our revenue, the sectors within each market. Market
+Sector
+Industrial
+Factory automation & control
+(41% of TI revenue)
+Building automation
+Grid infrastructure
+Medical
+Aerospace & defense
+Test & measurement
+Appliances
+Pro audio, video & signage
+Motor drives
+Power delivery
+Retail automation & payment
+Industrial transport
+Lighting
+Automotive
+Infotainment & cluster
+(21% of TI revenue)
+Advanced driver assistance systems (ADAS)
+Passive safety
+Hybrid, electric & powertrain systems
+Body electronics & lighting
+Personal electronics
+Mobile phones
+(24% of TI revenue)
+Portable electronics
+PC & notebooks
+Connected peripherals & printers
+Home theater & entertainment
+TV
+Tablets
+Wearables (non-medical)
+Data storage
+Gaming
+Communications equipment
+Wireless infrastructure
+(6% of TI revenue)
+Wired networking
+Broadband fixed line access
+Datacom module
+Enterprise systems
+Data center & enterprise computing
+(6% of TI revenue)
+Enterprise projectors
+Enterprise machine
+Other (calculators and other)
+(2% of TI revenue)
+Market characteristics
+Competitive landscape
+Despite recent consolidation, the analog and embedded processing markets remain highly fragmented. As a result, we face significant global competition from dozens of large and small companies, including both broad-based suppliers and niche suppliers.
